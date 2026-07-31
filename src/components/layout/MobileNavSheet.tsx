@@ -8,10 +8,66 @@ import { HeaderLogo } from "@/components/layout/SiteLogo";
 import { SocialIcon } from "@/components/layout/SocialIcon";
 import { Sheet } from "@/components/ui/sheet";
 
+function IconChevronRight({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+    </svg>
+  );
+}
+
+function IconExpandMore({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+    </svg>
+  );
+}
+
+function IconClose({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+    </svg>
+  );
+}
+
+function IconLocalShipping({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h4.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
+    </svg>
+  );
+}
+
+function IconBuild({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 6.6.9 9.5 2.9 11.5c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z" />
+    </svg>
+  );
+}
+
+function IconMail({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+    </svg>
+  );
+}
+
+function IconCall({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.49c0-.55-.45-1-1-1z" />
+    </svg>
+  );
+}
+
 const mobileQuickLinks = [
-  { label: "Sales", href: "/sales", icon: "local_shipping" },
-  { label: "Service", href: "/service", icon: "build" },
-  { label: "Contact", href: "/contact", icon: "mail" },
+  { label: "Sales", href: "/sales", Icon: IconLocalShipping },
+  { label: "Service", href: "/service", Icon: IconBuild },
+  { label: "Contact", href: "/contact", Icon: IconMail },
 ] as const;
 
 function MobileNavItem({
@@ -38,9 +94,7 @@ function MobileNavItem({
           onClick={onNavigate}
         >
           {item.label}
-          <span className="material-symbols-outlined text-[20px] text-secondary" aria-hidden>
-            chevron_right
-          </span>
+          <IconChevronRight className="w-5 h-5 text-secondary shrink-0" />
         </Link>
       </li>
     );
@@ -56,12 +110,9 @@ function MobileNavItem({
           )}
         >
           <span className="text-[15px]">{item.label}</span>
-          <span
-            className="material-symbols-outlined text-[22px] text-secondary transition-transform group-open/details:rotate-180"
-            aria-hidden
-          >
-            expand_more
-          </span>
+          <IconExpandMore
+            className="w-[22px] h-[22px] text-secondary shrink-0 transition-transform group-open/details:rotate-180"
+          />
         </summary>
         <div className="border-t border-outline-variant bg-surface-container-low px-2 py-2">
           <Link
@@ -122,7 +173,7 @@ export function MobileNavSheet({
           className="flex h-10 w-10 items-center justify-center rounded-lg border border-outline-variant bg-surface-container shrink-0"
           aria-label="Close menu"
         >
-          <span className="material-symbols-outlined text-[22px]">close</span>
+          <IconClose className="w-[22px] h-[22px]" />
         </button>
       </div>
 
@@ -134,9 +185,7 @@ export function MobileNavSheet({
             onClick={onClose}
             className="flex flex-col items-center gap-1.5 rounded-xl border border-outline-variant bg-surface-container-low px-2 py-3 text-center hover:border-primary-container/40 hover:bg-primary-container/5 transition-colors"
           >
-            <span className="material-symbols-outlined text-[22px] text-primary-container" aria-hidden>
-              {link.icon}
-            </span>
+            <link.Icon className="w-[22px] h-[22px] text-primary-container shrink-0" />
             <span className="text-xs font-semibold text-on-background">{link.label}</span>
           </Link>
         ))}
@@ -158,7 +207,7 @@ export function MobileNavSheet({
           href={phoneHref}
           className="flex items-center justify-center gap-2 w-full bg-primary-container text-white py-3.5 rounded-xl font-semibold shadow-industrial hover:bg-primary transition-colors"
         >
-          <span className="material-symbols-outlined">call</span>
+          <IconCall className="w-5 h-5 shrink-0" />
           {phone}
         </a>
         {(socialFacebook || socialLinkedin || socialInstagram) && (
