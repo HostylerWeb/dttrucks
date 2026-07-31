@@ -57,12 +57,13 @@ export function HeroSection({
           backgroundImageMobile ? (
             <picture>
               <source
+                media="(max-width: 768px)"
                 type="image/webp"
-                srcSet={`${backgroundImageMobile} 640w, ${backgroundImage} 1024w`}
-                sizes="100vw"
+                srcSet={backgroundImageMobile}
               />
+              <source type="image/webp" srcSet={backgroundImage} />
               <img
-                src={backgroundImage}
+                src={backgroundImageMobile}
                 alt={imageAlt}
                 decoding="async"
                 fetchPriority={prioritizeImage ? "high" : "auto"}

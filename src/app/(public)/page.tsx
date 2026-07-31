@@ -52,8 +52,14 @@ export default function Home() {
         rel="preload"
         as="image"
         href="/media/home/hero-3-in-range-640.webp"
-        imageSrcSet="/media/home/hero-3-in-range-640.webp 640w, /media/home/hero-3-in-range.webp 1024w"
-        imageSizes="100vw"
+        media="(max-width: 768px)"
+        fetchPriority="high"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="/media/home/hero-3-in-range.webp"
+        media="(min-width: 769px)"
         fetchPriority="high"
       />
       <StaticHomeHero />

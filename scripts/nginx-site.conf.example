@@ -6,7 +6,21 @@ server {
 
     client_max_body_size 25M;
 
-    # Serve static assets directly (faster TTFB for images/fonts than Node proxy).
+    # Required when serving /_next/static and /media directly (Node gzip no longer applies).
+    gzip on;
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_comp_level 5;
+    gzip_min_length 256;
+    gzip_types
+        text/plain
+        text/css
+        text/javascript
+        application/javascript
+        application/json
+        image/svg+xml
+        font/woff2;
+
     location /media/ {
         alias /var/www/dttrucks/public/media/;
         access_log off;
