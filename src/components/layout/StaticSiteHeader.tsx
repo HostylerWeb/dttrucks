@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { HeaderLogo } from "@/components/layout/SiteLogo";
+import { navItems } from "@/lib/nav";
 
 function IconCall({ className }: { className?: string }) {
   return (
@@ -16,7 +18,7 @@ function IconMenu({ className }: { className?: string }) {
   );
 }
 
-/** Server-rendered header shell — no client JS on the critical path. */
+/** Server-safe header shell for Suspense fallback — matches Header layout without client hooks. */
 export function StaticSiteHeader({
   phone,
   phoneHref,
@@ -25,7 +27,7 @@ export function StaticSiteHeader({
   phoneHref: string;
 }) {
   return (
-    <header className="sticky top-0 z-50 bg-surface border-b border-outline-variant">
+    <header className="sticky top-0 z-50 bg-surface border-b border-outline-variant overflow-visible">
       <nav
         className="page-container h-16 lg:h-[72px] xl:h-20 flex items-center gap-3 sm:gap-4"
         aria-label="Main"
@@ -34,7 +36,28 @@ export function StaticSiteHeader({
           <HeaderLogo />
         </div>
 
-        <div className="hidden lg:flex flex-1 items-center min-w-0 min-h-[40px]" aria-hidden />
+        <div className="hidden lg:flex flex-1 items-center justify-between min-w-0 gap-4 xl:gap-8 min-h-[40px]">
+          <div className="flex items-center gap-0.5 xl:gap-1 min-w-0">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="px-2 xl:px-2.5 py-2 text-[13px] xl:text-sm whitespace-nowrap text-secondary font-semibold"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+          <div className="flex items-center gap-2 shrink-0 pl-2 xl:pl-4 border-l border-outline-variant/60">
+            <a
+              href={phoneHref}
+              className="hidden xl:flex items-center gap-2 bg-primary-container text-white px-4 py-2.5 rounded-lg font-semibold text-sm shadow-industrial whitespace-nowrap shrink-0"
+            >
+              <IconCall className="w-5 h-5" />
+              {phone}
+            </a>
+          </div>
+        </div>
 
         <div className="flex lg:hidden items-center gap-2 shrink-0 ml-auto">
           <a

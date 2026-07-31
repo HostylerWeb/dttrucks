@@ -26,6 +26,19 @@ function NavLink({ href, label }: { href: string; label: string }) {
   );
 }
 
+function IconChevronDown({ className, open }: { className?: string; open?: boolean }) {
+  return (
+    <svg
+      className={cn("w-[18px] h-[18px] transition-transform", open && "rotate-180", className)}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden
+    >
+      <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
+    </svg>
+  );
+}
+
 function NavDropdown({ item }: { item: NavItem }) {
   const pathname = usePathname();
   const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
@@ -61,30 +74,24 @@ function NavDropdown({ item }: { item: NavItem }) {
           aria-haspopup="true"
           onClick={() => setOpen((value) => !value)}
         >
-          <span
-            className={cn(
-              "material-symbols-outlined text-[18px] transition-transform",
-              open && "rotate-180"
-            )}
-          >
-            expand_more
-          </span>
+          <IconChevronDown open={open} />
         </button>
       </div>
 
       {item.children && item.children.length > 0 && (
         <div
           className={cn(
-            "absolute left-0 top-full pt-2 min-w-[280px] max-w-[320px] transition-all duration-200 origin-top",
+            "absolute left-0 top-full z-[60] min-w-[280px] max-w-[320px] transition-all duration-200 origin-top",
             open
               ? "opacity-100 visible translate-y-0"
               : "opacity-0 invisible -translate-y-1 pointer-events-none"
           )}
         >
-          <div
-            className="rounded-xl border border-outline-variant bg-white shadow-[0_12px_40px_rgba(17,24,39,0.12)] py-2 overflow-hidden"
-            role="menu"
-          >
+          <div className="pt-2">
+            <div
+              className="rounded-xl border border-outline-variant bg-white shadow-[0_12px_40px_rgba(17,24,39,0.12)] py-2 overflow-hidden"
+              role="menu"
+            >
             <Link
               href={item.href}
               role="menuitem"
@@ -116,6 +123,7 @@ function NavDropdown({ item }: { item: NavItem }) {
               })}
             </ul>
           </div>
+          </div>
         </div>
       )}
     </div>
@@ -138,7 +146,7 @@ export function DesktopNavBar({
   return (
     <>
       <div className="hidden lg:flex flex-1 items-center justify-between min-w-0 gap-4 xl:gap-8">
-        <div className="flex items-center gap-0.5 xl:gap-1 min-w-0 overflow-hidden">
+        <div className="flex items-center gap-0.5 xl:gap-1 min-w-0">
           {navItems.map((item) =>
             item.children?.length ? (
               <NavDropdown key={item.href} item={item} />

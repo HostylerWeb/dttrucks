@@ -65,6 +65,7 @@ export function FeatureGrid({
               href={item.href}
               prefetch={false}
               className="text-primary-container font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all"
+              aria-label={`${item.linkLabel ?? "Learn more"} — ${item.title}`}
             >
               {item.linkLabel ?? "Learn more"}
               {useSvgIcons ? (

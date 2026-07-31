@@ -55,7 +55,11 @@ async function LiveChatLoader() {
 function HeaderFallback() {
   return (
     <>
-      <div className="hidden sm:block h-8 bg-inverse-surface" />
+      <div className="hidden sm:block bg-inverse-surface text-white py-2 text-sm">
+        <div className="page-container text-center text-white/90" aria-hidden>
+          Loading site information…
+        </div>
+      </div>
       <StaticSiteHeader phone="020 8595 4400" phoneHref="tel:02085954400" />
     </>
   );

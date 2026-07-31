@@ -39,7 +39,7 @@ export const homeHighlightFeatures = [
     description:
       "Your commercial vehicles are vital assets - when they're off the road, your business feels it. That's why we deliver fast, cost-effective servicing to minimise downtime and maximise productivity.",
     href: "/service",
-    linkLabel: "Learn more",
+    linkLabel: "Learn more about fleet servicing",
   },
   {
     icon: "engineering",

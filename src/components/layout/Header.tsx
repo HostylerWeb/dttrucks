@@ -58,7 +58,7 @@ export function Header({
     <>
       <header
         className={cn(
-          "sticky top-0 z-50 bg-surface border-b border-outline-variant transition-shadow duration-300",
+          "sticky top-0 z-50 bg-surface border-b border-outline-variant transition-shadow duration-300 overflow-visible",
           scrolled && "shadow-industrial"
         )}
       >
