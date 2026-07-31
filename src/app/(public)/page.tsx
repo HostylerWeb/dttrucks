@@ -48,7 +48,14 @@ function HomeContentSkeleton() {
 export default function Home() {
   return (
     <>
-      <link rel="preload" as="image" href="/media/home/hero-3-in-range.webp" fetchPriority="high" />
+      <link
+        rel="preload"
+        as="image"
+        href="/media/home/hero-3-in-range-640.webp"
+        imageSrcSet="/media/home/hero-3-in-range-640.webp 640w, /media/home/hero-3-in-range.webp 1024w"
+        imageSizes="100vw"
+        fetchPriority="high"
+      />
       <StaticHomeHero />
       <Suspense fallback={<HomeContentSkeleton />}>
         <HomePageContent />

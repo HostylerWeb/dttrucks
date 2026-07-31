@@ -5,6 +5,7 @@ export function StaticHomeHero() {
   return (
     <HeroSection
       backgroundImage={defaultHomeHero.backgroundImage}
+      backgroundImageMobile={defaultHomeHero.backgroundImageMobile}
       imageAlt={defaultHomeHero.imageAlt}
       badge={defaultHomeHero.badge}
       eyebrow={defaultHomeHero.eyebrow}

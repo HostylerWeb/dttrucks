@@ -11,6 +11,7 @@ type Cta = {
 
 export function HeroSection({
   backgroundImage,
+  backgroundImageMobile,
   imageAlt = "Hero background",
   backgroundPosition = "center",
   badge,
@@ -26,6 +27,7 @@ export function HeroSection({
   priorityImage,
 }: {
   backgroundImage?: string;
+  backgroundImageMobile?: string;
   imageAlt?: string;
   backgroundPosition?: string;
   badge?: string;
@@ -52,16 +54,34 @@ export function HeroSection({
     >
       <div className="absolute inset-0 z-0">
         {backgroundImage ? (
-          <Image
-            src={backgroundImage}
-            alt={imageAlt}
-            fill
-            priority={prioritizeImage}
-            unoptimized={prioritizeImage && backgroundImage.startsWith("/")}
-            className="object-cover"
-            style={{ objectPosition: backgroundPosition }}
-            sizes="100vw"
-          />
+          backgroundImageMobile ? (
+            <picture>
+              <source
+                type="image/webp"
+                srcSet={`${backgroundImageMobile} 640w, ${backgroundImage} 1024w`}
+                sizes="100vw"
+              />
+              <img
+                src={backgroundImage}
+                alt={imageAlt}
+                decoding="async"
+                fetchPriority={prioritizeImage ? "high" : "auto"}
+                className="absolute inset-0 h-full w-full object-cover"
+                style={{ objectPosition: backgroundPosition }}
+              />
+            </picture>
+          ) : (
+            <Image
+              src={backgroundImage}
+              alt={imageAlt}
+              fill
+              priority={prioritizeImage}
+              unoptimized={prioritizeImage && backgroundImage.startsWith("/")}
+              className="object-cover"
+              style={{ objectPosition: backgroundPosition }}
+              sizes="100vw"
+            />
+          )
         ) : (
           <div className="w-full h-full bg-inverse-surface" />
         )}
