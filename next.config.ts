@@ -14,6 +14,7 @@ const nextConfig: NextConfig = {
     ],
   },
   experimental: {
+    inlineCss: true,
     turbopackFileSystemCacheForDev: true,
   },
   async redirects() {

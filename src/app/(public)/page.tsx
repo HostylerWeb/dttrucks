@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
+import { preload } from "react-dom";
 import { getHomepageVideos } from "@/lib/db/videos";
 import { getAllSettings } from "@/lib/db/settings";
 import { buildPageMetadata } from "@/lib/metadata";
@@ -46,22 +47,14 @@ function HomeContentSkeleton() {
 }
 
 export default function Home() {
+  // High-priority LCP image in document head (not body <link> tags)
+  preload("/media/home/hero-3-in-range-640.webp", {
+    as: "image",
+    fetchPriority: "high",
+  });
+
   return (
     <>
-      <link
-        rel="preload"
-        as="image"
-        href="/media/home/hero-3-in-range-640.webp"
-        media="(max-width: 768px)"
-        fetchPriority="high"
-      />
-      <link
-        rel="preload"
-        as="image"
-        href="/media/home/hero-3-in-range.webp"
-        media="(min-width: 769px)"
-        fetchPriority="high"
-      />
       <StaticHomeHero />
       <Suspense fallback={<HomeContentSkeleton />}>
         <HomePageContent />

@@ -4,8 +4,7 @@ import { getAllSettings } from "@/lib/db/settings";
 import { UtilityBar } from "@/components/layout/UtilityBar";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { CookieConsent } from "@/components/public/CookieConsent";
-import { ScrollToTop } from "@/components/public/ScrollToTop";
+import { DeferredPublicWidgets } from "@/components/public/DeferredPublicWidgets";
 import { LiveChatWidget } from "@/components/public/LiveChatWidget";
 import { LocalBusinessJsonLd } from "@/components/seo/LocalBusinessJsonLd";
 import { WebSiteJsonLd } from "@/components/seo/WebSiteJsonLd";
@@ -96,8 +95,7 @@ export default function PublicLayout({
       <Suspense fallback={null}>
         <LiveChatLoader />
       </Suspense>
-      <CookieConsent />
-      <ScrollToTop />
+      <DeferredPublicWidgets />
     </div>
   );
 }

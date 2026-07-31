@@ -240,6 +240,22 @@ const mobileQuickLinks = [
   { label: "Contact", href: "/contact", icon: "mail" },
 ] as const;
 
+function IconCall({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.49c0-.55-.45-1-1-1z" />
+    </svg>
+  );
+}
+
+function IconMenu({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+    </svg>
+  );
+}
+
 export function Header({
   phone,
   phoneHref,
@@ -334,7 +350,7 @@ export function Header({
               className="flex items-center justify-center w-10 h-10 bg-primary-container text-white rounded-lg shrink-0 shadow-industrial"
               aria-label={`Call ${phone}`}
             >
-              <span className="material-symbols-outlined text-[22px]">call</span>
+              <IconCall className="w-[22px] h-[22px]" />
             </a>
             <button
               type="button"
@@ -343,7 +359,7 @@ export function Header({
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen(true)}
             >
-              <span className="material-symbols-outlined text-[24px]">menu</span>
+              <IconMenu className="w-6 h-6" />
             </button>
           </div>
         </nav>

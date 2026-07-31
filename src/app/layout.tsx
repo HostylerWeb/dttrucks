@@ -85,15 +85,6 @@ export default function RootLayout({
       lang="en-GB"
       className={`${plusJakarta.variable} ${inter.variable} scroll-smooth h-full antialiased`}
     >
-      <head>
-        <link
-          rel="preload"
-          href="/fonts/material-symbols-outlined.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-      </head>
       <body className="min-h-full flex flex-col bg-background text-on-background font-body">
         {children}
         {gaId && <GoogleAnalyticsConsent gaId={gaId} />}
