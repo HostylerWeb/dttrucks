@@ -17,6 +17,20 @@ const nextConfig: NextConfig = {
     inlineCss: true,
     turbopackFileSystemCacheForDev: true,
   },
+  turbopack: {
+    resolveAlias: {
+      "../build/polyfills/polyfill-module": "./src/lib/empty-polyfill.js",
+      "next/dist/build/polyfills/polyfill-module": "./src/lib/empty-polyfill.js",
+    },
+  },
+  webpack(config) {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "../build/polyfills/polyfill-module": false,
+      "next/dist/build/polyfills/polyfill-module": false,
+    };
+    return config;
+  },
   async redirects() {
     return [
       { source: "/about-us", destination: "/about", permanent: true },
