@@ -1,6 +1,6 @@
 export const CONTACT_INTRO = [
-  "Welcome to our contact page — here you'll find phone numbers, email and our Barking workshop address. Use the form for sales enquiries, service bookings or general questions.",
-  "Your feedback matters. Without your feedback, positive or negative, we wouldn't be where we are today — please share your experience with us.",
+  "Welcome to our contact page  -  here you'll find phone numbers, email and our Barking workshop address. Use the form for sales enquiries, service bookings or general questions.",
+  "Your feedback matters. Without your feedback, positive or negative, we wouldn't be where we are today  -  please share your experience with us.",
 ];
 
 export const CONTACT_RESPONSE_NOTE =
@@ -18,7 +18,7 @@ export const CONTACT_DEPARTMENTS = [
     id: "parts",
     label: "Parts",
     icon: "inventory_2",
-    description: "Genuine Isuzu parts and accessories — 96% first-time pick rate.",
+    description: "Genuine Isuzu parts and accessories  -  96% first-time pick rate.",
     href: "/service",
   },
   {

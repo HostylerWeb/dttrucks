@@ -1,6 +1,6 @@
 export const homeHero = {
   backgroundImage: "/media/home/hero-3-in-range.webp",
-  imageAlt: "Isuzu truck range — DT Trucks dealership",
+  imageAlt: "Isuzu truck range  -  DT Trucks dealership",
   title: "Welcome to DT Trucks",
   subtitle: "Van and Truck Services – Your Trusted Commercial Vehicle Partner",
   tagline: "ISUZU SALES, PARTS & SERVICE DEALER",
@@ -37,7 +37,7 @@ export const homeHighlightFeatures = [
     icon: "speed",
     title: "Boost Your Fleet's Efficiency and Uptime",
     description:
-      "Your commercial vehicles are vital assets—when they're off the road, your business feels it. That's why we deliver fast, cost-effective servicing to minimise downtime and maximise productivity.",
+      "Your commercial vehicles are vital assets - when they're off the road, your business feels it. That's why we deliver fast, cost-effective servicing to minimise downtime and maximise productivity.",
     href: "/service",
     linkLabel: "Learn more",
   },
@@ -87,12 +87,12 @@ export const homeHighlights = [
   {
     title: "Boost Your Fleet's Efficiency and Uptime",
     body:
-      "Your commercial vehicles are vital assets—when they're off the road, your business feels it. That's why we deliver fast, cost-effective servicing to minimise downtime and maximise productivity. From routine maintenance to urgent repairs, we work efficiently to get your van or truck back on the road without delay.",
+      "Your commercial vehicles are vital assets - when they're off the road, your business feels it. That's why we deliver fast, cost-effective servicing to minimise downtime and maximise productivity. From routine maintenance to urgent repairs, we work efficiently to get your van or truck back on the road without delay.",
   },
   {
     title: "Expert Support for All Transport Needs",
     body:
-      "Need guidance on transport logistics or vehicle performance? Our experienced staff are ready to help. Most queries are resolved on the spot, and if we don't have the answer immediately, we'll find it for you—because your business deserves nothing less.",
+      "Need guidance on transport logistics or vehicle performance? Our experienced staff are ready to help. Most queries are resolved on the spot, and if we don't have the answer immediately, we'll find it for you - because your business deserves nothing less.",
   },
   {
     title: "Get in Touch Today",
@@ -106,9 +106,9 @@ export const homeDealerSection = {
   intro:
     "At DT Trucks, we're proud to be recognised as a leading Isuzu dealership in London & Essex, offering expert servicing, genuine parts, and complete transport solutions. With decades of experience and state-of-the-art diagnostic equipment, your vehicle is always in the safest hands.",
   fleet:
-    "We currently maintain a high volume of commercial vehicles—from single operators to fleets of over 150 trucks. Our services cover everything from a simple bulb replacement to full engine rebuilds. No job is too big or too small, and every task is handled with precision and care.",
+    "We currently maintain a high volume of commercial vehicles - from single operators to fleets of over 150 trucks. Our services cover everything from a simple bulb replacement to full engine rebuilds. No job is too big or too small, and every task is handled with precision and care.",
   partsNote:
-    "As an authorised Isuzu main dealer, we supply a wide range of genuine Isuzu parts and accessories—from air fresheners, mugs, and umbrellas to full air conditioning kits and rear axle air suspension conversions. Whatever your needs, Isuzu Truck North London delivers the total transport solution.",
+    "As an authorised Isuzu main dealer, we supply a wide range of genuine Isuzu parts and accessories - from air fresheners, mugs, and umbrellas to full air conditioning kits and rear axle air suspension conversions. Whatever your needs, Isuzu Truck North London delivers the total transport solution.",
   uptime:
     "We're proud to maintain a 96% first-time pick rate on parts, ensuring fast turnaround and minimal vehicle downtime. We understand that every minute off the road affects your bottom line, which is why we focus on maximising uptime and earning potential. Through the Isuzu Care programme, we offer a 2-year warranty on all genuine parts and consistently deliver competitive pricing on fast-moving stock.",
   pillars: [
@@ -137,7 +137,7 @@ export const homeSpecialistSections = [
   {
     title: "Specialist Vehicle Support – A&E, PTS, and More",
     body:
-      "If you operate A&E, PTS, or other specialist vehicles, DT Trucks offers unmatched expertise, passion, and precision. We understand the unique demands of emergency and patient transport fleets, and we're proud to support operators across East and North London with fast, reliable maintenance solutions. Struggling to find skilled mechanics who understand specialist vehicles? We're here to help—with rapid turnaround times and trusted service.",
+      "If you operate A&E, PTS, or other specialist vehicles, DT Trucks offers unmatched expertise, passion, and precision. We understand the unique demands of emergency and patient transport fleets, and we're proud to support operators across East and North London with fast, reliable maintenance solutions. Struggling to find skilled mechanics who understand specialist vehicles? We're here to help - with rapid turnaround times and trusted service.",
   },
   {
     title: "Advanced Air Conditioning Services",

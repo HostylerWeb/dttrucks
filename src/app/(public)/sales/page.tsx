@@ -101,7 +101,7 @@ async function SalesPageContent() {
             </p>
             <h2 className="font-headline text-2xl lg:text-3xl font-bold mb-3">Isuzu Truck Range</h2>
             <p className="text-secondary leading-relaxed">
-              Browse Isuzu chassis by gross vehicle weight — from the 3.5t Grafter through to 11t and
+              Browse Isuzu chassis by gross vehicle weight  -  from the 3.5t Grafter through to 11t and
               13.5t F-Series. Choose the weight class that fits your payload and operation, then
               enquire about the right model.
             </p>
@@ -120,7 +120,7 @@ async function SalesPageContent() {
             <div className="mb-8 max-w-3xl">
               <h3 className="font-headline text-2xl font-bold mb-3">Isuzu Driveaway Trucks</h3>
               <p className="text-secondary leading-relaxed">
-                Ready-bodied trucks available with short lead times — tippers, dropsides,
+                Ready-bodied trucks available with short lead times  -  tippers, dropsides,
                 utilitrucks, box vans and curtainsiders. Ideal when you need a complete vehicle
                 for work, not just a chassis.
               </p>

@@ -34,7 +34,7 @@ export function BlogPostingJsonLd({
       name: "DT Trucks",
       logo: {
         "@type": "ImageObject",
-        url: absoluteUrl("/opengraph-image"),
+        url: absoluteUrl("/og.png"),
       },
     },
     ...(imageUrl ? { image: imageUrl } : {}),

@@ -217,7 +217,7 @@ export function AboutPageView() {
           <SectionHeading
             eyebrow="Our heritage"
             title="How were we founded?"
-            description="From Eastley Commercials in 1995 to today's DT Trucks — a partnership built on Isuzu expertise and customer care."
+            description="From Eastley Commercials in 1995 to today's DT Trucks  -  a partnership built on Isuzu expertise and customer care."
             headingLevel="h3"
           />
 
@@ -278,7 +278,7 @@ export function AboutPageView() {
           <SectionHeading
             eyebrow="The people behind DT Trucks"
             title="Get to know a little about our team!"
-            description="Leadership, workshop and office — the team that keeps London and Essex moving."
+            description="Leadership, workshop and office  -  the team that keeps London and Essex moving."
             headingLevel="h3"
           />
 
@@ -348,7 +348,7 @@ export function AboutPageView() {
                 Questions about sales, service or parts?
               </p>
               <p className="text-secondary text-sm mt-1">
-                Our team responds on business days — or use live chat for instant help.
+                Our team responds on business days  -  or use live chat for instant help.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 shrink-0 w-full sm:w-auto">

@@ -27,8 +27,8 @@ export async function LocalBusinessJsonLd() {
     url: siteUrl,
     telephone: settings.company_phone ?? "020 8595 4400",
     email: settings.company_email ?? "enquiries@dttrucks.com",
-    image: absoluteUrl("/opengraph-image"),
-    logo: absoluteUrl("/opengraph-image"),
+    image: absoluteUrl("/og.png"),
+    logo: absoluteUrl("/media/branding/dt-icon.png"),
     address: {
       "@type": "PostalAddress",
       ...BUSINESS_ADDRESS,

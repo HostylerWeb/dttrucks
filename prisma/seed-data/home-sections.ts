@@ -18,7 +18,7 @@ export const homePageSections: SeedPageSection[] = [
     sort_order: 0,
     content: JSON.stringify({
       backgroundImage: HERO_IMAGE,
-      imageAlt: "Isuzu truck range — DT Trucks dealership",
+      imageAlt: "Isuzu truck range  -  DT Trucks dealership",
       badge: "Authorised Isuzu Dealer",
       eyebrow: "The Next Generation Of Trucks!",
       title: "Welcome to DT Trucks",
@@ -44,7 +44,7 @@ export const homePageSections: SeedPageSection[] = [
           icon: "inventory_2",
           title: "96% first-time pick rate on parts",
           description:
-            "Fast turnaround and minimal vehicle downtime—we focus on maximising uptime and earning potential.",
+            "Fast turnaround and minimal vehicle downtime - we focus on maximising uptime and earning potential.",
         },
         {
           icon: "verified",
@@ -65,7 +65,7 @@ export const homePageSections: SeedPageSection[] = [
         icon: "speed",
         title: "Boost Your Fleet's Efficiency and Uptime",
         description:
-          "Your commercial vehicles are vital assets—when they're off the road, your business feels it. That's why we deliver fast, cost-effective servicing to minimise downtime and maximise productivity. From routine maintenance to urgent repairs, we work efficiently to get your van or truck back on the road without delay.",
+          "Your commercial vehicles are vital assets - when they're off the road, your business feels it. That's why we deliver fast, cost-effective servicing to minimise downtime and maximise productivity. From routine maintenance to urgent repairs, we work efficiently to get your van or truck back on the road without delay.",
         href: "/service",
         linkLabel: "Learn more",
       },
@@ -73,7 +73,7 @@ export const homePageSections: SeedPageSection[] = [
         icon: "engineering",
         title: "Expert Support for All Transport Needs",
         description:
-          "Need guidance on transport logistics or vehicle performance? Our experienced staff are ready to help. Most queries are resolved on the spot, and if we don't have the answer immediately, we'll find it for you—because your business deserves nothing less.",
+          "Need guidance on transport logistics or vehicle performance? Our experienced staff are ready to help. Most queries are resolved on the spot, and if we don't have the answer immediately, we'll find it for you - because your business deserves nothing less.",
         href: "/about",
         linkLabel: "Meet the team",
       },

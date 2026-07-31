@@ -77,7 +77,7 @@ async function DashboardContent() {
                   href={`/admin/enquiries/${e.id}`}
                   className="font-medium text-on-surface hover:text-primary-container"
                 >
-                  {e.name} — {e.type.replace("_", " ")}
+                  {e.name}  -  {e.type.replace("_", " ")}
                 </Link>
                 <span className="text-xs text-secondary">
                   {format(e.created_at, "dd MMM yyyy")}
@@ -89,7 +89,7 @@ async function DashboardContent() {
       </section>
 
       <p className="text-sm text-secondary">
-        Service pages are built into the site — edit pages, blog, trucks and jobs in the CMS.
+        Service pages are built into the site  -  edit pages, blog, trucks and jobs in the CMS.
       </p>
     </div>
   );

@@ -1,6 +1,6 @@
 export const defaultHomeHero = {
   backgroundImage: "/media/home/hero-3-in-range.webp",
-  imageAlt: "Isuzu truck range — DT Trucks dealership",
+  imageAlt: "Isuzu truck range  -  DT Trucks dealership",
   badge: "Authorised Isuzu Dealer",
   eyebrow: "The Next Generation Of Trucks!",
   title: "Welcome to DT Trucks",

@@ -50,9 +50,25 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     siteName: process.env.NEXT_PUBLIC_SITE_NAME ?? "DT Trucks",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "DT Trucks  -  Authorised Isuzu Dealer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/og.png"],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/apple-icon.png",
   },
 };
 

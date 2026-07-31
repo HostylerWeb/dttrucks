@@ -23,7 +23,7 @@ export async function sendViaResend({
 }) {
   const resend = getResendClient();
   if (!resend) {
-    console.info("[email] RESEND_API_KEY not set — skipping:", subject);
+    console.info("[email] RESEND_API_KEY not set  -  skipping:", subject);
     return false;
   }
 

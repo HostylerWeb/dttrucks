@@ -104,12 +104,12 @@ export default async function BlogAdminPage({
           href: `/admin/blog/${post.id}`,
           cells: {
             title: post.title,
-            category: post.category?.name ?? "—",
-            author: post.author?.name ?? "—",
+            category: post.category?.name ?? "-",
+            author: post.author?.name ?? "-",
             status: <StatusBadge status={post.status} />,
             date: post.published_at
               ? format(post.published_at, "dd MMM yyyy")
-              : "—",
+              : "-",
           },
         }))}
       />

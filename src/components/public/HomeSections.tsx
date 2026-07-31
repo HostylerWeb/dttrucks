@@ -134,7 +134,7 @@ export function HomeContactSection({
             Contact Us Today
           </p>
           <p className="text-inverse-on-surface/80 text-base sm:text-lg mb-8 sm:mb-10">
-            Service, parts, sales — speak directly with our experienced team in Barking.
+            Service, parts, sales  -  speak directly with our experienced team in Barking.
           </p>
           <div className="space-y-6">
             <div className="flex items-center gap-5">
@@ -157,7 +157,7 @@ export function HomeContactSection({
               </div>
               <div>
                 <p className="text-xs uppercase tracking-wide opacity-70 font-semibold">
-                  Sales — {salesName}
+                  Sales  -  {salesName}
                 </p>
                 <a
                   href={`tel:${salesPhone.replace(/\s/g, "")}`}

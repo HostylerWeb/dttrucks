@@ -21,7 +21,7 @@ export default async function PagePreview({
 
   return (
     <div className="min-h-screen bg-surface p-8 max-w-3xl mx-auto">
-      <p className="text-xs text-secondary mb-4">Preview — {page.status}</p>
+      <p className="text-xs text-secondary mb-4">Preview  -  {page.status}</p>
       <h1 className="font-headline text-3xl font-bold">{page.title}</h1>
       {page.subtitle && (
         <p className="mt-2 text-lg text-secondary">{page.subtitle}</p>

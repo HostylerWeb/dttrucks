@@ -22,7 +22,6 @@ const settingKeys = [
   "google_maps_embed_url",
   "ebay_store_url",
   "ebay_seller_username",
-  "internal_portal_url",
   "live_chat_enabled",
   "live_chat_id",
   "default_meta_title",

@@ -70,12 +70,12 @@ export function formatOpeningHoursList(json: string | null | undefined): Opening
     const parsed = JSON.parse(json) as Record<string, DayHours>;
     return Object.entries(FULL_DAY_LABELS).map(([key, day]) => {
       const entry = parsed[key];
-      if (!entry) return { day, hours: "—" };
+      if (!entry) return { day, hours: "-" };
       if (entry.closed) return { day, hours: "Closed" };
       if (entry.open && entry.close) {
         return { day, hours: `${entry.open} – ${entry.close}` };
       }
-      return { day, hours: "—" };
+      return { day, hours: "-" };
     });
   } catch {
     return defaults;

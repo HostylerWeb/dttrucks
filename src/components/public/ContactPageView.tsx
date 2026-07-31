@@ -159,7 +159,7 @@ export function ContactPageView({
             <div className="lg:col-span-4">
               <h2 className="font-headline text-xl sm:text-2xl font-bold mb-2">Visit us</h2>
               <p className="text-secondary text-sm leading-relaxed mb-6">
-                {companyName} — authorised Isuzu dealer for London and Essex.
+                {companyName}  -  authorised Isuzu dealer for London and Essex.
               </p>
 
               <address className="not-italic text-secondary space-y-3 text-sm leading-relaxed mb-6">

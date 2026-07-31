@@ -64,7 +64,7 @@ export function ImageUrlField({
           </div>
         </div>
       ) : (
-        <p className="text-sm text-secondary">No image selected — choose from the library below.</p>
+        <p className="text-sm text-secondary">No image selected  -  choose from the library below.</p>
       )}
 
       <input type="hidden" name={name} value={url} />

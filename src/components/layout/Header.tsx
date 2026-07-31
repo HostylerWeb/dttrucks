@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { navItems, type NavItem } from "@/lib/nav";
 import { cn } from "@/lib/utils";
+import { HeaderLogo } from "@/components/layout/SiteLogo";
 import { Sheet } from "@/components/ui/sheet";
 
 function NavLink({ href, label }: { href: string; label: string }) {
@@ -267,24 +268,14 @@ export function Header({
         )}
       >
         <nav
-          className="page-container h-16 lg:h-[72px] xl:h-20 flex items-center justify-between gap-3"
+          className="page-container h-16 lg:h-[72px] xl:h-20 grid grid-cols-[auto_1fr_auto] items-center gap-x-3 sm:gap-x-4"
           aria-label="Main"
         >
-          <Link href="/" className="flex items-center gap-2.5 shrink-0 min-w-0">
-            <div className="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center text-white font-headline font-extrabold text-sm shrink-0">
-              DT
-            </div>
-            <div className="leading-tight min-w-0">
-              <span className="font-headline font-extrabold text-base text-primary-container block truncate">
-                DT Trucks
-              </span>
-              <span className="text-[10px] uppercase tracking-widest text-secondary font-semibold block truncate">
-                Isuzu Dealer
-              </span>
-            </div>
-          </Link>
+          <div className="shrink-0 pr-4 sm:pr-6 lg:pr-10 xl:pr-14 max-w-[min(100%,240px)] lg:max-w-[300px]">
+            <HeaderLogo />
+          </div>
 
-          <div className="hidden lg:flex flex-1 items-center justify-center gap-0.5 xl:gap-1 min-w-0 px-4">
+          <div className="hidden lg:flex items-center justify-start gap-0.5 xl:gap-1 min-w-0 pl-2 xl:pl-4">
             {navItems.map((item) =>
               item.children?.length ? (
                 <NavDropdown key={item.href} item={item} />
@@ -294,7 +285,7 @@ export function Header({
             )}
           </div>
 
-          <div className="flex items-center gap-2 shrink-0">
+          <div className="flex items-center gap-2 shrink-0 justify-end col-start-3">
             <div className="hidden xl:flex items-center gap-0.5">
               {socialFacebook && (
                 <SocialIcon href={socialFacebook} label="Facebook">
@@ -354,19 +345,7 @@ export function Header({
 
       <Sheet open={menuOpen} onClose={closeMenu} side="right">
         <div className="flex items-center justify-between gap-3 pb-5 border-b border-outline-variant">
-          <Link href="/" className="flex items-center gap-2.5 min-w-0" onClick={closeMenu}>
-            <div className="w-9 h-9 bg-primary-container rounded-lg flex items-center justify-center text-white font-headline font-extrabold text-sm shrink-0">
-              DT
-            </div>
-            <div className="min-w-0">
-              <span className="font-headline font-extrabold text-base text-primary-container block">
-                DT Trucks
-              </span>
-              <span className="text-[10px] uppercase tracking-widest text-secondary font-semibold">
-                Isuzu Dealer
-              </span>
-            </div>
-          </Link>
+          <HeaderLogo onNavigate={closeMenu} className="flex items-center shrink-0 min-w-0 mr-0" />
           <button
             type="button"
             onClick={closeMenu}

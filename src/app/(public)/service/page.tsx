@@ -113,7 +113,7 @@ export default async function ServiceIndexPage() {
               <h2 className="font-headline text-xl sm:text-2xl lg:text-3xl font-bold mb-3">Isuzu Barking Services</h2>
           <p className="text-secondary max-w-2xl mb-10 leading-relaxed">
             From routine workshop servicing and tachograph calibrations to 24/7 roadside cover and
-            specialist vehicle support — all from one authorised Isuzu dealership.
+            specialist vehicle support  -  all from one authorised Isuzu dealership.
           </p>
 
           <ul className="grid sm:grid-cols-2 gap-x-10 gap-y-0">
@@ -160,14 +160,14 @@ export default async function ServiceIndexPage() {
           <div>
             <h3 className="font-headline font-bold text-lg mb-2">Any make welcome</h3>
             <p className="text-sm text-secondary leading-relaxed">
-              We specialise in Isuzu but service and repair commercial vehicles of any make —
+              We specialise in Isuzu but service and repair commercial vehicles of any make  - 
               from car-derived vans to 18m 44-tonne.
             </p>
           </div>
           <div>
             <h3 className="font-headline font-bold text-lg mb-2">Fleet packages</h3>
             <p className="text-sm text-secondary leading-relaxed">
-              Tailor-made support whether you run one van or hundreds of LGVs — inspections,
+              Tailor-made support whether you run one van or hundreds of LGVs  -  inspections,
               servicing, calibrations and breakdown cover.
             </p>
           </div>
@@ -196,7 +196,7 @@ export default async function ServiceIndexPage() {
                 >
                   {phone}
                 </a>{" "}
-                or send an enquiry — we respond on business days.
+                or send an enquiry  -  we respond on business days.
               </p>
               <ul className="space-y-2 text-sm text-secondary">
                 <li>Mon–Fri 07:00–17:00 · Sat 07:00–12:00</li>

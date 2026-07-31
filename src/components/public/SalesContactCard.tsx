@@ -27,7 +27,7 @@ export function SalesContactCard({
       </div>
       <div className="flex-1">
         <p className="font-headline text-xl font-bold">{name ?? "Sales team"}</p>
-        <p className="mt-1 text-sm text-secondary">Isuzu truck sales — new, used and driveaway</p>
+        <p className="mt-1 text-sm text-secondary">Isuzu truck sales  -  new, used and driveaway</p>
         <div className="mt-4 flex flex-wrap gap-3">
           {phone && <PhoneButton phone={phone} />}
           {email && (

@@ -42,7 +42,7 @@ export default async function JobApplicationsPage() {
                 Download
               </a>
             ) : (
-              "—"
+              "-"
             ),
             actions: (
               <form action={updateApplicationStatus.bind(null, app.id)} className="flex gap-2">

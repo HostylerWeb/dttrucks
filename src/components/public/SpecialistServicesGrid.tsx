@@ -17,7 +17,7 @@ export function SpecialistServicesGrid() {
               Specialist Vehicle & Workshop Services
             </h2>
             <p className="text-secondary max-w-xl leading-relaxed">
-              Compliance, emergency fleets, and advanced workshop capabilities — we help keep your
+              Compliance, emergency fleets, and advanced workshop capabilities  -  we help keep your
               fleet roadworthy and ready for service.
             </p>
           </div>

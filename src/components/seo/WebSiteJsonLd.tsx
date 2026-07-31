@@ -24,7 +24,9 @@ export function WebSiteJsonLd() {
         url: siteUrl,
         logo: {
           "@type": "ImageObject",
-          url: absoluteUrl("/opengraph-image"),
+          url: absoluteUrl("/media/branding/dt-icon.png"),
+          width: 118,
+          height: 51,
         },
       },
     ],

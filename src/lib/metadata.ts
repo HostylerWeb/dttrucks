@@ -76,7 +76,7 @@ export function buildStaticServiceMetadata(slug: string): Metadata {
 export async function buildTruckMetadata(slug: string): Promise<Metadata> {
   const model = await getModelBySlug(slug);
   if (!model) return {};
-  const title = `${model.name} — Isuzu Truck Sales`;
+  const title = `${model.name}  -  Isuzu Truck Sales`;
   const description = model.description.replace(/<[^>]+>/g, "").slice(0, 160);
   return buildMetadata(title, `/sales/${slug}`, description, model.image_url);
 }
@@ -98,7 +98,7 @@ export async function buildBlogMetadata(slug: string): Promise<Metadata> {
 export async function buildJobMetadata(slug: string): Promise<Metadata> {
   const job = await getJobBySlug(slug);
   if (!job) return {};
-  const title = `${job.title} — Careers`;
+  const title = `${job.title}  -  Careers`;
   const description = job.description.replace(/<[^>]+>/g, "").slice(0, 160);
   return buildMetadata(title, `/careers/${slug}`, description);
 }

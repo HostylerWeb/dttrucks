@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FooterYear } from "@/components/layout/FooterYear";
+import { FooterLogo } from "@/components/layout/SiteLogo";
 import {
   footerLegalLinks,
   footerQuickLinks,
@@ -37,15 +38,12 @@ export function Footer({ settings }: { settings: Settings }) {
   const linkedin = settings.social_linkedin || socialLinks.linkedin;
   const instagram = settings.social_instagram || socialLinks.instagram;
   const openingHours = formatOpeningHoursList(settings.opening_hours);
-  const portalUrl = settings.internal_portal_url;
 
   return (
     <footer className="bg-inverse-surface text-white border-t border-white/10">
       <div className="page-container py-10 sm:py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10">
         <div className="lg:col-span-1">
-          <p className="font-headline text-lg font-bold mb-4">
-            {settings.company_name ?? "DT Trucks"}
-          </p>
+          <FooterLogo />
           <p className="text-surface-variant text-sm leading-relaxed mb-4">
             Authorised Isuzu Dealer for London & Essex. Sales, parts and service since 1995.
           </p>
@@ -143,16 +141,6 @@ export function Footer({ settings }: { settings: Settings }) {
             {settings.company_registration ?? "9501804"}
           </p>
           <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-4 gap-y-2">
-            {portalUrl && (
-              <Link
-                href={portalUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white font-semibold"
-              >
-                Internal Portal
-              </Link>
-            )}
             <a href={facebook} target="_blank" rel="noopener noreferrer" className="hover:text-white">
               Facebook
             </a>

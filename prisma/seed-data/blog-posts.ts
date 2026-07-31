@@ -18,7 +18,7 @@ export const BLOG_POSTS = [
     published_at: "2025-09-17T19:48:31.000Z",
     meta_title: "Exclusive Discount on AC Regassing! - DT Trucks",
     meta_description:
-      "End-of-season discount on AC regassing for fleet customers. Mobile service for large fleets — contact DT Trucks in Barking, Essex.",
+      "End-of-season discount on AC regassing for fleet customers. Mobile service for large fleets  -  contact DT Trucks in Barking, Essex.",
   },
   {
     slug: "isuzu-for-small-business",
@@ -54,6 +54,6 @@ export const BLOG_POSTS = [
     published_at: "2021-01-22T16:21:17.000Z",
     meta_title: "Why Isuzu Trucks are Great for Small Businesses - DT Trucks",
     meta_description:
-      "Reliability, affordability, payload capacity and a compact footprint — why Isuzu trucks are a smart choice for small business logistics.",
+      "Reliability, affordability, payload capacity and a compact footprint  -  why Isuzu trucks are a smart choice for small business logistics.",
   },
 ];

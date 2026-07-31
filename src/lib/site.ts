@@ -10,7 +10,7 @@ export function absoluteUrl(path: string) {
 
 export const SEO = {
   locale: "en_GB",
-  defaultOgPath: "/opengraph-image",
+  defaultOgPath: "/og.png",
 } as const;
 
 /** Castle Works, 721 Ripple Road, Barking IG11 0SN */

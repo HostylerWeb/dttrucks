@@ -101,9 +101,6 @@ export default async function SettingsAdminPage() {
               placeholder="https://www.ebay.co.uk/usr/dt-trucks-isuzu"
             />
           </FormField>
-          <FormField label="Internal portal URL" name="internal_portal_url">
-            <input name="internal_portal_url" defaultValue={map.internal_portal_url ?? ""} className={inputClassName} />
-          </FormField>
           <FormField label="Live chat enabled" name="live_chat_enabled">
             <select name="live_chat_enabled" defaultValue={map.live_chat_enabled ?? "false"} className={inputClassName}>
               <option value="false">Disabled</option>

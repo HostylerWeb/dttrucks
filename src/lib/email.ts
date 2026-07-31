@@ -80,7 +80,7 @@ export async function sendEnquiryEmails(data: EnquiryEmailPayload) {
   await sendEmail({
     to: routing.to,
     cc: routing.cc,
-    subject: `New enquiry: ${typeLabel} — ${data.name}`,
+    subject: `New enquiry: ${typeLabel}  -  ${data.name}`,
     html: notificationHtml,
     text: notificationText,
   });
@@ -92,7 +92,7 @@ export async function sendEnquiryEmails(data: EnquiryEmailPayload) {
 
   await sendEmail({
     to: [data.email],
-    subject: `We received your enquiry — ${process.env.NEXT_PUBLIC_SITE_NAME ?? "DT Trucks"}`,
+    subject: `We received your enquiry  -  ${process.env.NEXT_PUBLIC_SITE_NAME ?? "DT Trucks"}`,
     html: confirmationHtml,
     text: confirmationText,
   });
@@ -124,7 +124,7 @@ export async function sendJobApplicationEmails(data: JobApplicationEmailPayload)
 
   await sendEmail({
     to: [adminEmail],
-    subject: `Job application: ${data.jobTitle} — ${data.name}`,
+    subject: `Job application: ${data.jobTitle}  -  ${data.name}`,
     html: notificationHtml,
     text: notificationText,
   });
@@ -136,7 +136,7 @@ export async function sendJobApplicationEmails(data: JobApplicationEmailPayload)
 
   await sendEmail({
     to: [data.email],
-    subject: `Application received — ${data.jobTitle}`,
+    subject: `Application received  -  ${data.jobTitle}`,
     html: confirmationHtml,
     text: confirmationText,
   });

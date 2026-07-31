@@ -32,11 +32,11 @@ export const legalPages = [
 <ol>
 <li><strong>Additional benefits:</strong> Manufacturer warranty is passed to the purchaser (new and used vehicles).</li>
 <li>The seller contracts as principal, not as agent.</li>
-<li>Specification changes or discontinuance — the seller may deliver updated specification or cancel.</li>
+<li>Specification changes or discontinuance  -  the seller may deliver updated specification or cancel.</li>
 <li><strong>Payment:</strong> Ruling price at order; full payment before delivery; price increase cancellation rights apply.</li>
 <li><strong>Delivery:</strong> Seller premises unless agreed; risk passes on delivery; property passes on payment.</li>
 <li>Deposit is forfeited on cancellation except in specified cases.</li>
-<li>Negligence and consequential loss — limited liability; consumer rights preserved.</li>
+<li>Negligence and consequential loss  -  limited liability; consumer rights preserved.</li>
 <li>Variation only in writing.</li>
 <li>Notice requirements as specified in the contract.</li>
 <li>Finance agreement provisions (Consumer Credit Act 1974).</li>

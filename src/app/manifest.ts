@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "DT Trucks — Authorised Isuzu Dealer",
+    name: "DT Trucks  -  Authorised Isuzu Dealer",
     short_name: "DT Trucks",
     description:
       "Authorised Isuzu dealer in Barking, Essex. Truck sales, service, parts and fleet support across London and the South East.",
@@ -13,12 +13,12 @@ export default function manifest(): MetadataRoute.Manifest {
     lang: "en-GB",
     icons: [
       {
-        src: "/icon",
+        src: "/favicon-32x32.png",
         sizes: "32x32",
         type: "image/png",
       },
       {
-        src: "/apple-icon",
+        src: "/apple-icon.png",
         sizes: "180x180",
         type: "image/png",
       },

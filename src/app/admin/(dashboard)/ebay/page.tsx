@@ -93,7 +93,7 @@ export default async function EbayAdminPage() {
                 className="h-12 w-12 rounded object-cover border border-outline-variant"
               />
             ) : (
-              "—"
+              "-"
             ),
             title: (
               <a
@@ -105,11 +105,11 @@ export default async function EbayAdminPage() {
                 {listing.title}
               </a>
             ),
-            price: listing.price_display ?? "—",
+            price: listing.price_display ?? "-",
             ebay: listing.ebay_item_id,
             synced: listing.last_synced_at
               ? format(listing.last_synced_at, "dd MMM yyyy HH:mm")
-              : "—",
+              : "-",
           },
         }))}
       />
