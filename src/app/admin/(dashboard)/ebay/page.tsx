@@ -5,34 +5,18 @@ import {
   getEbayListingsForAdmin,
 } from "@/lib/db/ebay";
 import { defaultEbayStoreUrl } from "@/lib/ebay/scrape";
-import { syncEbayListingsFromProfile } from "@/lib/ebay/sync";
 import { requireRead } from "@/lib/admin/session";
 import { hasPermission } from "@/lib/permissions";
-import { cacheTags } from "@/lib/admin/revalidate";
 import { PageHeader } from "@/components/admin/page-header";
 import { DataTable } from "@/components/admin/data-table";
+import { EbayInitialSync } from "@/components/admin/ebay-initial-sync";
 import { EbaySyncButton } from "@/components/admin/ebay-sync-button";
 
 export default async function EbayAdminPage() {
   const session = await requireRead();
   const canWrite = hasPermission(session.user.role, "write");
 
-  let count = await getEbayListingCount();
-  let autoSynced = false;
-  let autoSyncError: string | null = null;
-
-  if (count === 0 && canWrite) {
-    try {
-      await syncEbayListingsFromProfile();
-      cacheTags.ebayListings();
-      autoSynced = true;
-      count = await getEbayListingCount();
-    } catch (error) {
-      autoSyncError =
-        error instanceof Error ? error.message : "Initial eBay sync failed.";
-    }
-  }
-
+  const count = await getEbayListingCount();
   const listings = await getEbayListingsForAdmin();
   const settings = await getAllSettings();
   const sellerId = settings.ebay_seller_username ?? "dt-trucks-isuzu";
@@ -81,16 +65,7 @@ export default async function EbayAdminPage() {
         </div>
       </div>
 
-      {autoSynced && (
-        <p className="mb-4 text-sm text-green-700">
-          Initial sync completed — {count} listings imported from eBay.
-        </p>
-      )}
-      {autoSyncError && (
-        <p className="mb-4 text-sm text-primary">
-          {autoSyncError} Use the update button to retry, or set the seller username in Settings.
-        </p>
-      )}
+      {count === 0 && canWrite && <EbayInitialSync />}
 
       <p className="mb-6 text-sm text-secondary max-w-3xl">
         The live website uses Auction Nudge with seller{" "}

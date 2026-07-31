@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { AdminButton } from "@/components/admin/page-header";
 import { syncEbayListingsAction } from "@/app/admin/(dashboard)/ebay/actions";
 
 export function EbaySyncButton() {
+  const router = useRouter();
   const [pending, setPending] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -19,6 +21,7 @@ export function EbaySyncButton() {
       setMessage(
         `Synced ${result.total} listings (${result.added} new, ${result.updated} updated, ${result.removed} removed).`
       );
+      router.refresh();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to sync eBay listings.");
     } finally {
