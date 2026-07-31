@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="DT Trucks — Authorised Isuzu dealer in Barking, Essex. Truck sales, genuine parts, servicing and fleet support across London and the South East."
+    />
+    <title>DT Trucks | Authorised Isuzu Dealer — London & Essex</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#9e001f",
+              "primary-container": "#c8102e",
+              "primary-fixed-dim": "#ffb3b1",
+              secondary: "#575e70",
+              tertiary: "#00583c",
+              "tertiary-container": "#00734f",
+              "inverse-surface": "#2e3132",
+              "inverse-on-surface": "#f0f1f2",
+              surface: "#f8f9fa",
+              "surface-container-low": "#f3f4f5",
+              "surface-container": "#edeeef",
+              "surface-container-highest": "#e1e3e4",
+              "surface-variant": "#e1e3e4",
+              "on-background": "#191c1d",
+              "on-surface": "#191c1d",
+              outline: "#906f6e",
+              "outline-variant": "#e5bdbb",
+              background: "#f8f9fa",
+            },
+            maxWidth: {
+              "container-max": "1440px",
+            },
+            spacing: {
+              "margin-desktop": "48px",
+              "margin-tablet": "24px",
+              "margin-mobile": "16px",
+              gutter: "24px",
+            },
+            fontFamily: {
+              headline: ["Plus Jakarta Sans", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+            },
+            boxShadow: {
+              industrial: "0px 4px 12px rgba(17, 24, 39, 0.08)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      .material-symbols-filled {
+        font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      .bg-grid-pattern {
+        background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
+        background-size: 24px 24px;
+      }
+      .hero-gradient {
+        background: linear-gradient(to right, rgba(25, 28, 29, 0.92) 0%, rgba(25, 28, 29, 0.45) 55%, rgba(25, 28, 29, 0.2) 100%);
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(229, 231, 235, 0.6);
+      }
+      .skip-link {
+        position: absolute;
+        top: -100px;
+        left: 16px;
+        z-index: 9999;
+        padding: 10px 16px;
+        background: #c8102e;
+        color: white;
+        font-weight: 600;
+        border-radius: 8px;
+      }
+      .skip-link:focus {
+        top: 16px;
+      }
+    </style>
+  </head>
+  <body class="bg-background text-on-background font-body text-body-md antialiased">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Utility bar -->
+    <div class="bg-inverse-surface text-white py-2 text-sm">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop flex flex-wrap justify-between items-center gap-2">
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-1">
+          <span class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[17px]">schedule</span>
+            Mon–Fri 07:00–17:00 · Sat 07:00–12:00 · Sunday Closed
+          </span>
+          <span class="hidden sm:flex items-center gap-1.5 text-white/80">
+            <span class="material-symbols-outlined text-[17px]">location_on</span>
+            Barking, Essex — London & Essex Dealer
+          </span>
+        </div>
+        <a href="#" class="text-white/70 hover:text-white text-xs font-semibold">Internal Portal</a>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-surface border-b border-outline-variant transition-shadow">
+      <nav class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-6 xl:px-margin-desktop h-[72px] xl:h-20 flex items-center gap-3 lg:gap-4">
+        <a href="#" class="flex items-center gap-2 shrink-0 min-w-0">
+          <div class="w-9 h-9 xl:w-10 xl:h-10 bg-primary-container rounded-lg flex items-center justify-center text-white font-headline font-extrabold text-sm">DT</div>
+          <div class="leading-tight hidden sm:block">
+            <span class="font-headline font-extrabold text-base xl:text-lg text-primary-container block">DT Trucks</span>
+            <span class="text-[9px] xl:text-[10px] uppercase tracking-widest text-secondary font-semibold">Isuzu Dealer</span>
+          </div>
+        </a>
+
+        <div class="hidden lg:flex flex-1 items-center justify-center gap-0.5 xl:gap-1 min-w-0 px-2">
+          <a href="#" class="text-primary-container font-bold px-2 xl:px-2.5 py-2 text-[13px] xl:text-sm border-b-2 border-primary-container whitespace-nowrap">Home</a>
+          <a href="#" class="text-secondary font-semibold px-2 xl:px-2.5 py-2 text-[13px] xl:text-sm hover:text-primary-container transition-colors whitespace-nowrap">About</a>
+          <a href="#" class="text-secondary font-semibold px-2 xl:px-2.5 py-2 text-[13px] xl:text-sm hover:text-primary-container transition-colors whitespace-nowrap">Truck Sales</a>
+          <a href="#" class="text-secondary font-semibold px-2 xl:px-2.5 py-2 text-[13px] xl:text-sm hover:text-primary-container transition-colors whitespace-nowrap">Service</a>
+          <a href="#" class="text-secondary font-semibold px-2 xl:px-2.5 py-2 text-[13px] xl:text-sm hover:text-primary-container transition-colors whitespace-nowrap">Specialist</a>
+          <a href="#" class="text-secondary font-semibold px-2 xl:px-2.5 py-2 text-[13px] xl:text-sm hover:text-primary-container transition-colors whitespace-nowrap">eBay</a>
+          <a href="#" class="text-secondary font-semibold px-2 xl:px-2.5 py-2 text-[13px] xl:text-sm hover:text-primary-container transition-colors whitespace-nowrap">Blog</a>
+          <a href="#contact" class="text-secondary font-semibold px-2 xl:px-2.5 py-2 text-[13px] xl:text-sm hover:text-primary-container transition-colors whitespace-nowrap">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-2 xl:gap-3 shrink-0">
+          <div class="hidden xl:flex items-center gap-0.5">
+            <a href="https://www.facebook.com/dttrucksuk" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg flex items-center justify-center text-secondary hover:bg-surface-container hover:text-primary-container" aria-label="Facebook">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/dt-trucks-ltd/" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg flex items-center justify-center text-secondary hover:bg-surface-container hover:text-primary-container" aria-label="LinkedIn">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.567H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.484v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/dttrucksltd/" target="_blank" rel="noopener" class="w-9 h-9 rounded-lg flex items-center justify-center text-secondary hover:bg-surface-container hover:text-primary-container" aria-label="Instagram">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272 1.273 1.69 1.073 6.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 1.618 5.78 5.98 5.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+          <a href="tel:02085954400" class="hidden sm:flex xl:hidden items-center justify-center w-10 h-10 bg-primary-container text-white rounded-lg shadow-industrial hover:bg-primary transition-all shrink-0" aria-label="Call 020 8595 4400">
+            <span class="material-symbols-outlined text-[22px]">call</span>
+          </a>
+          <a href="tel:02085954400" class="hidden xl:flex items-center gap-2 bg-primary-container text-white px-4 py-2.5 rounded-lg font-semibold text-sm shadow-industrial hover:bg-primary transition-all active:scale-[0.98] whitespace-nowrap shrink-0">
+            <span class="material-symbols-outlined text-[20px]">call</span>
+            020 8595 4400
+          </a>
+          <a href="tel:02085954400" class="flex sm:hidden items-center justify-center w-10 h-10 bg-primary-container text-white rounded-lg shrink-0" aria-label="Call 020 8595 4400">
+            <span class="material-symbols-outlined text-[22px]">call</span>
+          </a>
+          <button id="menu-open" type="button" class="lg:hidden p-2.5 rounded-lg border border-outline-variant text-primary-container" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Mobile nav -->
+    <div id="mobile-nav" class="hidden fixed inset-0 z-[60] bg-black/50" aria-hidden="true">
+      <div class="absolute right-0 top-0 h-full w-full max-w-sm bg-surface shadow-2xl flex flex-col p-6">
+        <div class="flex justify-between items-center mb-6">
+          <span class="font-headline font-bold text-primary-container">Menu</span>
+          <button id="menu-close" type="button" class="p-2 rounded-lg bg-surface-container" aria-label="Close menu">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-1 text-base font-semibold">
+          <a href="#" class="py-3 px-2 text-primary-container border-b border-outline-variant">Home</a>
+          <a href="#" class="py-3 px-2 text-on-background hover:text-primary-container">About</a>
+          <a href="#" class="py-3 px-2 text-on-background hover:text-primary-container">Truck Sales</a>
+          <a href="#" class="py-3 px-2 text-on-background hover:text-primary-container">Service & Parts</a>
+          <a href="#" class="py-3 px-2 text-on-background hover:text-primary-container">Specialist Applications</a>
+          <a href="#" class="py-3 px-2 text-on-background hover:text-primary-container">eBay</a>
+          <a href="#" class="py-3 px-2 text-on-background hover:text-primary-container">Blog</a>
+          <a href="#contact" class="py-3 px-2 text-on-background hover:text-primary-container">Contact</a>
+        </nav>
+        <a href="tel:02085954400" class="mt-8 flex items-center justify-center gap-2 bg-primary-container text-white py-3 rounded-lg font-semibold">
+          <span class="material-symbols-outlined">call</span> 020 8595 4400
+        </a>
+      </div>
+    </div>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="relative min-h-[560px] lg:h-[650px] flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <div
+            class="w-full h-full bg-cover bg-center"
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDc97p8Hjq4UR6arLaQAiIefwU1ms86qwsDc8Zggjqz4nkozaQkmtzs3OiMnizojD6bf7b6FRiVS812zNKq4-4cajDcKpl6Z2UU2UYDROCR7d0FGsiXAcHywjzvIqhBzcS8owvSprYDYTpHNw0jjL2ZVdYvmiAI174m4ilaIs6spfGXnqy8zg71TIElvlSgfrWZD2VA5ltWmy4toN6rM4TRlt4xidPy26h9573w4mn6tBboN-CTQ09tUQ')"
+            role="img"
+            aria-label="Isuzu commercial truck"
+          ></div>
+          <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        <div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop text-white py-16">
+          <div class="max-w-2xl">
+            <span class="bg-primary-container text-white px-4 py-1 text-xs font-bold uppercase tracking-widest rounded mb-5 inline-block">Authorised Isuzu Dealer</span>
+            <p class="text-primary-fixed-dim text-sm font-semibold uppercase tracking-wide mb-2">The Next Generation Of Trucks!</p>
+            <h1 class="font-headline text-4xl md:text-5xl lg:text-[48px] font-extrabold leading-tight mb-4 tracking-tight">Welcome to DT Trucks</h1>
+            <p class="text-lg md:text-xl text-white/90 mb-2">Van and Truck Services – Your Trusted Commercial Vehicle Partner</p>
+            <p class="text-primary-fixed-dim font-headline text-xl md:text-2xl font-bold mb-8">ISUZU SALES, PARTS & SERVICE DEALER</p>
+            <div class="flex flex-wrap gap-3">
+              <a href="#" class="bg-primary-container hover:bg-primary text-white px-8 py-3.5 rounded-lg font-bold shadow-industrial transition-all active:scale-[0.98]">Truck Sales</a>
+              <a href="#" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/40 text-white px-8 py-3.5 rounded-lg font-bold transition-all active:scale-[0.98]">Service & Parts</a>
+              <a href="#contact" class="text-white/90 hover:text-white px-4 py-3.5 font-semibold text-sm underline-offset-4 hover:underline">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Intro -->
+      <section class="py-16 lg:py-20 bg-surface">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div>
+            <h2 class="font-headline text-3xl lg:text-4xl font-bold text-on-background mb-5 tracking-tight">Your Trusted Commercial Vehicle Partner</h2>
+            <p class="text-secondary leading-relaxed mb-8">
+              At DT Trucks, we specialise in van and truck servicing, repairs, and replacements for businesses across the UK. Whether you're managing a single vehicle or an entire fleet, our expert team provides tailored advice and reliable solutions to keep your operations running smoothly.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="mt-0.5 bg-primary-container/10 p-1.5 rounded-full">
+                  <span class="material-symbols-outlined text-primary-container text-xl">verified</span>
+                </div>
+                <div>
+                  <p class="font-semibold text-on-background">Authorised Isuzu Main Dealer</p>
+                  <p class="text-sm text-secondary">Genuine parts, expert engineering, Barking Essex.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="mt-0.5 bg-primary-container/10 p-1.5 rounded-full">
+                  <span class="material-symbols-outlined text-primary-container text-xl">inventory_2</span>
+                </div>
+                <div>
+                  <p class="font-semibold text-on-background">96% parts first-time pick rate</p>
+                  <p class="text-sm text-secondary">Fast turnaround to minimise vehicle downtime.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative group">
+            <div class="absolute -inset-3 bg-primary-container/5 rounded-xl -rotate-1"></div>
+            <div class="relative h-[380px] lg:h-[450px] rounded-xl overflow-hidden shadow-industrial border border-outline-variant">
+              <div
+                class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDpl6crF0ocVprgwfuabQSZ8X3U5VuG7q030X15apdJ6ZvgEeIP78AmxZlO8_DTegzX0P9UO8uLzjOH5AQrCY-641lMps6dtExmChv0BxiIzR08TPEUtC73xVC0LmMHKhAvZ4XEYpBX2yFvWDZX-jH7MrMcCDJuTKgBNw7znVl0bHJiuhVxewHEGVpJUYynunJb0cZ2jIBno7T7Z5jaw0NBuTq3fOIVnd_PIAAdfGcWKwBrCAiCwqRvnw')"
+                role="img"
+                aria-label="DT Trucks workshop"
+              ></div>
+            </div>
+            <div class="absolute -bottom-5 -left-4 md:-bottom-6 md:-left-6 bg-white p-5 rounded-lg shadow-industrial border border-outline-variant">
+              <p class="text-primary-container font-headline text-3xl font-extrabold leading-none">131+</p>
+              <p class="text-secondary text-xs font-semibold uppercase tracking-wide mt-1">Years Combined Experience</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fleet efficiency -->
+      <section class="py-14 lg:py-16 bg-white bg-grid-pattern">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            <article class="glass-card p-7 lg:p-8 rounded-xl border border-outline-variant hover:border-primary-container transition-all group">
+              <div class="w-14 h-14 bg-primary-container text-white rounded-lg flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                <span class="material-symbols-outlined material-symbols-filled text-3xl">speed</span>
+              </div>
+              <h3 class="font-headline text-xl font-bold mb-3">Boost Fleet Efficiency & Uptime</h3>
+              <p class="text-secondary text-sm leading-relaxed mb-5">Fast, cost-effective servicing to minimise downtime. From routine maintenance to urgent repairs — we get you back on the road.</p>
+              <a href="#" class="text-primary-container font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">Learn more <span class="material-symbols-outlined text-base">arrow_forward</span></a>
+            </article>
+            <article class="glass-card p-7 lg:p-8 rounded-xl border border-outline-variant hover:border-primary-container transition-all group">
+              <div class="w-14 h-14 bg-primary-container text-white rounded-lg flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                <span class="material-symbols-outlined material-symbols-filled text-3xl">engineering</span>
+              </div>
+              <h3 class="font-headline text-xl font-bold mb-3">Expert Transport Support</h3>
+              <p class="text-secondary text-sm leading-relaxed mb-5">Most queries resolved on the spot. If we don't have the answer immediately, we'll find it for you.</p>
+              <a href="#" class="text-primary-container font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">Meet the team <span class="material-symbols-outlined text-base">arrow_forward</span></a>
+            </article>
+            <article class="glass-card p-7 lg:p-8 rounded-xl border border-outline-variant hover:border-primary-container transition-all group">
+              <div class="w-14 h-14 bg-primary-container text-white rounded-lg flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                <span class="material-symbols-outlined material-symbols-filled text-3xl">contact_support</span>
+              </div>
+              <h3 class="font-headline text-xl font-bold mb-3">Get in Touch Today</h3>
+              <p class="text-secondary text-sm leading-relaxed mb-5">Use live chat or call our team directly. We respond within 24 hours on business days.</p>
+              <a href="#contact" class="text-primary-container font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">Contact us <span class="material-symbols-outlined text-base">arrow_forward</span></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dealer spotlight -->
+      <section class="bg-inverse-surface py-16 lg:py-20 overflow-hidden relative">
+        <div class="absolute top-0 right-0 opacity-[0.06] pointer-events-none translate-x-1/4">
+          <span class="material-symbols-outlined text-[280px] lg:text-[400px] text-white">local_shipping</span>
+        </div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop relative z-10">
+          <div class="text-center mb-12 lg:mb-16">
+            <h2 class="font-headline text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 max-w-3xl mx-auto">DT Trucks – Your Number One Isuzu Dealer in London & Essex</h2>
+            <div class="h-1 w-20 bg-primary-container mx-auto"></div>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+            <div class="text-center p-4">
+              <p class="text-primary-fixed-dim font-headline text-4xl lg:text-5xl font-extrabold mb-1">96%</p>
+              <p class="text-surface-variant text-xs font-bold uppercase tracking-wide">Parts first-time pick</p>
+            </div>
+            <div class="text-center p-4">
+              <p class="text-primary-fixed-dim font-headline text-4xl lg:text-5xl font-extrabold mb-1">131</p>
+              <p class="text-surface-variant text-xs font-bold uppercase tracking-wide">Years experience</p>
+            </div>
+            <div class="text-center p-4">
+              <p class="text-primary-fixed-dim font-headline text-4xl lg:text-5xl font-extrabold mb-1">150+</p>
+              <p class="text-surface-variant text-xs font-bold uppercase tracking-wide">Fleet vehicles maintained</p>
+            </div>
+            <div class="text-center p-4">
+              <p class="text-primary-fixed-dim font-headline text-4xl lg:text-5xl font-extrabold mb-1">2 Year</p>
+              <p class="text-surface-variant text-xs font-bold uppercase tracking-wide">Parts warranty</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Three pillars -->
+      <section class="py-16 lg:py-24 bg-surface-container-low">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+          <div class="text-center mb-10">
+            <h2 class="font-headline text-3xl font-bold mb-3">Parts, Sales & Workshop</h2>
+            <p class="text-secondary max-w-xl mx-auto">Your complete commercial vehicle partner at one authorised Isuzu dealership.</p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-0 rounded-2xl overflow-hidden shadow-industrial border border-outline-variant">
+            <!-- Parts -->
+            <div class="bg-white p-8 lg:p-10 flex flex-col items-center text-center border-b lg:border-b-0 lg:border-r border-outline-variant">
+              <span class="material-symbols-outlined text-5xl text-primary-container mb-5">inventory_2</span>
+              <span class="text-xs font-bold uppercase tracking-wide text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full mb-4">2 Year Warranty</span>
+              <h3 class="font-headline text-xl font-bold mb-3">Genuine Isuzu Parts</h3>
+              <p class="text-secondary text-sm mb-6">95%+ first-time pick. Order before 6pm for next-day delivery across London & Essex.</p>
+              <ul class="text-left w-full space-y-2.5 mb-8 text-sm text-secondary">
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-container text-sm">done</span> NKR, NPR, NQR & Grafter range</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-container text-sm">done</span> Isuzu Care programme</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-container text-sm">done</span> Trade counter open</li>
+              </ul>
+              <a href="#" class="w-full bg-primary-container text-white py-3 rounded-lg font-semibold hover:bg-primary transition-colors text-center">Enquire about Parts</a>
+            </div>
+            <!-- Sales -->
+            <div class="bg-surface-container-highest p-8 lg:p-10 flex flex-col items-center text-center border-b lg:border-b-0 lg:border-r border-outline-variant">
+              <span class="material-symbols-outlined text-5xl text-primary-container mb-5">storefront</span>
+              <h3 class="font-headline text-xl font-bold mb-3">Isuzu Truck Sales</h3>
+              <p class="text-secondary text-sm mb-6">3.5t to 13.5t GVW. Driveaway tippers, dropsides, box vans and curtainsiders.</p>
+              <ul class="text-left w-full space-y-2.5 mb-8 text-sm text-secondary">
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-container text-sm">done</span> 3-year unlimited mileage warranty</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-container text-sm">done</span> O-Licence assistance</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-container text-sm">done</span> Flexible finance options</li>
+              </ul>
+              <a href="#" class="w-full bg-primary-container text-white py-3 rounded-lg font-semibold hover:bg-primary transition-colors text-center">View Truck Range</a>
+            </div>
+            <!-- Workshop -->
+            <div class="bg-white p-8 lg:p-10 flex flex-col items-center text-center">
+              <span class="material-symbols-outlined text-5xl text-primary-container mb-5">build_circle</span>
+              <h3 class="font-headline text-xl font-bold mb-3">Fully Equipped Workshop</h3>
+              <p class="text-secondary text-sm mb-6">6 service bays, Master techs, IRTEC accredited. Any make from vans to 44-tonne.</p>
+              <ul class="text-left w-full space-y-2.5 mb-8 text-sm text-secondary">
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-container text-sm">done</span> 4 Master technicians</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-container text-sm">done</span> 24/7 roadside breakdown</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-container text-sm">done</span> On-site fleet maintenance</li>
+              </ul>
+              <a href="#" class="w-full bg-inverse-surface text-white py-3 rounded-lg font-semibold hover:bg-black transition-colors text-center">Book Service</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Specialist services -->
+      <section class="py-16 lg:py-20 bg-white">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-end gap-4 mb-10">
+            <div>
+              <h2 class="font-headline text-3xl font-bold text-on-background mb-3">Specialist Vehicle & Workshop Services</h2>
+              <p class="text-secondary max-w-xl">Compliance, emergency fleets, and advanced workshop capabilities.</p>
+            </div>
+            <a href="#" class="inline-flex border-2 border-outline text-on-background px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-surface-container transition-all self-start">All Services</a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="p-5 border border-outline-variant rounded-xl flex gap-4 hover:shadow-industrial transition-all group">
+              <span class="material-symbols-outlined text-4xl text-primary-container group-hover:scale-110 transition-transform shrink-0">emergency</span>
+              <div>
+                <h4 class="font-semibold mb-1">A&E, PTS & Blue Light</h4>
+                <p class="text-sm text-secondary">Specialist vehicle support for emergency and patient transport fleets.</p>
+              </div>
+            </div>
+            <div class="p-5 border border-outline-variant rounded-xl flex gap-4 hover:shadow-industrial transition-all group">
+              <span class="material-symbols-outlined text-4xl text-primary-container group-hover:scale-110 transition-transform shrink-0">ac_unit</span>
+              <div>
+                <h4 class="font-semibold mb-1">Air Conditioning Recharge</h4>
+                <p class="text-sm text-secondary">All vehicle types including refrigerated and 44-tonne units.</p>
+              </div>
+            </div>
+            <div class="p-5 border border-outline-variant rounded-xl flex gap-4 hover:shadow-industrial transition-all group">
+              <span class="material-symbols-outlined text-4xl text-primary-container group-hover:scale-110 transition-transform shrink-0">assignment_turned_in</span>
+              <div>
+                <h4 class="font-semibold mb-1">O-Licence Inspections</h4>
+                <p class="text-sm text-secondary">IRTEC-approved examiners, brake tester, emissions & headlight calibration.</p>
+              </div>
+            </div>
+            <div class="p-5 border border-outline-variant rounded-xl flex gap-4 hover:shadow-industrial transition-all group">
+              <span class="material-symbols-outlined text-4xl text-primary-container group-hover:scale-110 transition-transform shrink-0">support_agent</span>
+              <div>
+                <h4 class="font-semibold mb-1">24/7 Roadside Breakdown</h4>
+                <p class="text-sm text-secondary">Under 90 minutes response, 365 days a year.</p>
+              </div>
+            </div>
+            <div class="p-5 border border-outline-variant rounded-xl flex gap-4 hover:shadow-industrial transition-all group">
+              <span class="material-symbols-outlined text-4xl text-primary-container group-hover:scale-110 transition-transform shrink-0">shutter_speed</span>
+              <div>
+                <h4 class="font-semibold mb-1">Tachograph Calibration</h4>
+                <p class="text-sm text-secondary">DVSA-approved smart Gen1/Gen2, digital and analogue.</p>
+              </div>
+            </div>
+            <div class="p-5 border border-outline-variant rounded-xl flex gap-4 hover:shadow-industrial transition-all group">
+              <span class="material-symbols-outlined text-4xl text-primary-container group-hover:scale-110 transition-transform shrink-0">tire_repair</span>
+              <div>
+                <h4 class="font-semibold mb-1">Roller Brake Testing</h4>
+                <p class="text-sm text-secondary">HGV trucks and trailers — Operator Licensing compliance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="py-16 lg:py-24 bg-inverse-surface text-white">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          <div>
+            <h2 class="font-headline text-3xl lg:text-4xl font-bold mb-5">Contact Us Today</h2>
+            <p class="text-inverse-on-surface/80 text-lg mb-10">Service, parts, sales — speak directly with our experienced team in Barking.</p>
+            <div class="space-y-6">
+              <div class="flex items-center gap-5">
+                <div class="w-14 h-14 bg-primary-container rounded-full flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-2xl">phone_in_talk</span>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-wide opacity-70 font-semibold">Service & Parts</p>
+                  <a href="tel:02085954400" class="font-headline text-2xl font-bold hover:text-primary-fixed-dim transition-colors">020 8595 4400</a>
+                </div>
+              </div>
+              <div class="flex items-center gap-5">
+                <div class="w-14 h-14 bg-primary-container rounded-full flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-2xl">person</span>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-wide opacity-70 font-semibold">Sales — George Smith</p>
+                  <a href="tel:07450444888" class="font-headline text-2xl font-bold hover:text-primary-fixed-dim transition-colors">07450 444 888</a>
+                  <a href="mailto:George.Smith@dttrucks.com" class="text-sm text-primary-fixed-dim hover:underline block mt-1">George.Smith@dttrucks.com</a>
+                </div>
+              </div>
+              <div class="flex items-start gap-5">
+                <div class="w-14 h-14 bg-primary-container rounded-full flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined text-2xl">location_on</span>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-wide opacity-70 font-semibold">Address</p>
+                  <p class="text-sm leading-relaxed mt-1">Castle Works, 721 Ripple Road<br />Barking, Essex IG11 0SN</p>
+                  <p class="text-xs opacity-60 mt-2">What3Words: ///TONIC.SMALL.AGES</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-6 lg:p-8 rounded-xl text-on-background shadow-industrial">
+            <h3 class="font-headline text-xl font-bold mb-6">Send a message</h3>
+            <form id="contact-form" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="font-semibold text-sm block mb-1.5" for="name">Full name</label>
+                  <input id="name" name="name" type="text" required class="w-full rounded-lg border-outline-variant focus:ring-primary-container focus:border-primary-container" placeholder="Your name" />
+                </div>
+                <div>
+                  <label class="font-semibold text-sm block mb-1.5" for="phone">Phone</label>
+                  <input id="phone" name="phone" type="tel" class="w-full rounded-lg border-outline-variant focus:ring-primary-container focus:border-primary-container" placeholder="07123 456 789" />
+                </div>
+              </div>
+              <div>
+                <label class="font-semibold text-sm block mb-1.5" for="email">Email</label>
+                <input id="email" name="email" type="email" required class="w-full rounded-lg border-outline-variant focus:ring-primary-container focus:border-primary-container" placeholder="you@company.com" />
+              </div>
+              <div>
+                <label class="font-semibold text-sm block mb-1.5" for="type">Inquiry type</label>
+                <select id="type" name="type" class="w-full rounded-lg border-outline-variant focus:ring-primary-container focus:border-primary-container">
+                  <option>Isuzu Truck Sales</option>
+                  <option>Service & Parts</option>
+                  <option>Parts Inquiry</option>
+                  <option>Tachograph Calibration</option>
+                  <option>General Support</option>
+                </select>
+              </div>
+              <div>
+                <label class="font-semibold text-sm block mb-1.5" for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required class="w-full rounded-lg border-outline-variant focus:ring-primary-container focus:border-primary-container" placeholder="Tell us how we can help…"></textarea>
+              </div>
+              <button type="submit" class="w-full bg-primary-container text-white py-3.5 rounded-lg font-bold hover:bg-primary transition-all">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Videos -->
+      <section class="py-16 lg:py-20 bg-surface">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+          <h2 class="font-headline text-3xl font-bold text-center mb-10">Check out some of our Isuzu Videos</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="video-card relative group aspect-video rounded-lg overflow-hidden bg-black lg:col-span-2 lg:row-span-2 cursor-pointer" data-title="The Isuzu Production Facility" tabindex="0" role="button">
+              <div class="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqnGz4LgirWUdhicE_ZDoPwOzpAqBLH5z438GBw_7II8E9Tvr49bjoF3hKWMLeDSbuBlvrE6AIlaclDRjiKBGQrq8KRYVJcA2l4vHlnQGWMCIo-R9LONhT7JOz7QHoqHELxIiy6-yPgrtJxA1_l_Aq8hG0LOxS1vgoNgekOGc8l5tYBiB9xnXiuuwl36-Ld7vgsSnAolkGWoVXz5Gn3RL_AonaMNHDd1BmBmj7yb084EkgzPqIJ-zYVQ')"></div>
+              <div class="absolute inset-0 flex items-center justify-center"><span class="material-symbols-outlined text-white text-6xl lg:text-7xl opacity-90 group-hover:scale-110 transition-transform">play_circle</span></div>
+              <p class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white text-sm font-semibold">The Isuzu Production Facility</p>
+            </div>
+            <div class="video-card relative group aspect-video rounded-lg overflow-hidden bg-black cursor-pointer" data-title="Behind the Scenes at Isuzu Truck" tabindex="0" role="button">
+              <div class="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDSnkGfY2y-Bkk06rUnx5qkAFzCSACCXEUTvTw2EcneadkitpqWOQe2vEe6WZ5eJfazGxCu91lLsR7JMZN25cl9Wo_Tj6IOipC-81TZFAMhfmx6DBeRYNmJWqupOUgdUwsuZMIILuxy5aS4F5IMDF845eqrAq4uMHbLlJEQPhYYYudZa1NcLKcGFb6D5B1dOh2y7KWAjhU6Ay03PadL0rX1u07F2OV0OWl1NNmzI2pzD4WF0JyuNNu_wg')"></div>
+              <div class="absolute inset-0 flex items-center justify-center"><span class="material-symbols-outlined text-white text-5xl opacity-90 group-hover:scale-110 transition-transform">play_circle</span></div>
+              <p class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent text-white text-xs font-semibold">Behind the Scenes at Isuzu Truck</p>
+            </div>
+            <div class="video-card relative group aspect-video rounded-lg overflow-hidden bg-black cursor-pointer" data-title="Isuzu Grafter Green" tabindex="0" role="button">
+              <div class="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuByc-kkRbjrGZphXZ72rWlMerzabWCqM9o1NIMy9izeTqoZJgelCxVA-v3i0MmlHUoWjsP2IB56LAPMZMt5g0hmT8lu9IXIiF-N90-_ec1JkL84ZNh97ZnUyoBaMczrZJ1UgQ0LEF1L14DQxjxwNoz4eQW-f3Mvk_f3QNzVGd4U0BR_6FZGWve5PrJM8ulM2whuE2PLk0KRvyLhm8FA48EV7puwOwb4bZTsBYW-7JGmTv9ADKaKaKf77A')"></div>
+              <div class="absolute inset-0 flex items-center justify-center"><span class="material-symbols-outlined text-white text-5xl opacity-90 group-hover:scale-110 transition-transform">play_circle</span></div>
+              <p class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent text-white text-xs font-semibold">Isuzu Grafter Green</p>
+            </div>
+            <div class="video-card relative group aspect-video rounded-lg overflow-hidden bg-black cursor-pointer" data-title="7.5t Walk Around" tabindex="0" role="button">
+              <div class="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxvGrG9uLr-BDEtL21AsbeELNpW0W7A5IcYVu9LOqwJQzTvrlUvnGAYZHI1no8RZP5QyW4-PRluZc4_Sp9hgX5kFk0M9lnXdrIhL6MQYFrqZU6BuPPGwY6N5Zegvk9imv2WDvZbCG1eiQl0ztkXC4jP8HwRdpS2WamJC7xuNi4rKcevWDU1HBCzeSPnCYxZYIJgzKNGALfsxGs90ILyc99BgRaj7z6W2xXqAcLswW7QqVW9rDNJ0Y-2Q')"></div>
+              <div class="absolute inset-0 flex items-center justify-center"><span class="material-symbols-outlined text-white text-5xl opacity-90 group-hover:scale-110 transition-transform">play_circle</span></div>
+              <p class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent text-white text-xs font-semibold">Features Video — 7.5t Walk Around</p>
+            </div>
+            <div class="video-card relative group aspect-video rounded-lg overflow-hidden bg-black cursor-pointer" data-title="Isuzu Truck Features" tabindex="0" role="button">
+              <div class="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-NjKQpUJVyqbvszAcXGxtUR88sB8Uq-_XRSXjF85LNsODCpZYaVTXfixsNNBSM2hdrvxVubtjkAPspTja3_wvDiT0eNzoXiWw_xVCx66boKw25nkpz8Mov-nfuzL7yLuwdwwKlI1dEBWcXnwx_8b5RsKqOFth78FsMfIa9nTcGzBaOV1NFpTT1exbZfbe4LKV7GuvD_9VLivfMWwgsjh1JoE8L7KDdt9WvAoP2nYgxmvYrwUq3I7N-Q')"></div>
+              <div class="absolute inset-0 flex items-center justify-center"><span class="material-symbols-outlined text-white text-5xl opacity-90 group-hover:scale-110 transition-transform">play_circle</span></div>
+              <p class="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent text-white text-xs font-semibold">Isuzu Truck Features</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-inverse-surface text-white border-t border-white/10">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin-desktop py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div>
+          <h4 class="font-headline text-lg font-bold mb-4">DT Trucks</h4>
+          <p class="text-surface-variant text-sm leading-relaxed mb-4">Authorised Isuzu Dealer for London & Essex. Sales, parts and service since 1995.</p>
+          <p class="text-surface-variant text-sm">enquiries@dttrucks.com<br />020 8595 4400</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-surface-variant">
+            <li><a href="#" class="hover:text-primary-fixed-dim transition-colors">About Us</a></li>
+            <li><a href="#" class="hover:text-primary-fixed-dim transition-colors">Truck Sales</a></li>
+            <li><a href="#" class="hover:text-primary-fixed-dim transition-colors">Service & Parts</a></li>
+            <li><a href="#" class="hover:text-primary-fixed-dim transition-colors">Blog</a></li>
+            <li><a href="#contact" class="hover:text-primary-fixed-dim transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Services</h4>
+          <ul class="space-y-2 text-sm text-surface-variant">
+            <li><a href="#" class="hover:text-primary-fixed-dim transition-colors">Tachograph Calibrations</a></li>
+            <li><a href="#" class="hover:text-primary-fixed-dim transition-colors">Specialist Applications</a></li>
+            <li><a href="#" class="hover:text-primary-fixed-dim transition-colors">eBay Listings</a></li>
+            <li><a href="#" class="hover:text-primary-fixed-dim transition-colors">O-Licence Inspections</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Legal</h4>
+          <ul class="space-y-2 text-sm text-surface-variant">
+            <li><a href="#" class="hover:text-primary-fixed-dim transition-colors">Terms & Conditions</a></li>
+            <li><a href="#" class="hover:text-primary-fixed-dim transition-colors">Conditions of Sale</a></li>
+            <li><a href="#" class="hover:text-primary-fixed-dim transition-colors">Privacy / GDPR</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10 py-6 px-margin-mobile md:px-margin-tablet lg:px-margin-desktop">
+        <div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-surface-variant">
+          <p>© 2026 DT Trucks Limited. Registered in England No. 9501804</p>
+          <div class="flex gap-4">
+            <a href="https://www.facebook.com/dttrucksuk" target="_blank" rel="noopener" class="hover:text-white" aria-label="Facebook">Facebook</a>
+            <a href="https://www.linkedin.com/company/dt-trucks-ltd/" target="_blank" rel="noopener" class="hover:text-white" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://www.instagram.com/dttrucksltd/" target="_blank" rel="noopener" class="hover:text-white" aria-label="Instagram">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cookie banner -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 w-full z-[100] p-4 translate-y-full transition-transform duration-500" role="dialog" aria-label="Cookie consent">
+      <div class="max-w-container-max mx-auto bg-inverse-surface text-white p-5 md:p-6 rounded-xl shadow-2xl flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-primary-fixed-dim text-2xl shrink-0">cookie</span>
+          <p class="text-sm text-inverse-on-surface/90">We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you are happy with it.</p>
+        </div>
+        <div class="flex gap-3 shrink-0">
+          <button id="cookie-manage" type="button" class="px-5 py-2 border border-white/30 rounded-lg text-sm font-semibold hover:bg-white/10">Privacy</button>
+          <button id="cookie-accept" type="button" class="px-5 py-2 bg-primary-container rounded-lg text-sm font-semibold hover:bg-primary">Accept</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chat + scroll -->
+    <div id="chat-panel" class="hidden fixed bottom-24 right-6 z-40 w-80 bg-white rounded-xl shadow-2xl border border-outline-variant overflow-hidden" role="dialog" aria-label="Live chat">
+      <div class="bg-inverse-surface text-white px-5 py-4 font-semibold">DT Trucks Support</div>
+      <div class="p-5 text-sm text-secondary">Need help with parts, service or truck sales? Call <a href="tel:02085954400" class="text-primary-container font-semibold">020 8595 4400</a> or send a message via our contact form.</div>
+    </div>
+    <button id="scroll-top" type="button" class="fixed bottom-6 left-6 z-40 w-11 h-11 bg-white rounded-full shadow-industrial border border-outline-variant flex items-center justify-center text-primary-container hover:bg-surface-container transition-all opacity-0 pointer-events-none" aria-label="Go to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <span class="material-symbols-outlined">expand_less</span>
+    </button>
+    <button id="chat-btn" type="button" class="fixed bottom-6 right-6 z-40 w-14 h-14 bg-primary-container text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-105 active:scale-95 transition-all" aria-label="Open live chat" aria-expanded="false">
+      <span class="material-symbols-outlined material-symbols-filled text-3xl">chat_bubble</span>
+    </button>
+
+    <script src="main.js"></script>
+  </body>
+</html>

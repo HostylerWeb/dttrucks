@@ -1,0 +1,333 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model users {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  password_hash String
+  name          String
+  role          user_role @default(editor)
+  is_active     Boolean   @default(true)
+  created_at    DateTime  @default(now())
+  updated_at    DateTime  @updatedAt
+  last_login_at DateTime?
+
+  blog_posts blog_posts[]
+  enquiries  enquiries[]  @relation("assigned_to")
+}
+
+enum user_role {
+  admin
+  editor
+  viewer
+}
+
+model pages {
+  id               String         @id @default(cuid())
+  slug             String         @unique
+  title            String
+  subtitle         String?
+  content          String
+  meta_title       String?
+  meta_description String?
+  status           content_status @default(draft)
+  published_at     DateTime?
+  created_at       DateTime       @default(now())
+  updated_at       DateTime       @updatedAt
+  deleted_at       DateTime?
+
+  sections page_sections[]
+}
+
+enum content_status {
+  draft
+  published
+  archived
+}
+
+model page_sections {
+  id           String       @id @default(cuid())
+  page_id      String
+  page         pages        @relation(fields: [page_id], references: [id], onDelete: Cascade)
+  section_type section_type
+  title        String?
+  content      String?
+  sort_order   Int          @default(0)
+  is_visible   Boolean      @default(true)
+  created_at   DateTime     @default(now())
+  updated_at   DateTime     @updatedAt
+}
+
+enum section_type {
+  hero
+  text_block
+  feature_grid
+  image_gallery
+  video_embed
+  cta_banner
+  team_members
+  faq
+  contact_info
+}
+
+model services {
+  id                String         @id @default(cuid())
+  slug              String         @unique
+  title             String
+  short_description String?
+  content           String
+  icon              String?
+  image_url         String?
+  meta_title        String?
+  meta_description  String?
+  status            content_status @default(draft)
+  sort_order        Int            @default(0)
+  is_featured       Boolean        @default(false)
+  published_at      DateTime?
+  created_at        DateTime       @default(now())
+  updated_at        DateTime       @updatedAt
+  deleted_at        DateTime?
+
+  faqs service_faqs[]
+}
+
+model service_faqs {
+  id         String   @id @default(cuid())
+  service_id String
+  service    services @relation(fields: [service_id], references: [id], onDelete: Cascade)
+  question   String
+  answer     String
+  sort_order Int      @default(0)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
+
+model truck_categories {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  description String?
+  image_url   String?
+  sort_order  Int      @default(0)
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+
+  truck_models truck_models[]
+}
+
+model truck_models {
+  id             String         @id @default(cuid())
+  category_id    String
+  category       truck_categories @relation(fields: [category_id], references: [id])
+  slug           String         @unique
+  name           String
+  model_code     String?
+  description    String
+  specifications String?
+  image_url      String?
+  is_driveaway   Boolean        @default(false)
+  driveaway_type String?
+  status         content_status @default(draft)
+  sort_order     Int            @default(0)
+  published_at   DateTime?
+  created_at     DateTime       @default(now())
+  updated_at     DateTime       @updatedAt
+  deleted_at     DateTime?
+
+  images truck_images[]
+}
+
+model truck_images {
+  id         String       @id @default(cuid())
+  truck_id   String
+  truck      truck_models @relation(fields: [truck_id], references: [id], onDelete: Cascade)
+  url        String
+  alt_text   String?
+  sort_order Int          @default(0)
+  created_at DateTime     @default(now())
+}
+
+model blog_posts {
+  id               String           @id @default(cuid())
+  slug             String           @unique
+  title            String
+  excerpt          String?
+  content          String
+  featured_image   String?
+  author_id        String?
+  author           users?           @relation(fields: [author_id], references: [id])
+  category_id      String?
+  category         blog_categories? @relation(fields: [category_id], references: [id])
+  status           content_status   @default(draft)
+  published_at     DateTime?
+  meta_title       String?
+  meta_description String?
+  created_at       DateTime         @default(now())
+  updated_at       DateTime         @updatedAt
+  deleted_at       DateTime?
+}
+
+model blog_categories {
+  id         String   @id @default(cuid())
+  slug       String   @unique
+  name       String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  posts blog_posts[]
+}
+
+model team_members {
+  id         String   @id @default(cuid())
+  name       String
+  role       String
+  bio        String?
+  photo_url  String?
+  sort_order Int      @default(0)
+  is_visible Boolean  @default(true)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
+
+model job_listings {
+  id              String          @id @default(cuid())
+  title           String
+  slug            String          @unique
+  description     String
+  requirements    String?
+  location        String          @default("Barking, Essex")
+  employment_type employment_type @default(full_time)
+  status          content_status  @default(draft)
+  published_at    DateTime?
+  expires_at      DateTime?
+  created_at      DateTime        @default(now())
+  updated_at      DateTime        @updatedAt
+  deleted_at      DateTime?
+
+  applications job_applications[]
+}
+
+enum employment_type {
+  full_time
+  part_time
+  contract
+  apprenticeship
+}
+
+model job_applications {
+  id           String             @id @default(cuid())
+  job_id       String
+  job          job_listings       @relation(fields: [job_id], references: [id])
+  name         String
+  email        String
+  phone        String?
+  cover_letter String?
+  resume_url   String?
+  status       application_status @default(new)
+  notes        String?
+  created_at   DateTime           @default(now())
+  updated_at   DateTime           @updatedAt
+}
+
+enum application_status {
+  new
+  reviewing
+  shortlisted
+  rejected
+  hired
+}
+
+model enquiries {
+  id             String         @id @default(cuid())
+  type           enquiry_type
+  name           String
+  email          String
+  phone          String?
+  subject        String?
+  message        String
+  source_page    String?
+  status         enquiry_status @default(new)
+  assigned_to_id String?
+  assigned_to    users?         @relation("assigned_to", fields: [assigned_to_id], references: [id])
+  notes          String?
+  metadata       String?
+  created_at     DateTime       @default(now())
+  updated_at     DateTime       @updatedAt
+}
+
+enum enquiry_type {
+  general
+  sales
+  service
+  parts
+  tachograph
+  specialist
+  careers
+}
+
+enum enquiry_status {
+  new
+  in_progress
+  resolved
+  spam
+}
+
+model form_rate_limits {
+  id         String   @id @default(cuid())
+  ip_hash    String
+  action     String
+  created_at DateTime @default(now())
+
+  @@index([ip_hash, action, created_at])
+}
+
+model media {
+  id         String   @id @default(cuid())
+  filename   String
+  url        String
+  alt_text   String?
+  mime_type  String
+  size_bytes Int
+  width      Int?
+  height     Int?
+  created_at DateTime @default(now())
+}
+
+model site_settings {
+  id         String   @id @default(cuid())
+  key        String   @unique
+  value      String
+  updated_at DateTime @updatedAt
+}
+
+model videos {
+  id         String   @id @default(cuid())
+  title      String
+  youtube_id String
+  page_slug  String?
+  sort_order Int      @default(0)
+  is_visible Boolean  @default(true)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
+
+model ebay_listings {
+  id             String    @id @default(cuid())
+  ebay_item_id   String    @unique
+  title          String
+  price_display  String?
+  image_url      String?
+  ebay_url       String
+  item_hash      String?
+  sort_order     Int       @default(0)
+  is_visible     Boolean   @default(true)
+  last_synced_at DateTime?
+  created_at     DateTime  @default(now())
+  updated_at     DateTime  @updatedAt
+}
