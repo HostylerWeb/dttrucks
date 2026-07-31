@@ -16,7 +16,7 @@ export default async function BlogPostPreview({
 
   return (
     <div className="min-h-screen bg-surface p-8 max-w-3xl mx-auto">
-      <p className="text-xs text-secondary mb-4">Preview  -  {post.status}</p>
+      <p className="text-xs text-secondary mb-4">Preview - {post.status}</p>
       {post.category && (
         <p className="text-sm text-secondary">{post.category.name}</p>
       )}

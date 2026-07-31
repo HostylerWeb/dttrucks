@@ -18,11 +18,11 @@ export const homePageSections: SeedPageSection[] = [
     sort_order: 0,
     content: JSON.stringify({
       backgroundImage: HERO_IMAGE,
-      imageAlt: "Isuzu truck range  -  DT Trucks dealership",
+      imageAlt: "Isuzu truck range - DT Trucks dealership",
       badge: "Authorised Isuzu Dealer",
       eyebrow: "The Next Generation Of Trucks!",
       title: "Welcome to DT Trucks",
-      subtitle: "Van and Truck Services – Your Trusted Commercial Vehicle Partner",
+      subtitle: "Van and Truck Services, Your Trusted Commercial Vehicle Partner",
       tagline: "ISUZU SALES, PARTS & SERVICE DEALER",
       ctas: [
         { label: "Truck Sales", href: "/sales", variant: "primary" },
@@ -33,7 +33,7 @@ export const homePageSections: SeedPageSection[] = [
   },
   {
     section_type: "text_block",
-    title: "Van and Truck Services – Your Trusted Commercial Vehicle Partner",
+    title: "Van and Truck Services, Your Trusted Commercial Vehicle Partner",
     sort_order: 1,
     content: JSON.stringify({
       component: "intro_split",

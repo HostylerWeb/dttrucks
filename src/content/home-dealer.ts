@@ -1,5 +1,5 @@
 export const DEALER_HEADING =
-  "DT Trucks – Your Number One Isuzu Dealer in London & Essex";
+  "DT Trucks: Your Number One Isuzu Dealer in London & Essex";
 
 export const DEALER_STATS = [
   { value: "96%", label: "Parts first-time pick" },
@@ -20,14 +20,14 @@ export const DEALER_INSIGHTS = [
     icon: "local_shipping",
     title: "Every fleet size",
     summary:
-      "From single operators to fleets of over 150 trucks  -  bulb replacements to full engine rebuilds, handled with precision.",
+      "From single operators to fleets of over 150 trucks - bulb replacements to full engine rebuilds, handled with precision.",
     points: ["No job too big or small", "High-volume fleet maintenance"],
   },
   {
     icon: "inventory_2",
     title: "Total parts solution",
     summary:
-      "Genuine Isuzu parts and accessories  -  from everyday items to air conditioning kits and rear axle suspension conversions.",
+      "Genuine Isuzu parts and accessories - from everyday items to air conditioning kits and rear axle suspension conversions.",
     points: ["Authorised main dealer", "Complete transport solution"],
   },
   {
@@ -59,7 +59,7 @@ export const HOME_PILLARS: HomePillar[] = [
     lead: "Comprehensive genuine Isuzu parts with industry-leading availability across London and Essex.",
     bullets: [
       "Typically over 95% first-time pick availability",
-      "Order before 6:00pm  -  on premises by 12pm next day (99% guarantee)",
+      "Order before 6:00pm - on premises by 12pm next day (99% guarantee)",
       "Service items for NKR, NPR, NQR, Grafter and Forward range",
       "Wide range of genuine accessories and conversion parts",
     ],
@@ -69,12 +69,12 @@ export const HOME_PILLARS: HomePillar[] = [
     id: "sales",
     icon: "storefront",
     title: "Sales",
-    lead: "3.5 to 13.5 tonnes GVW  -  trucks that drivers enjoy and companies rely on every day.",
+    lead: "3.5 to 13.5 tonnes GVW - trucks that drivers enjoy and companies rely on every day.",
     bullets: [
       "Class-leading body and payload allowance",
       "Excellent fuel economy and 3-year unlimited mileage warranty",
       "Manoeuvrable and easy to drive",
-      "Tested in extreme climates  -  strong, safe, comfortable cabs",
+      "Tested in extreme climates - strong, safe, comfortable cabs",
     ],
     cta: { label: "View Truck Range", href: "/sales" },
   },
@@ -87,7 +87,7 @@ export const HOME_PILLARS: HomePillar[] = [
       "6 service bays and 21 employees",
       "4 Master techs, IRTEC accredited",
       "5 tachograph-trained technicians with stock heads and sender units",
-      "Technicians aged 19–62  -  131 years combined experience",
+      "Technicians aged 19-62 - 131 years combined experience",
       "Any make: car-derived vans up to 18m 44-tonne",
     ],
     cta: { label: "Book Service", href: "/service" },
@@ -100,7 +100,7 @@ export const SPECIALIST_SERVICES = [
     icon: "emergency",
     title: "A&E, PTS & Specialist Fleets",
     summary:
-      "Unmatched expertise for emergency and patient transport  -  fast, reliable maintenance across East and North London.",
+      "Unmatched expertise for emergency and patient transport - fast, reliable maintenance across East and North London.",
     href: "/specialist-applications",
     featured: true,
   },
@@ -136,7 +136,7 @@ export const SPECIALIST_SERVICES = [
   {
     icon: "tire_repair",
     title: "Roller Brake Testing",
-    summary: "HGV trucks and trailers  -  Operator Licensing compliance.",
+    summary: "HGV trucks and trailers - Operator Licensing compliance.",
     href: "/service/roller-brake-testing",
     featured: false,
   },

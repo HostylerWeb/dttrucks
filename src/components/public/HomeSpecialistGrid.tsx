@@ -14,7 +14,7 @@ export function HomeSpecialistGrid() {
               Specialist Vehicle & Workshop Services
             </p>
             <p className="text-secondary leading-relaxed">
-              A&E, PTS, air conditioning, and VOSA compliance  -  expertise for niche commercial
+              A&E, PTS, air conditioning, and VOSA compliance - expertise for niche commercial
               fleets across London and Essex.
             </p>
           </div>

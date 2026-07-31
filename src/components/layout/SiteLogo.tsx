@@ -31,7 +31,7 @@ export function HeaderLogo({
       className={className ?? "flex items-center shrink-0"}
       onClick={onNavigate}
     >
-      {/* Lossless WebP from source PNGs  -  sharper than indexed PNG + Next image optimizer */}
+      {/* Lossless WebP from source PNGs - sharper than indexed PNG + Next image optimizer */}
       <picture>
         <source
           type="image/webp"

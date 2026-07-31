@@ -14,7 +14,7 @@ export function UtilityBar({ settings }: { settings: Settings }) {
         </span>
         <span className="hidden md:flex items-center gap-1.5 text-white/80">
           <span className="material-symbols-outlined text-[17px]">location_on</span>
-          Barking, Essex  -  London & Essex Dealer
+          Barking, Essex · London & Essex Dealer
         </span>
       </div>
     </div>

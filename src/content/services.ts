@@ -30,7 +30,7 @@ export type ServiceDefinition = {
   heroSubtitle?: string;
   heroImage?: string;
   heroImageAlt?: string;
-  /** Opening paragraphs  -  primary page copy from the live site */
+  /** Opening paragraphs - primary page copy from the live site */
   paragraphs: string[];
   bullets?: string[];
   sections?: ServiceSection[];
@@ -47,7 +47,7 @@ export const SERVICES: ServiceDefinition[] = [
     slug: "workshop",
     title: "Test Centre & Workshop",
     shortDescription:
-      "Fully equipped workshop with IRTEC-accredited Master technicians  -  vans to 44-tonne.",
+      "Fully equipped workshop with IRTEC-accredited Master technicians - vans to 44-tonne.",
     icon: "build",
     featured: true,
     sortOrder: 1,
@@ -65,14 +65,14 @@ export const SERVICES: ServiceDefinition[] = [
       { label: "Tachograph technicians", value: "5" },
     ],
     paragraphs: [
-      "Our fully equipped, high technology workshop facility has 10 service bays and 30 employees, 4 of which are Master techs and IRTEC accredited. There are 5 tachograph-trained technicians. Our technicians are between 19 and 62 years of age  -  a combined experience of 131 years. This enables us to cover all your servicing and general maintenance needs.",
+      "Our fully equipped, high technology workshop facility has 10 service bays and 30 employees, 4 of which are Master techs and IRTEC accredited. There are 5 tachograph-trained technicians. Our technicians are between 19 and 62 years of age - a combined experience of 131 years. This enables us to cover all your servicing and general maintenance needs.",
       "We can service and repair your Isuzu truck (or any other make of vehicle) from car-derived vans up to 18m 44-tonne. Whether you run a single van or a large LGV fleet, we tailor packages to keep your vehicles roadworthy with minimal downtime.",
     ],
     bullets: [
       "10 service bays and 30 employees",
       "4 Master technicians, IRTEC accredited",
       "5 tachograph-trained technicians",
-      "Technicians aged 19–62  -  131 years combined experience",
+      "Technicians aged 19-62 - 131 years combined experience",
       "Any make: car-derived vans up to 18m 44-tonne",
       "Fully committed to the Isuzu Care programme",
     ],
@@ -112,7 +112,7 @@ export const SERVICES: ServiceDefinition[] = [
     sortOrder: 3,
     metaTitle: "Tachograph Calibrations Barking - DT Trucks - Isuzu Dealership",
     metaDescription:
-      "Tachograph Calibration in Essex | DVSA-Approved Smart & Digital Testing – DT Trucks",
+      "Tachograph Calibration in Essex | DVSA-Approved Smart & Digital Testing | DT Trucks",
     enquiryType: "tachograph",
     heroSubtitle: "Smart · Digital · Analogue · DVSA-Approved",
     badge: "DVSA Approved",
@@ -145,7 +145,7 @@ export const SERVICES: ServiceDefinition[] = [
       {
         title: "Digital Tachograph Calibration",
         intro:
-          "Complete digital tachograph calibration for all major manufacturers  -  from routine checks to full system replacements. Ideal for operators running mixed-age fleets across the South East.",
+          "Complete digital tachograph calibration for all major manufacturers - from routine checks to full system replacements. Ideal for operators running mixed-age fleets across the South East.",
         items: [
           "Digital head calibration",
           "Printer testing and verification",
@@ -191,7 +191,7 @@ export const SERVICES: ServiceDefinition[] = [
       {
         question: "Do you offer fleet support?",
         answer:
-          "Yes  -  we support fleets of all sizes across Essex and the South East with scheduled tachograph testing and compliance management.",
+          "Yes - we support fleets of all sizes across Essex and the South East with scheduled tachograph testing and compliance management.",
       },
     ],
   },
@@ -207,7 +207,7 @@ export const SERVICES: ServiceDefinition[] = [
       "24/7/365 roadside breakdown assistance with multiple fully equipped service vehicles. Phone call to kerbside in under 90 minutes.",
     enquiryType: "service",
     heroImage: HERO_TRUCK,
-    heroImageAlt: "Isuzu commercial truck  -  DT Trucks roadside assistance",
+    heroImageAlt: "Isuzu commercial truck - DT Trucks roadside assistance",
     highlights: [
       { label: "Coverage", value: "24/7/365" },
       { label: "Response", value: "< 90 min" },
@@ -215,7 +215,7 @@ export const SERVICES: ServiceDefinition[] = [
     ],
     paragraphs: [
       "24 hours a day, 7 days a week, 365 days a year we keep you covered. We have multiple fully equipped and vastly stocked service vehicles to keep you on the road.",
-      "From phone call to kerbside in under 90 minutes. We understand the importance of your valuable asset  -  and the cost of every minute off the road.",
+      "From phone call to kerbside in under 90 minutes. We understand the importance of your valuable asset - and the cost of every minute off the road.",
     ],
     bullets: [
       "24/7/365 coverage across London and Essex",
@@ -236,9 +236,9 @@ export const SERVICES: ServiceDefinition[] = [
       "On-premises maintenance for large fleets including safety inspections, servicing and repairs. Barking is Service HQ.",
     enquiryType: "service",
     heroImage: HERO_TRUCK,
-    heroImageAlt: "Fleet maintenance  -  DT Trucks",
+    heroImageAlt: "Fleet maintenance - DT Trucks",
     paragraphs: [
-      "Barking is our Service HQ. However, should you have maintenance that is more suited to be carried out on your premises, we can arrange this  -  from safety inspections to servicing or even repairs.",
+      "Barking is our Service HQ. However, should you have maintenance that is more suited to be carried out on your premises, we can arrange this - from safety inspections to servicing or even repairs.",
       "This service is desirable to customers who run a large fleet of vehicles where yard resources are stretched. We bring workshop capability to you so your fleet stays productive.",
     ],
     bullets: [
@@ -262,8 +262,8 @@ export const SERVICES: ServiceDefinition[] = [
     heroImage: HERO_TEAM,
     heroImageAlt: "DT Trucks specialist vehicle team",
     paragraphs: [
-      "You thought Isuzu was all we know? Wrong. DT Trucks are extremely knowledgeable on Isuzu and also specialist equipment  -  from UXO survey and disposal vehicles, to specialist adaptations for PTS and Blue Light vehicles.",
-      "DT Trucks maintain a vast array of specialist vehicles including aviation ground equipment. Get in contact with us with a challenge  -  we enhance reliability and longevity for niche fleets across the UK.",
+      "You thought Isuzu was all we know? Wrong. DT Trucks are extremely knowledgeable on Isuzu and also specialist equipment - from UXO survey and disposal vehicles, to specialist adaptations for PTS and Blue Light vehicles.",
+      "DT Trucks maintain a vast array of specialist vehicles including aviation ground equipment. Get in contact with us with a challenge - we enhance reliability and longevity for niche fleets across the UK.",
     ],
     sections: [
       {
@@ -300,7 +300,7 @@ export const SERVICES: ServiceDefinition[] = [
     heroImage: HERO_WORKSHOP,
     heroImageAlt: "Air conditioning service at DT Trucks workshop",
     paragraphs: [
-      "As a trusted Isuzu dealership, we specialise in professional air conditioning recharge services for all vehicle types  -  from passenger cars to 44-tonne HGV tractor units, and even select refrigerated systems.",
+      "As a trusted Isuzu dealership, we specialise in professional air conditioning recharge services for all vehicle types - from passenger cars to 44-tonne HGV tractor units, and even select refrigerated systems.",
       "Our certified technicians ensure optimal cooling performance and system efficiency, helping fleets stay road-ready and compliant. Whether you’re servicing a single vehicle or managing a commercial fleet, our air-con solutions are fast, reliable, and tailored to your needs.",
     ],
     bullets: [
@@ -337,7 +337,7 @@ export const SERVICES: ServiceDefinition[] = [
 ];
 
 export const SERVICE_INDEX_INTRO =
-  "DT Trucks is THE ONE-STOP REPAIR SHOP. Although we specialise in ISUZU Trucks we can maintain ANY vehicle. We always listen to you, the customer and realise that a fleet can mean one car derived van, or anything up to many hundreds of LGVs  -  therefore everyone needs a package tailor-made for them as individuals. We are fully committed to the ISUZU CARE Programme.";
+  "DT Trucks is THE ONE-STOP REPAIR SHOP. Although we specialise in ISUZU Trucks we can maintain ANY vehicle. We always listen to you, the customer and realise that a fleet can mean one car derived van, or anything up to many hundreds of LGVs - therefore everyone needs a package tailor-made for them as individuals. We are fully committed to the ISUZU CARE Programme.";
 
 export const SERVICE_INDEX_PARAGRAPHS = [
   SERVICE_INDEX_INTRO,

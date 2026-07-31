@@ -70,7 +70,7 @@ async function main() {
     {
       slug: "home",
       title: "Home",
-      subtitle: "Authorised Isuzu Dealer  -  London & Essex",
+      subtitle: "Authorised Isuzu Dealer - London & Essex",
       content:
         "<p>Homepage content is managed via page sections. Use the sections editor below for hero, services, videos, and CTAs.</p>",
       meta_title: originalPageSeo.home.title,
@@ -89,7 +89,7 @@ async function main() {
       title: "Service & Parts",
       subtitle: "One-stop repair shop at Castle Works, Barking",
       content:
-        "<p>DT Trucks is THE ONE-STOP REPAIR SHOP  -  workshop servicing, tachograph calibrations, specialist repairs and genuine Isuzu parts with a 96% first-time pick rate. Ten service bays, IRTEC-accredited technicians and fleet support across London and Essex.</p>",
+        "<p>DT Trucks is THE ONE-STOP REPAIR SHOP - workshop servicing, tachograph calibrations, specialist repairs and genuine Isuzu parts with a 96% first-time pick rate. Ten service bays, IRTEC-accredited technicians and fleet support across London and Essex.</p>",
       meta_title: originalPageSeo.service.title,
       meta_description: originalPageSeo.service.description,
     },
@@ -98,7 +98,7 @@ async function main() {
       title: "Isuzu Truck Sales",
       subtitle: "The Best Trucks At Unbeatable Prices",
       content:
-        "<p>Explore our wide selection of trucks available for purchase. Whether you know exactly what you need or require some assistance in finding the perfect truck, I’m here to help. Feel free to contact me  -  call my mobile number below, fill in the contact form with your truck requirements, or send me an email. I am always ready to assist.</p><p>With over 30 years of experience in the commercial vehicle industry, I specialise in Isuzu truck sales, covering London, Essex, and Hertfordshire. I support transport managers, fleet managers, and business owners in choosing the right truck for their needs.</p><p>Get in touch today to learn more about how I can assist with your truck needs.</p>",
+        "<p>Explore our wide selection of trucks available for purchase. Whether you know exactly what you need or require some assistance in finding the perfect truck, I’m here to help. Feel free to contact me - call my mobile number below, fill in the contact form with your truck requirements, or send me an email. I am always ready to assist.</p><p>With over 30 years of experience in the commercial vehicle industry, I specialise in Isuzu truck sales, covering London, Essex, and Hertfordshire. I support transport managers, fleet managers, and business owners in choosing the right truck for their needs.</p><p>Get in touch today to learn more about how I can assist with your truck needs.</p>",
       meta_title: originalPageSeo.sales.title,
       meta_description: originalPageSeo.sales.description,
     },
@@ -107,7 +107,7 @@ async function main() {
       title: "Specialist Applications",
       subtitle: "Specialised maintenance and repair for Isuzu Trucks and niche equipment",
       content:
-        "<p>Specialist Services and Nationwide Excellence – DT Trucks Limited. Specialised maintenance and repair for Isuzu Trucks, aviation ground equipment, plant equipment, and UXO survey and disposal equipment across the UK.</p>",
+        "<p>Specialist Services and Nationwide Excellence, DT Trucks Limited. Specialised maintenance and repair for Isuzu Trucks, aviation ground equipment, plant equipment, and UXO survey and disposal equipment across the UK.</p>",
       meta_title: originalPageSeo["specialist-applications"].title,
       meta_description: originalPageSeo["specialist-applications"].description,
     },
@@ -165,7 +165,7 @@ async function main() {
       slug: "3-5t-gvw",
       name: "3.5 tonnes GVW",
       description:
-        "The 3.5t Grafter is a light truck that’s more than capable of handling a busy workload  -  named Best Builders’ Truck seven years in a row by Trade Van Driver. Two models: 1.9L 123PS Grafter Green (N35.125) and 3.0L 150PS Grafter Blue (N35.150). Single or twin rear wheels, 3.5-tonne towing, and short Driveaway lead times.",
+        "The 3.5t Grafter is a light truck that’s more than capable of handling a busy workload - named Best Builders’ Truck seven years in a row by Trade Van Driver. Two models: 1.9L 123PS Grafter Green (N35.125) and 3.0L 150PS Grafter Blue (N35.150). Single or twin rear wheels, 3.5-tonne towing, and short Driveaway lead times.",
       image_url: "/media/sales/3.5-tonnes-GVW.jpg",
       sort_order: 1,
     },
@@ -189,7 +189,7 @@ async function main() {
       slug: "11-13-5t-gvw",
       name: "11 & 13.5 tonnes GVW",
       description:
-        "‘Big truck’ performance with a ‘small truck’ footprint. F110.210 for tipper and beavertail with compact cab; F135.240 with Easyshift for scaffolders and box/curtainside  -  the ideal step up from N-Series.",
+        "‘Big truck’ performance with a ‘small truck’ footprint. F110.210 for tipper and beavertail with compact cab; F135.240 with Easyshift for scaffolders and box/curtainside - the ideal step up from N-Series.",
       image_url: "/media/sales/11-13.5-tonnes-GVW.jpg",
       sort_order: 4,
     },

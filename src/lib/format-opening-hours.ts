@@ -12,7 +12,7 @@ const DAY_LABELS: Record<string, string> = {
 
 export function formatOpeningHoursSummary(json: string | null | undefined) {
   if (!json) {
-    return "Mon–Fri 07:00–17:00 · Sat 07:00–12:00 · Sunday Closed";
+    return "Mon-Fri 07:00-17:00 · Sat 07:00-12:00 · Sunday Closed";
   }
 
   try {
@@ -27,17 +27,17 @@ export function formatOpeningHoursSummary(json: string | null | undefined) {
         continue;
       }
       if (day.open && day.close) {
-        parts.push(`${label} ${day.open}–${day.close}`);
+        parts.push(`${label} ${day.open}-${day.close}`);
       }
     }
 
     if (parts.length === 0) {
-      return "Mon–Fri 07:00–17:00 · Sat 07:00–12:00 · Sunday Closed";
+      return "Mon-Fri 07:00-17:00 · Sat 07:00-12:00 · Sunday Closed";
     }
 
     return parts.join(" · ");
   } catch {
-    return "Mon–Fri 07:00–17:00 · Sat 07:00–12:00 · Sunday Closed";
+    return "Mon-Fri 07:00-17:00 · Sat 07:00-12:00 · Sunday Closed";
   }
 }
 
@@ -55,12 +55,12 @@ export type OpeningHoursRow = { day: string; hours: string };
 
 export function formatOpeningHoursList(json: string | null | undefined): OpeningHoursRow[] {
   const defaults = [
-    { day: "Monday", hours: "07:00 – 17:00" },
-    { day: "Tuesday", hours: "07:00 – 17:00" },
-    { day: "Wednesday", hours: "07:00 – 17:00" },
-    { day: "Thursday", hours: "07:00 – 17:00" },
-    { day: "Friday", hours: "07:00 – 17:00" },
-    { day: "Saturday", hours: "07:00 – 12:00" },
+    { day: "Monday", hours: "07:00-17:00" },
+    { day: "Tuesday", hours: "07:00-17:00" },
+    { day: "Wednesday", hours: "07:00-17:00" },
+    { day: "Thursday", hours: "07:00-17:00" },
+    { day: "Friday", hours: "07:00-17:00" },
+    { day: "Saturday", hours: "07:00-12:00" },
     { day: "Sunday", hours: "Closed" },
   ];
 
@@ -73,7 +73,7 @@ export function formatOpeningHoursList(json: string | null | undefined): Opening
       if (!entry) return { day, hours: "-" };
       if (entry.closed) return { day, hours: "Closed" };
       if (entry.open && entry.close) {
-        return { day, hours: `${entry.open} – ${entry.close}` };
+        return { day, hours: `${entry.open}, ${entry.close}` };
       }
       return { day, hours: "-" };
     });

@@ -101,7 +101,7 @@ const truckModels: TruckModelSeed[] = [
     name: "F110.210",
     model_code: "F110.210",
     description:
-      "Our F-Series 11t trucks offer ‘big truck’ performance with a ‘small truck’ footprint. Well suited to tipper and beavertail operations, with a compact cab and lower chassis design for driver comfort  -  the ideal step up from N-Series.",
+      "Our F-Series 11t trucks offer ‘big truck’ performance with a ‘small truck’ footprint. Well suited to tipper and beavertail operations, with a compact cab and lower chassis design for driver comfort - the ideal step up from N-Series.",
     sort_order: 1,
     image_url: IMG.gvw11,
     specifications: { gvw: "11t" },
@@ -133,7 +133,7 @@ const truckModels: TruckModelSeed[] = [
     slug: "driveaway-7-5t-tipper",
     name: "7.5 Tonne TIPPER",
     description:
-      "The bigger brother of our popular 3.5T tipper  -  an efficient, reliable workhorse with impressive payload. Compact and easier to manoeuvre than many rivals, with Easyshift to minimise driver fatigue. Models: N75.150(E), N75.190(E).",
+      "The bigger brother of our popular 3.5T tipper - an efficient, reliable workhorse with impressive payload. Compact and easier to manoeuvre than many rivals, with Easyshift to minimise driver fatigue. Models: N75.150(E), N75.190(E).",
     is_driveaway: true,
     driveaway_type: "tipper",
     sort_order: 2,
@@ -155,7 +155,7 @@ const truckModels: TruckModelSeed[] = [
     slug: "driveaway-3-5t-utilitruck",
     name: "3.5 Tonne UTILITRUCK",
     description:
-      "The latest vehicle in our Driveaway range  -  a 3.5t Utilitruck with a lockable toolpod to keep tools and equipment safe. Ideal for companies that need a tipper with added security throughout the working day. Model: N35.125(T).",
+      "The latest vehicle in our Driveaway range - a 3.5t Utilitruck with a lockable toolpod to keep tools and equipment safe. Ideal for companies that need a tipper with added security throughout the working day. Model: N35.125(T).",
     is_driveaway: true,
     driveaway_type: "utilitruck",
     sort_order: 4,

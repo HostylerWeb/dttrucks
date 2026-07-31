@@ -112,7 +112,7 @@ export function SpecialistApplicationsView({
               <div className="p-5 sm:p-6 lg:p-7">
                 <h2 className="font-headline text-xl font-bold mb-2">Specialist enquiry</h2>
                 <p className="text-sm text-secondary mb-5 leading-relaxed">
-                  UXO rigs, aviation ground equipment, plant and niche commercial vehicles  -  tell us
+                  UXO rigs, aviation ground equipment, plant and niche commercial vehicles - tell us
                   about your equipment.
                 </p>
                 <a
@@ -137,7 +137,7 @@ export function SpecialistApplicationsView({
               <address className="not-italic text-sm text-secondary space-y-2 leading-relaxed">
                 <p className="font-semibold text-on-surface">{companyName}</p>
                 <p>{companyAddress}</p>
-                <p>Mon–Fri 07:00–17:00 · Sat 07:00–12:00</p>
+                <p>Mon-Fri 07:00-17:00 · Sat 07:00-12:00</p>
               </address>
               <Link
                 href="/service/specialist-vehicles"
@@ -156,7 +156,7 @@ export function SpecialistApplicationsView({
           <div className="max-w-2xl mb-8 sm:mb-10">
             <h2 className="font-headline text-2xl sm:text-3xl font-bold mb-3">Equipment in the field</h2>
             <p className="text-secondary leading-relaxed">
-              From aviation ground winches to UXO survey and disposal rigs  -  our team maintains
+              From aviation ground winches to UXO survey and disposal rigs - our team maintains
               specialist equipment that demands precision, safety and reliability.
             </p>
           </div>

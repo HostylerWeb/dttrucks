@@ -4,7 +4,7 @@ export const SPECIALIST_HERO = {
 };
 
 export const SPECIALIST_INTRO_TITLE =
-  "Specialist Services and Nationwide Excellence – DT Trucks Limited";
+  "Specialist Services and Nationwide Excellence, DT Trucks Limited";
 
 export const SPECIALIST_INTRO_PARAGRAPHS = [
   "At DT Trucks Limited, we pride ourselves on offering specialised maintenance and repair services for Isuzu Trucks, as well as a diverse range of other equipment. Our skilled team ensures top-notch performance for Isuzu Trucks, enhancing their reliability and longevity.",

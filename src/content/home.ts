@@ -1,8 +1,8 @@
 export const homeHero = {
   backgroundImage: "/media/home/hero-3-in-range.webp",
-  imageAlt: "Isuzu truck range  -  DT Trucks dealership",
+  imageAlt: "Isuzu truck range - DT Trucks dealership",
   title: "Welcome to DT Trucks",
-  subtitle: "Van and Truck Services – Your Trusted Commercial Vehicle Partner",
+  subtitle: "Van and Truck Services, Your Trusted Commercial Vehicle Partner",
   tagline: "ISUZU SALES, PARTS & SERVICE DEALER",
   ctas: [
     { label: "Sales", href: "/sales", variant: "primary" as const },
@@ -102,7 +102,7 @@ export const homeHighlights = [
 ];
 
 export const homeDealerSection = {
-  title: "DT Trucks – Your Number One Isuzu Dealer in London & Essex",
+  title: "DT Trucks: Your Number One Isuzu Dealer in London & Essex",
   intro:
     "At DT Trucks, we're proud to be recognised as a leading Isuzu dealership in London & Essex, offering expert servicing, genuine parts, and complete transport solutions. With decades of experience and state-of-the-art diagnostic equipment, your vehicle is always in the safest hands.",
   fleet:
@@ -135,7 +135,7 @@ export const homeDealerSection = {
 
 export const homeSpecialistSections = [
   {
-    title: "Specialist Vehicle Support – A&E, PTS, and More",
+    title: "Specialist Vehicle Support: A&E, PTS, and More",
     body:
       "If you operate A&E, PTS, or other specialist vehicles, DT Trucks offers unmatched expertise, passion, and precision. We understand the unique demands of emergency and patient transport fleets, and we're proud to support operators across East and North London with fast, reliable maintenance solutions. Struggling to find skilled mechanics who understand specialist vehicles? We're here to help - with rapid turnaround times and trusted service.",
   },

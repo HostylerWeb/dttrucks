@@ -41,7 +41,7 @@ export default async function ServiceIndexPage() {
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           <div className="lg:col-span-7 space-y-4 sm:space-y-5">
             <h2 className="font-headline text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight tracking-tight">
-              DT Trucks – Barking
+              DT Trucks: Barking
             </h2>
             {SERVICE_INDEX_PARAGRAPHS.map((paragraph) => (
               <p key={paragraph.slice(0, 40)} className="text-base sm:text-lg text-secondary leading-relaxed">
@@ -68,7 +68,7 @@ export default async function ServiceIndexPage() {
                   {settings.company_address ??
                     "Castle Works, 721 Ripple Road, Barking, Essex IG11 0SN"}
                 </p>
-                <p>Mon–Fri 07:00–17:00 · Sat 07:00–12:00</p>
+                <p>Mon-Fri 07:00-17:00 · Sat 07:00-12:00</p>
                 <p>
                   <a
                     href={phoneHref}
@@ -113,7 +113,7 @@ export default async function ServiceIndexPage() {
               <h2 className="font-headline text-xl sm:text-2xl lg:text-3xl font-bold mb-3">Isuzu Barking Services</h2>
           <p className="text-secondary max-w-2xl mb-10 leading-relaxed">
             From routine workshop servicing and tachograph calibrations to 24/7 roadside cover and
-            specialist vehicle support  -  all from one authorised Isuzu dealership.
+            specialist vehicle support - all from one authorised Isuzu dealership.
           </p>
 
           <ul className="grid sm:grid-cols-2 gap-x-10 gap-y-0">
@@ -160,14 +160,13 @@ export default async function ServiceIndexPage() {
           <div>
             <h3 className="font-headline font-bold text-lg mb-2">Any make welcome</h3>
             <p className="text-sm text-secondary leading-relaxed">
-              We specialise in Isuzu but service and repair commercial vehicles of any make  - 
-              from car-derived vans to 18m 44-tonne.
+              We specialise in Isuzu but service and repair commercial vehicles of any make - from car-derived vans to 18m 44-tonne.
             </p>
           </div>
           <div>
             <h3 className="font-headline font-bold text-lg mb-2">Fleet packages</h3>
             <p className="text-sm text-secondary leading-relaxed">
-              Tailor-made support whether you run one van or hundreds of LGVs  -  inspections,
+              Tailor-made support whether you run one van or hundreds of LGVs - inspections,
               servicing, calibrations and breakdown cover.
             </p>
           </div>
@@ -196,10 +195,10 @@ export default async function ServiceIndexPage() {
                 >
                   {phone}
                 </a>{" "}
-                or send an enquiry  -  we respond on business days.
+                or send an enquiry - we respond on business days.
               </p>
               <ul className="space-y-2 text-sm text-secondary">
-                <li>Mon–Fri 07:00–17:00 · Sat 07:00–12:00</li>
+                <li>Mon-Fri 07:00-17:00 · Sat 07:00-12:00</li>
                 <li>Castle Works, 721 Ripple Road, Barking IG11 0SN</li>
               </ul>
             </div>

@@ -38,7 +38,7 @@ export async function sendViaSmtp({
 }) {
   const transporter = getSmtpTransporter();
   if (!transporter) {
-    console.info("[email] SMTP_HOST not set  -  skipping:", subject);
+    console.info("[email] SMTP_HOST not set - skipping:", subject);
     return false;
   }
 

@@ -103,7 +103,7 @@ export function ServiceDetailView({
             <div className="border border-outline-variant rounded-xl p-5 sm:p-6 lg:p-7 bg-white">
               <h2 className="font-headline text-xl font-bold mb-2">Book this service</h2>
               <p className="text-sm text-secondary mb-5 leading-relaxed">
-                Castle Works, Barking  -  Mon–Fri 07:00–17:00 · Sat 07:00–12:00
+                Castle Works, Barking - Mon-Fri 07:00-17:00 · Sat 07:00-12:00
               </p>
               <a
                 href={phoneHref}

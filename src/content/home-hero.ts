@@ -1,10 +1,10 @@
 export const defaultHomeHero = {
   backgroundImage: "/media/home/hero-3-in-range.webp",
-  imageAlt: "Isuzu truck range  -  DT Trucks dealership",
+  imageAlt: "Isuzu truck range - DT Trucks dealership",
   badge: "Authorised Isuzu Dealer",
   eyebrow: "The Next Generation Of Trucks!",
   title: "Welcome to DT Trucks",
-  subtitle: "Van and Truck Services – Your Trusted Commercial Vehicle Partner",
+  subtitle: "Van and Truck Services, Your Trusted Commercial Vehicle Partner",
   tagline: "ISUZU SALES, PARTS & SERVICE DEALER",
   ctas: [
     { label: "Truck Sales", href: "/sales", variant: "primary" as const },

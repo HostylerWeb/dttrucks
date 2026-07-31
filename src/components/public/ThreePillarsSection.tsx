@@ -24,7 +24,7 @@ export function ThreePillarsSection() {
             Parts, sales & workshop
           </h2>
           <p className="text-secondary max-w-xl mx-auto mt-4 leading-relaxed">
-            Everything your commercial fleet needs  -  genuine parts, new trucks and IRTEC-accredited
+            Everything your commercial fleet needs - genuine parts, new trucks and IRTEC-accredited
             workshop support.
           </p>
         </div>

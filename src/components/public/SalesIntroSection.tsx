@@ -91,7 +91,7 @@ export function SalesIntroSection({
                 </div>
 
                 <p className="text-sm text-secondary">
-                  Isuzu truck sales  -  new, used and driveaway vehicles.
+                  Isuzu truck sales - new, used and driveaway vehicles.
                 </p>
 
                 <div className="flex flex-col gap-3">

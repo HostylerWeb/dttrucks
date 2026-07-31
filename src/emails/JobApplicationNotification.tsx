@@ -13,7 +13,7 @@ type JobApplicationEmailData = {
 export function JobApplicationNotificationEmail(data: JobApplicationEmailData) {
   return (
     <EmailLayout
-      preview={`Job application: ${data.jobTitle}  -  ${data.name}`}
+      preview={`Job application: ${data.jobTitle} - ${data.name}`}
       title="New job application"
     >
       <Text style={emailText}>

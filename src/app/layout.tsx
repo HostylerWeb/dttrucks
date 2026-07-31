@@ -55,7 +55,7 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "DT Trucks  -  Authorised Isuzu Dealer",
+        alt: "DT Trucks - Authorised Isuzu Dealer",
       },
     ],
   },

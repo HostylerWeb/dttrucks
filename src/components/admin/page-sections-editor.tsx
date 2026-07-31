@@ -31,7 +31,7 @@ export function PageSectionsEditor({
             <div className="flex flex-wrap items-center justify-between gap-2">
               <p className="font-medium capitalize">
                 {section.section_type.replace("_", " ")}
-                {section.title ? `  -  ${section.title}` : ""}
+                {section.title ? ` - ${section.title}` : ""}
               </p>
               <div className="flex items-center gap-2">
                 <ReorderButtons

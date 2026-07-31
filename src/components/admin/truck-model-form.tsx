@@ -140,7 +140,7 @@ export function TruckModelForm({
           <FormField
             label="Driveaway body type"
             name="driveaway_type"
-            hint="e.g. tipper, dropside, utilitruck, box, curtainsider  -  only needed for driveaways."
+            hint="e.g. tipper, dropside, utilitruck, box, curtainsider - only needed for driveaways."
           >
             <input
               id="driveaway_type"

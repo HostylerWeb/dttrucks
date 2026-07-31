@@ -12,7 +12,7 @@ export const ABOUT_HIGHLIGHTS = [
   {
     icon: "build",
     title: "After-sales that lasts",
-    description: "Workshop, parts, roadside and sales under one roof  -  support that continues long after you drive away.",
+    description: "Workshop, parts, roadside and sales under one roof - support that continues long after you drive away.",
   },
 ];
 
@@ -27,25 +27,25 @@ export const ABOUT_TIMELINE = [
     year: "2000s",
     title: "National sales leadership",
     description:
-      "The range grows to 7.5t, twin rear wheel 3.5t, 5.5t, 6.5t, 11t and 13.5t  -  consistently top three nationally for Isuzu sales.",
+      "The range grows to 7.5t, twin rear wheel 3.5t, 5.5t, 6.5t, 11t and 13.5t - consistently top three nationally for Isuzu sales.",
   },
   {
     year: "2004",
     title: "Separate paths",
     description:
-      "Partners pursue separate ventures  -  Derek with Isuzu Service & Parts, George with further Isuzu involvement.",
+      "Partners pursue separate ventures - Derek with Isuzu Service & Parts, George with further Isuzu involvement.",
   },
   {
     year: "2015",
     title: "Reunited in Barking",
     description:
-      "Derek and George reunite to establish the new Isuzu dealership in North London  -  sales, service and parts in Barking.",
+      "Derek and George reunite to establish the new Isuzu dealership in North London - sales, service and parts in Barking.",
   },
   {
     year: "Today",
     title: "Innovation & sustainability",
     description:
-      "Launch of the Isuzu N35.125 Green  -  Euro 6 1.9-litre engine, upgraded suspension and 6-speed gearbox.",
+      "Launch of the Isuzu N35.125 Green - Euro 6 1.9-litre engine, upgraded suspension and 6-speed gearbox.",
   },
 ];
 
@@ -71,13 +71,13 @@ export const ABOUT_FOUNDED_PARAGRAPHS = [
 export const ABOUT_IMAGES = {
   logo: {
     src: "/media/about/dt-trucks-logo.png",
-    alt: "DT Trucks  -  Isuzu Dealership",
+    alt: "DT Trucks - Isuzu Dealership",
     width: 433,
     height: 91,
   },
   eastley: {
     src: "/media/about/eastley-commercials.jpg",
-    alt: "DT Trucks beginning  -  Eastley Commercials",
+    alt: "DT Trucks beginning - Eastley Commercials",
     width: 730,
     height: 430,
   },

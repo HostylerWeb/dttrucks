@@ -18,7 +18,7 @@ export const BLOG_POSTS = [
     published_at: "2025-09-17T19:48:31.000Z",
     meta_title: "Exclusive Discount on AC Regassing! - DT Trucks",
     meta_description:
-      "End-of-season discount on AC regassing for fleet customers. Mobile service for large fleets  -  contact DT Trucks in Barking, Essex.",
+      "End-of-season discount on AC regassing for fleet customers. Mobile service for large fleets - contact DT Trucks in Barking, Essex.",
   },
   {
     slug: "isuzu-for-small-business",
@@ -35,8 +35,8 @@ export const BLOG_POSTS = [
 <p><img src="/media/blog/isuzu-reliable.jpg" alt="Isuzu are reliable" /></p>
 <h2>Affordable Trucks</h2>
 <p>Trucks that are built with quality but priced lightly!</p>
-<p>You're extremely unlikely to get ripped off when you're considering purchasing an Isuzu truck. Isuzu says it competitively prices all of its truck options, and when you see how much you can pay for a truck – especially at the aforementioned DT Trucks – you'll be astounded, especially given the level of engineering you're getting. Even used trucks can often be prohibitively expensive, but when it comes to Isuzu, you'll always be paying what you should pay for a truck.</p>
-<p>In addition to being low-cost trucks to purchase, Isuzu trucks also don't cost very much to maintain. Of course, no matter what truck you use, you'll be consuming more fuel than you would for a smaller vehicle, but as trucks go, Isuzu models are competitive in terms of fuel economy. A small business owner is – and should be – worried about how much money to spend maintaining trucks, so Isuzu machines are a great option for keeping costs low across the board.</p>
+<p>You're extremely unlikely to get ripped off when you're considering purchasing an Isuzu truck. Isuzu says it competitively prices all of its truck options, and when you see how much you can pay for a truck, especially at the aforementioned DT Trucks: you'll be astounded, especially given the level of engineering you're getting. Even used trucks can often be prohibitively expensive, but when it comes to Isuzu, you'll always be paying what you should pay for a truck.</p>
+<p>In addition to being low-cost trucks to purchase, Isuzu trucks also don't cost very much to maintain. Of course, no matter what truck you use, you'll be consuming more fuel than you would for a smaller vehicle, but as trucks go, Isuzu models are competitive in terms of fuel economy. A small business owner is, and should be, worried about how much money to spend maintaining trucks, so Isuzu machines are a great option for keeping costs low across the board.</p>
 <p><img src="/media/blog/affordable-trucks.jpg" alt="Affordable Isuzu Trucks" /></p>
 <h2>Payload capacity</h2>
 <p>Isuzu says that its trucks are engineered to take the maximum payload possible. As a small business owner, that should be good news for you; many of your journeys will need to carry as much freight as possible, so it makes sense to get a truck that's specifically engineered to maximise this aspect. In general, as a small business owner, you want to get the most you possibly can out of every single journey. That's why ensuring maximum payload capacity is a good idea.</p>
@@ -54,6 +54,6 @@ export const BLOG_POSTS = [
     published_at: "2021-01-22T16:21:17.000Z",
     meta_title: "Why Isuzu Trucks are Great for Small Businesses - DT Trucks",
     meta_description:
-      "Reliability, affordability, payload capacity and a compact footprint  -  why Isuzu trucks are a smart choice for small business logistics.",
+      "Reliability, affordability, payload capacity and a compact footprint - why Isuzu trucks are a smart choice for small business logistics.",
   },
 ];
