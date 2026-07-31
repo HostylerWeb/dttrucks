@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { HeroSection } from "@/components/public/HeroSection";
-import { VideoEmbed } from "@/components/public/VideoEmbed";
+import { DeferredVideoEmbed } from "@/components/public/DeferredVideoEmbed";
 import { ImageGallery } from "@/components/public/ImageGallery";
 import { FeatureGrid } from "@/components/public/FeatureGrid";
 import { FAQAccordion } from "@/components/public/FAQAccordion";
@@ -221,7 +221,7 @@ export async function PageSectionsRenderer({
                 {section.title && (
                   <h2 className="font-headline text-2xl font-bold mb-6">{section.title}</h2>
                 )}
-                <VideoEmbed youtubeId={data.youtube_id} title={section.title ?? "Video"} />
+                <DeferredVideoEmbed youtubeId={data.youtube_id} title={section.title ?? "Video"} />
               </div>
             );
           }

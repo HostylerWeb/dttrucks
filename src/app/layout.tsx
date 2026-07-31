@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
-import { GoogleAnalyticsConsent } from "@/components/analytics/GoogleAnalyticsConsent";
+import { DeferredGoogleAnalytics } from "@/components/analytics/DeferredGoogleAnalytics";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -87,7 +87,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-on-background font-body">
         {children}
-        {gaId && <GoogleAnalyticsConsent gaId={gaId} />}
+        {gaId && <DeferredGoogleAnalytics gaId={gaId} />}
       </body>
     </html>
   );

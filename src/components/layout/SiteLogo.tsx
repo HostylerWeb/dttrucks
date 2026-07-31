@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 const HEADER_LOGO = {
   standard: "/media/branding/dt-trucks-logo.webp",
@@ -56,7 +55,9 @@ export function HeaderLogo({
 export function FooterLogo() {
   return (
     <Link href="/" className="inline-block mb-4">
-      <Image
+      {/* Plain img avoids pulling next/image into the global client bundle */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
         src={FOOTER_LOGO.src}
         alt={FOOTER_LOGO.alt}
         width={FOOTER_LOGO.width}

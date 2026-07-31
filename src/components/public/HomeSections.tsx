@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ContactForm } from "@/components/public/ContactForm";
+import { DeferredHomeContactForm } from "@/components/public/DeferredHomeContactForm";
 import { PhoneButton } from "@/components/public/PhoneButton";
 import { WhatsAppButton } from "@/components/public/WhatsAppButton";
 
@@ -184,7 +184,7 @@ export function HomeContactSection({
                   <p className="text-xs uppercase tracking-wide opacity-70 font-semibold">Address</p>
                   <p className="text-sm leading-relaxed mt-1 whitespace-pre-line">{companyAddress}</p>
                   {what3words && (
-                    <p className="text-xs opacity-60 mt-2">What3Words: ///{what3words}</p>
+                    <p className="text-xs opacity-60 mt-2">What3Words: {`///${what3words}`}</p>
                   )}
                 </div>
               </div>
@@ -196,7 +196,7 @@ export function HomeContactSection({
           </div>
         </div>
         <div className="bg-white p-5 sm:p-6 lg:p-8 rounded-xl text-on-background shadow-industrial">
-          <ContactForm sourcePage="/" title="Send a message" />
+          <DeferredHomeContactForm sourcePage="/" title="Send a message" />
         </div>
       </div>
     </section>
