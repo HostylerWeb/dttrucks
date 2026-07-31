@@ -13,6 +13,18 @@ How to publish changes from GitHub to the production VPS.
 | Process manager | PM2 (`dttrucks`) |
 | Web server | nginx → Next.js on port 3000 |
 
+### VPS SSH (for deploy from dev machine / Cursor)
+
+| Item | Value |
+|------|--------|
+| Host | `2.24.141.130` |
+| User | `root` |
+| Password | `Curtisisgreat123@` |
+
+**Security:** change the root password and prefer SSH keys in production. This password is documented here so deploys can be run from Cursor without interactive login. Do not share this file publicly.
+
+Requires `sshpass` on your dev machine (`sudo apt install sshpass` on Linux).
+
 Production secrets (`.env`, database password) live **only on the server**. They are not in GitHub.
 
 ---
@@ -49,6 +61,22 @@ That script:
 5. Restarts the app with PM2
 
 When it finishes, check https://srv1869968.hstgr.cloud/
+
+### 3. Deploy from dev machine without interactive SSH (sshpass)
+
+After pushing to `main`, run this from your dev machine (or ask Cursor to run it):
+
+```bash
+sshpass -p 'Curtisisgreat123@' ssh -o StrictHostKeyChecking=no root@2.24.141.130 \
+  'cd /var/www/dttrucks && ./scripts/deploy.sh'
+```
+
+Verify the server picked up the latest commit:
+
+```bash
+sshpass -p 'Curtisisgreat123@' ssh -o StrictHostKeyChecking=no root@2.24.141.130 \
+  'cd /var/www/dttrucks && git rev-parse --short HEAD && pm2 status dttrucks'
+```
 
 ---
 
@@ -120,4 +148,4 @@ pm2 save
 
 ## Ask Cursor to deploy
 
-After pushing to `main`, you can say: **“Update the live website from GitHub”** — the deploy steps above are what should be run on the VPS.
+After pushing to `main`, you can say: **“Update the live website from GitHub”** — Cursor should run the `sshpass` deploy command in section 3 above (or SSH in and run `./scripts/deploy.sh`).

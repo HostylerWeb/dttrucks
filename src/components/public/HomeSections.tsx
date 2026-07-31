@@ -65,9 +65,9 @@ export function HomeIntroSection({
     <section className="page-section bg-surface">
       <div className="page-container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         <div>
-          <p className="font-headline text-2xl sm:text-3xl lg:text-4xl font-bold text-on-background mb-4 sm:mb-5 tracking-tight">
+          <h2 className="font-headline text-2xl sm:text-3xl lg:text-4xl font-bold text-on-background mb-4 sm:mb-5 tracking-tight">
             {title}
-          </p>
+          </h2>
           <p className="text-secondary leading-relaxed mb-8">{body}</p>
           <div className="space-y-4">
             {highlights.map((item) => (
@@ -88,11 +88,13 @@ export function HomeIntroSection({
         <div className="relative group">
           <div className="absolute -inset-3 bg-primary-container/5 rounded-xl -rotate-1" />
           <div className="relative h-[380px] lg:h-[450px] rounded-xl overflow-hidden shadow-industrial border border-outline-variant">
-            <div
-              className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              style={{ backgroundImage: `url('${image}')` }}
-              role="img"
-              aria-label={imageAlt}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={image}
+              alt={imageAlt}
+              loading="lazy"
+              decoding="async"
+              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
           </div>
           {statBadge && (

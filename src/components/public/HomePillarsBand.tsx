@@ -7,9 +7,9 @@ export function HomePillarsBand() {
     <section className="page-section bg-surface-container-low">
       <div className="page-container">
         <div className="text-center mb-8 sm:mb-10 lg:mb-12 max-w-2xl mx-auto">
-          <p className="font-headline text-2xl sm:text-3xl font-bold text-on-background">
+          <h2 className="font-headline text-2xl sm:text-3xl font-bold text-on-background">
             Parts, Sales & Workshop
-          </p>
+          </h2>
           <p className="text-secondary mt-3 leading-relaxed">
             Your complete commercial vehicle partner at one authorised Isuzu dealership in London
             & Essex.
@@ -51,6 +51,7 @@ export function HomePillarsBand() {
                 )}
                 <Link
                   href={config.href}
+                  prefetch={false}
                   className={cn(
                     "w-full py-3 rounded-lg font-semibold text-sm transition-colors text-center min-h-11 flex items-center justify-center",
                     config.darkCta

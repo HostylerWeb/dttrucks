@@ -61,7 +61,11 @@ export function HeroSection({
                 type="image/webp"
                 srcSet={backgroundImageMobile}
               />
-              <source type="image/webp" srcSet={backgroundImage} />
+              <source
+                media="(min-width: 769px)"
+                type="image/webp"
+                srcSet={backgroundImage}
+              />
               <img
                 src={backgroundImageMobile}
                 alt={imageAlt}
@@ -136,6 +140,7 @@ export function HeroSection({
                     <Link
                       key={cta.href}
                       href={cta.href}
+                      prefetch={false}
                       className="inline-flex items-center justify-center sm:justify-start text-white/90 hover:text-white px-4 py-3 font-semibold text-sm underline-offset-4 hover:underline min-h-11"
                     >
                       {cta.label}
@@ -147,6 +152,7 @@ export function HeroSection({
                     <Link
                       key={cta.href}
                       href={cta.href}
+                      prefetch={false}
                       className="inline-flex items-center justify-center w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/40 text-white px-6 sm:px-8 py-3.5 rounded-lg font-bold transition-all active:scale-[0.98] min-h-11"
                     >
                       {cta.label}
@@ -157,6 +163,7 @@ export function HeroSection({
                   <Link
                     key={cta.href}
                     href={cta.href}
+                    prefetch={false}
                     className={cn(buttonClassName("primary", "lg"), "w-full sm:w-auto justify-center min-h-11")}
                   >
                     {cta.label}

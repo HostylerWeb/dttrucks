@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FeatureIcon } from "@/components/public/FeatureIcon";
 
 export type FeatureItem = {
   icon: string;
@@ -12,10 +13,12 @@ export function FeatureGrid({
   items,
   columns = 3,
   variant = "cards",
+  useSvgIcons = false,
 }: {
   items: FeatureItem[];
   columns?: 2 | 3 | 4;
   variant?: "cards" | "glass";
+  useSvgIcons?: boolean;
 }) {
   const gridCols =
     columns === 4
@@ -42,12 +45,16 @@ export function FeatureGrid({
                 : "w-12 h-12 bg-primary-container/10 text-primary-container rounded-lg flex items-center justify-center mb-4"
             }
           >
-            <span
-              className="material-symbols-outlined text-3xl"
-              style={variant === "glass" ? { fontVariationSettings: '"FILL" 1' } : undefined}
-            >
-              {item.icon}
-            </span>
+            {useSvgIcons ? (
+              <FeatureIcon name={item.icon} />
+            ) : (
+              <span
+                className="material-symbols-outlined text-3xl"
+                style={variant === "glass" ? { fontVariationSettings: '"FILL" 1' } : undefined}
+              >
+                {item.icon}
+              </span>
+            )}
           </div>
           <p className="font-headline text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-on-background">
             {item.title}
@@ -56,10 +63,17 @@ export function FeatureGrid({
           {item.href && (
             <Link
               href={item.href}
+              prefetch={false}
               className="text-primary-container font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all"
             >
               {item.linkLabel ?? "Learn more"}
-              <span className="material-symbols-outlined text-base">arrow_forward</span>
+              {useSvgIcons ? (
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                  <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
+                </svg>
+              ) : (
+                <span className="material-symbols-outlined text-base">arrow_forward</span>
+              )}
             </Link>
           )}
         </article>

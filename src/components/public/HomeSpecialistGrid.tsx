@@ -10,9 +10,9 @@ export function HomeSpecialistGrid() {
             <p className="text-primary-container text-xs sm:text-sm font-bold uppercase tracking-widest mb-2 sm:mb-3">
               Specialist support
             </p>
-            <p className="font-headline text-2xl sm:text-3xl font-bold text-on-background mb-2 sm:mb-3">
+            <h2 className="font-headline text-2xl sm:text-3xl font-bold text-on-background mb-2 sm:mb-3">
               Specialist Vehicle & Workshop Services
-            </p>
+            </h2>
             <p className="text-secondary leading-relaxed">
               A&E, PTS, air conditioning, and VOSA compliance - expertise for niche commercial
               fleets across London and Essex.
@@ -20,6 +20,7 @@ export function HomeSpecialistGrid() {
           </div>
           <Link
             href="/service"
+            prefetch={false}
             className="inline-flex items-center justify-center border-2 border-outline text-on-background px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-surface-container transition-all self-start shrink-0 min-h-11"
           >
             All services

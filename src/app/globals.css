@@ -65,6 +65,11 @@ body {
   );
 }
 
+.content-defer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 480px;
+}
+
 @media (max-width: 639px) {
   .hero-gradient {
     background: linear-gradient(

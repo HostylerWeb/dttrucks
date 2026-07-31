@@ -28,7 +28,7 @@ export const homeIntroHighlights = [
   },
 ];
 
-export const homeIntroImage = "/media/home/hero-3-in-range.webp";
+export const homeIntroImage = "/media/home/hero-3-in-range-640.webp";
 export const homeIntroImageAlt = "DT Trucks Isuzu dealership and workshop";
 export const homeStatBadge = { value: "131+", label: "Years Combined Experience" };
 

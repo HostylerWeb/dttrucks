@@ -6,15 +6,18 @@ import "./globals.css";
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
   subsets: ["latin"],
-  weight: ["400", "600", "700", "800"],
+  weight: ["600", "700", "800"],
   display: "swap",
+  adjustFontFallback: true,
 });
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "600"],
-  display: "swap",
+  display: "optional",
+  adjustFontFallback: true,
+  preload: false,
 });
 
 export const viewport: Viewport = {
