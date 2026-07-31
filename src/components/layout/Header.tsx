@@ -1,14 +1,10 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { HeaderLogo } from "@/components/layout/SiteLogo";
-
-const DesktopNavBar = dynamic(
-  () => import("@/components/layout/DesktopNavBar").then((mod) => mod.DesktopNavBar),
-  { ssr: false }
-);
+import { DesktopNavBar } from "@/components/layout/DesktopNavBar";
+import dynamic from "next/dynamic";
 
 const MobileNavSheet = dynamic(
   () => import("@/components/layout/MobileNavSheet").then((mod) => mod.MobileNavSheet),
@@ -48,21 +44,12 @@ export function Header({
 }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 4);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 1024px)");
-    const update = () => setIsDesktop(mediaQuery.matches);
-    update();
-    mediaQuery.addEventListener("change", update);
-    return () => mediaQuery.removeEventListener("change", update);
   }, []);
 
   const closeMenu = () => setMenuOpen(false);
@@ -84,15 +71,13 @@ export function Header({
           </div>
 
           <div className="hidden lg:flex flex-1 items-center min-w-0 min-h-[40px]">
-            {isDesktop && (
-              <DesktopNavBar
-                phone={phone}
-                phoneHref={phoneHref}
-                socialFacebook={socialFacebook}
-                socialLinkedin={socialLinkedin}
-                socialInstagram={socialInstagram}
-              />
-            )}
+            <DesktopNavBar
+              phone={phone}
+              phoneHref={phoneHref}
+              socialFacebook={socialFacebook}
+              socialLinkedin={socialLinkedin}
+              socialInstagram={socialInstagram}
+            />
           </div>
 
           <div className="flex lg:hidden items-center gap-2 shrink-0 ml-auto">

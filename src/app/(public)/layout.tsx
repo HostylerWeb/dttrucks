@@ -1,7 +1,8 @@
 import { Suspense } from "react";
 import { getAllSettings } from "@/lib/db/settings";
 import { UtilityBar } from "@/components/layout/UtilityBar";
-import { DeferredSiteHeader } from "@/components/layout/DeferredSiteHeader";
+import { Header } from "@/components/layout/Header";
+import { StaticSiteHeader } from "@/components/layout/StaticSiteHeader";
 import { Footer } from "@/components/layout/Footer";
 import { DeferredPublicWidgets } from "@/components/public/DeferredPublicWidgets";
 import { DeferredMaterialSymbols } from "@/components/layout/DeferredMaterialSymbols";
@@ -20,7 +21,7 @@ async function PublicSiteHeader() {
       <WebSiteJsonLd />
       <LocalBusinessJsonLd />
       <UtilityBar settings={settings} />
-      <DeferredSiteHeader
+      <Header
         phone={phone}
         phoneHref={phoneHref}
         socialFacebook={settings.social_facebook || socialLinks.facebook}
@@ -54,8 +55,8 @@ async function LiveChatLoader() {
 function HeaderFallback() {
   return (
     <>
-      <div className="h-8 bg-inverse-surface animate-pulse" />
-      <div className="h-[72px] border-b border-outline-variant bg-surface animate-pulse" />
+      <div className="hidden sm:block h-8 bg-inverse-surface" />
+      <StaticSiteHeader phone="020 8595 4400" phoneHref="tel:02085954400" />
     </>
   );
 }
