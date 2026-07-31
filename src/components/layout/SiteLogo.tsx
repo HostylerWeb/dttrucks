@@ -11,7 +11,8 @@ const HEADER_LOGO = {
 } as const;
 
 const FOOTER_LOGO = {
-  src: "/media/branding/dt-icon.png",
+  webp: "/media/branding/dt-icon.webp",
+  png: "/media/branding/dt-icon.png",
   width: 118,
   height: 51,
   alt: "DT Trucks - Isuzu Dealership",
@@ -54,16 +55,21 @@ export function HeaderLogo({
 
 export function FooterLogo() {
   return (
-    <Link href="/" className="inline-block mb-4">
-      {/* Plain img avoids pulling next/image into the global client bundle */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={FOOTER_LOGO.src}
-        alt={FOOTER_LOGO.alt}
-        width={FOOTER_LOGO.width}
-        height={FOOTER_LOGO.height}
-        className="h-10 w-auto"
-      />
+    <Link
+      href="/"
+      className="inline-flex items-center min-h-11 py-2 -my-2 mb-2"
+      aria-label="DT Trucks home"
+    >
+      <picture>
+        <source type="image/webp" srcSet={FOOTER_LOGO.webp} />
+        <img
+          src={FOOTER_LOGO.png}
+          alt={FOOTER_LOGO.alt}
+          width={FOOTER_LOGO.width}
+          height={FOOTER_LOGO.height}
+          className="h-10 w-auto"
+        />
+      </picture>
     </Link>
   );
 }

@@ -3,6 +3,7 @@ import { getAllServices } from "@/content/services";
 export type NavItemLink = {
   label: string;
   href: string;
+  shortLabel?: string;
 };
 
 export type NavItem = NavItemLink & {
@@ -17,14 +18,18 @@ export const serviceNavChildren: NavItemLink[] = getAllServices().map((service) 
 export const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Isuzu Truck Sales", href: "/sales" },
+  { label: "Isuzu Truck Sales", shortLabel: "Truck Sales", href: "/sales" },
   {
     label: "Service & Parts",
     href: "/service",
     children: serviceNavChildren,
   },
-  { label: "Specialist Applications", href: "/specialist-applications" },
-  { label: "eBay Listings", href: "/ebay" },
+  {
+    label: "Specialist Applications",
+    shortLabel: "Specialist",
+    href: "/specialist-applications",
+  },
+  { label: "eBay Listings", shortLabel: "eBay", href: "/ebay" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { getCategories, getPostsPaginated } from "@/lib/db/blog";
 import { buildStaticPageMetadata, staticMetadata } from "@/lib/metadata";
-import { HeroSection } from "@/components/public/HeroSection";
 import { BreadcrumbsBar } from "@/components/layout/BreadcrumbsBar";
 import { BlogCard } from "@/components/public/BlogCard";
 import { BlogCategoryFilter, BlogPagination } from "@/components/public/BlogFilters";
@@ -34,12 +33,10 @@ export default async function BlogIndexPage({
   return (
     <>
       <BreadcrumbsBar items={[{ label: "Home", href: "/" }, { label: "Blog" }]} />
-      <HeroSection
-        title="Blog"
-        minHeight="min-h-[200px] sm:min-h-[220px]"
-        ctas={[]}
-      />
       <section className="page-section page-container">
+        <h1 className="font-headline text-3xl sm:text-4xl font-bold text-on-background mb-6 sm:mb-8">
+          Blog
+        </h1>
         <BlogCategoryFilter categories={categoryFilters} activeSlug={categorySlug} />
         {posts.length === 0 ? (
           <p className="text-secondary text-center py-12">No blog posts found.</p>

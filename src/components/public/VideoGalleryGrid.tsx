@@ -10,11 +10,11 @@ export function VideoGalleryGrid({ videos }: { videos: VideoItem[] }) {
   if (videos.length === 0) return null;
 
   return (
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {videos.map((video) => (
-        <div key={video.id}>
+        <div key={video.id} className="min-w-0">
           <DeferredVideoEmbed youtubeId={video.youtube_id} title={video.title} />
-          <h2 className="mt-3 text-sm font-semibold text-on-surface leading-snug">{video.title}</h2>
+          <h2 className="mt-4 text-sm font-semibold text-on-surface leading-snug">{video.title}</h2>
         </div>
       ))}
     </div>

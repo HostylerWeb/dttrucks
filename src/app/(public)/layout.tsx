@@ -20,7 +20,12 @@ async function PublicSiteHeader() {
     <>
       <WebSiteJsonLd />
       <LocalBusinessJsonLd />
-      <UtilityBar settings={settings} />
+      <UtilityBar
+        settings={settings}
+        socialFacebook={settings.social_facebook || socialLinks.facebook}
+        socialLinkedin={settings.social_linkedin || socialLinks.linkedin}
+        socialInstagram={settings.social_instagram || socialLinks.instagram}
+      />
       <Header
         phone={phone}
         phoneHref={phoneHref}

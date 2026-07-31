@@ -16,7 +16,7 @@ export function VideoEmbed({
     return (
       <button
         type="button"
-        className="group relative aspect-video w-full overflow-hidden rounded-xl bg-black shadow-industrial"
+        className="group relative aspect-video w-full min-h-[12rem] overflow-hidden rounded-xl bg-black shadow-industrial touch-manipulation"
         onClick={() => setActive(true)}
         aria-label={`Play video: ${title}`}
       >

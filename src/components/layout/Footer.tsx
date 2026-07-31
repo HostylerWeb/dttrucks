@@ -11,6 +11,9 @@ import { formatOpeningHoursList } from "@/lib/format-opening-hours";
 
 type Settings = Record<string, string | undefined>;
 
+const footerLinkClass =
+  "inline-flex items-center min-h-11 py-2 hover:text-primary-fixed-dim transition-colors";
+
 function SocialIconLink({
   href,
   label,
@@ -25,7 +28,7 @@ function SocialIconLink({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="hover:text-white"
+      className="inline-flex items-center justify-center min-h-11 min-w-11 rounded-md hover:text-white hover:bg-white/10 transition-colors"
       aria-label={label}
     >
       {children}
@@ -74,7 +77,7 @@ export function Footer({ settings }: { settings: Settings }) {
           <ul className="space-y-2 text-sm text-surface-variant">
             {footerQuickLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="hover:text-primary-fixed-dim transition-colors">
+                <Link href={link.href} className={footerLinkClass}>
                   {link.label}
                 </Link>
               </li>
@@ -97,7 +100,7 @@ export function Footer({ settings }: { settings: Settings }) {
           <ul className="space-y-2 text-sm text-surface-variant">
             {footerServiceLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="hover:text-primary-fixed-dim transition-colors">
+                <Link href={link.href} className={footerLinkClass}>
                   {link.label}
                 </Link>
               </li>
@@ -109,7 +112,7 @@ export function Footer({ settings }: { settings: Settings }) {
           <ul className="space-y-2 text-sm text-surface-variant">
             {footerLegalLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="hover:text-primary-fixed-dim transition-colors">
+                <Link href={link.href} className={footerLinkClass}>
                   {link.label}
                 </Link>
               </li>
@@ -141,13 +144,28 @@ export function Footer({ settings }: { settings: Settings }) {
             {settings.company_registration ?? "9501804"}
           </p>
           <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-4 gap-y-2">
-            <a href={facebook} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+            <a
+              href={facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center min-h-11 py-2 hover:text-white"
+            >
               Facebook
             </a>
-            <a href={linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+            <a
+              href={linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center min-h-11 py-2 hover:text-white"
+            >
               LinkedIn
             </a>
-            <a href={instagram} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+            <a
+              href={instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center min-h-11 py-2 hover:text-white"
+            >
               Instagram
             </a>
           </div>

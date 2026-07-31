@@ -71,13 +71,7 @@ export function Header({
           </div>
 
           <div className="hidden lg:flex flex-1 items-center min-w-0 min-h-[40px]">
-            <DesktopNavBar
-              phone={phone}
-              phoneHref={phoneHref}
-              socialFacebook={socialFacebook}
-              socialLinkedin={socialLinkedin}
-              socialInstagram={socialInstagram}
-            />
+            <DesktopNavBar phone={phone} phoneHref={phoneHref} />
           </div>
 
           <div className="flex lg:hidden items-center gap-2 shrink-0 ml-auto">

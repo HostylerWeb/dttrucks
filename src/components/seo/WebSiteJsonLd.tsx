@@ -24,7 +24,7 @@ export function WebSiteJsonLd() {
         url: siteUrl,
         logo: {
           "@type": "ImageObject",
-          url: absoluteUrl("/media/branding/dt-icon.png"),
+          url: absoluteUrl("/media/branding/dt-icon.webp"),
           width: 118,
           height: 51,
         },
