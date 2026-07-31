@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { LoginForm } from "@/components/admin/login-form";
 
 export default function AdminLoginPage() {
@@ -21,9 +22,9 @@ export default function AdminLoginPage() {
         </div>
 
         <p className="mt-6 text-center text-xs text-secondary">
-          <a href="/" className="hover:text-primary-container">
+          <Link href="/" className="hover:text-primary-container">
             Back to website
-          </a>
+          </Link>
         </p>
       </div>
     </div>

@@ -15,13 +15,11 @@ function hasAnalyticsConsent() {
 }
 
 export function GoogleAnalyticsConsent({ gaId }: { gaId: string }) {
-  const [enabled, setEnabled] = useState(false);
+  const [enabled, setEnabled] = useState(() =>
+    typeof window !== "undefined" && hasAnalyticsConsent()
+  );
 
   useEffect(() => {
-    if (hasAnalyticsConsent()) {
-      setEnabled(true);
-    }
-
     const onConsent = () => setEnabled(hasAnalyticsConsent());
     window.addEventListener(CONSENT_EVENT, onConsent);
     return () => window.removeEventListener(CONSENT_EVENT, onConsent);

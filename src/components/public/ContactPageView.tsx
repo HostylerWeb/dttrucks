@@ -173,7 +173,7 @@ export function ContactPageView({
                       rel="noopener noreferrer"
                       className="font-semibold text-primary-container hover:underline"
                     >
-                      ///{what3words}
+                      {`///${what3words}`}
                     </a>
                   </p>
                 )}

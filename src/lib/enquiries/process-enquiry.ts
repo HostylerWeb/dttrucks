@@ -3,7 +3,7 @@ import { cacheTags } from "@/lib/admin/revalidate";
 import { sendEnquiryEmails } from "@/lib/email";
 import { checkRateLimit, hashIp } from "@/lib/rate-limit";
 import { isHoneypotFilled } from "@/lib/spam";
-import { enquirySchema, type EnquiryInput } from "@/lib/validations/enquiry";
+import { enquirySchema } from "@/lib/validations/enquiry";
 import type { enquiry_type } from "@/generated/prisma/client";
 
 function parseMetadata(raw: unknown): Record<string, unknown> | undefined {

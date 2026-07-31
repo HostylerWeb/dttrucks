@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { requireRead } from "@/lib/admin/session";
 import { DataTable } from "@/components/admin/data-table";

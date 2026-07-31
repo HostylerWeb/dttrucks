@@ -4,7 +4,7 @@ import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import Link from "@tiptap/extension-link";
 import Image from "@tiptap/extension-image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 export function RichTextEditor({
@@ -26,6 +26,12 @@ export function RichTextEditor({
     ],
     content: defaultValue,
     immediatelyRender: false,
+    onCreate: ({ editor: ed }) => {
+      if (defaultValue && ed.isEmpty) {
+        ed.commands.setContent(defaultValue);
+      }
+      setHtml(ed.getHTML());
+    },
     onUpdate: ({ editor: ed }) => setHtml(ed.getHTML()),
     editorProps: {
       attributes: {
@@ -34,13 +40,6 @@ export function RichTextEditor({
       },
     },
   });
-
-  useEffect(() => {
-    if (editor && defaultValue && editor.isEmpty) {
-      editor.commands.setContent(defaultValue);
-      setHtml(defaultValue);
-    }
-  }, [editor, defaultValue]);
 
   return (
     <div className={cn("rounded-lg border border-outline-variant bg-white", className)}>

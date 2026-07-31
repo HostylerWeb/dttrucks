@@ -16,7 +16,7 @@ const userSchema = z.object({
 });
 
 export async function createUser(formData: FormData) {
-  const session = await requireManageUsers();
+  await requireManageUsers();
   const parsed = parseFormData(userSchema, formData);
   if (!parsed.success) return { error: "Invalid form data" };
 
