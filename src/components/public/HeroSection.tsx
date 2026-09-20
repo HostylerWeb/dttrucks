@@ -47,7 +47,7 @@ export function HeroSection({
   return (
     <section
       className={cn(
-        "relative flex items-center overflow-hidden bg-inverse-surface text-white",
+        "relative flex items-center overflow-hidden bg-background text-on-background",
         minHeight,
         className
       )}
@@ -88,7 +88,7 @@ export function HeroSection({
             />
           )
         ) : (
-          <div className="w-full h-full bg-inverse-surface" />
+          <div className="w-full h-full bg-surface-container" />
         )}
         <div className="absolute inset-0 hero-gradient" />
       </div>
@@ -100,7 +100,7 @@ export function HeroSection({
             </span>
           )}
           {eyebrow && (
-            <p className="text-primary-fixed-dim text-xs sm:text-sm font-semibold uppercase tracking-wide mb-2">
+            <p className="text-primary-container text-xs sm:text-sm font-semibold uppercase tracking-wide mb-2">
               {eyebrow}
             </p>
           )}
@@ -119,16 +119,16 @@ export function HeroSection({
           )}
           {subtitle &&
             (subtitleTag === "h2" ? (
-              <h2 className="text-base sm:text-lg md:text-xl text-white/90 mb-2 leading-relaxed font-semibold">
+              <h2 className="text-base sm:text-lg md:text-xl text-secondary mb-2 leading-relaxed font-semibold">
                 {subtitle}
               </h2>
             ) : (
-              <p className="text-base sm:text-lg md:text-xl text-white/90 mb-2 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-secondary mb-2 leading-relaxed">
                 {subtitle}
               </p>
             ))}
           {tagline && (
-            <p className="text-primary-fixed-dim font-headline text-lg sm:text-xl md:text-2xl font-bold mb-6 sm:mb-8 leading-snug">
+            <p className="text-primary-container font-headline text-lg sm:text-xl md:text-2xl font-bold mb-6 sm:mb-8 leading-snug">
               {tagline}
             </p>
           )}
@@ -141,7 +141,7 @@ export function HeroSection({
                       key={cta.href}
                       href={cta.href}
                       prefetch={false}
-                      className="inline-flex items-center justify-center sm:justify-start text-white/90 hover:text-white px-4 py-3 font-semibold text-sm underline-offset-4 hover:underline min-h-11"
+                      className="inline-flex items-center justify-center sm:justify-start text-primary-container hover:text-primary px-4 py-3 font-semibold text-sm underline-offset-4 hover:underline min-h-11"
                     >
                       {cta.label}
                     </Link>
@@ -153,7 +153,7 @@ export function HeroSection({
                       key={cta.href}
                       href={cta.href}
                       prefetch={false}
-                      className="inline-flex items-center justify-center w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/40 text-white px-6 sm:px-8 py-3.5 rounded-lg font-bold transition-all active:scale-[0.98] min-h-11"
+                      className="inline-flex items-center justify-center w-full sm:w-auto bg-white hover:bg-surface-container border-2 border-outline-variant text-on-background px-6 sm:px-8 py-3.5 rounded-lg font-bold transition-all active:scale-[0.98] min-h-11 shadow-industrial"
                     >
                       {cta.label}
                     </Link>

@@ -73,14 +73,7 @@ export function ThreePillarsSection() {
                   </div>
                 </div>
                 <p className="text-secondary text-base lg:text-lg leading-relaxed">{active.lead}</p>
-                <Link
-                  href={active.cta.href}
-                  className={
-                    active.darkCta
-                      ? "mt-8 inline-flex items-center justify-center rounded-lg bg-inverse-surface text-white px-8 py-3.5 font-semibold hover:bg-black transition-colors shadow-industrial"
-                      : buttonClassName("primary", "lg") + " mt-8"
-                  }
-                >
+                <Link href={active.cta.href} className={buttonClassName("primary", "lg") + " mt-8"}>
                   {active.cta.label}
                 </Link>
               </div>

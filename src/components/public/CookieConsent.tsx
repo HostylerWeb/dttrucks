@@ -32,12 +32,12 @@ export function CookieConsent() {
       aria-label="Cookie consent"
     >
       <div className="page-container !px-0 sm:!px-[var(--spacing-margin-mobile)]">
-        <div className="bg-inverse-surface text-white p-4 sm:p-6 rounded-xl shadow-2xl flex flex-col gap-4">
+        <div className="bg-white text-on-background border border-outline-variant p-4 sm:p-6 rounded-xl shadow-2xl flex flex-col gap-4">
           <div className="flex items-start gap-3">
-            <span className="material-symbols-outlined text-primary-fixed-dim text-2xl shrink-0" aria-hidden>
+            <span className="material-symbols-outlined text-primary-container text-2xl shrink-0" aria-hidden>
               cookie
             </span>
-            <p className="text-sm text-inverse-on-surface/90 leading-relaxed">
+            <p className="text-sm text-secondary leading-relaxed">
               We use cookies to ensure that we give you the best experience on our website. If you
               continue to use this site we will assume that you are happy with it.
             </p>
@@ -45,14 +45,14 @@ export function CookieConsent() {
           <div className="flex flex-col sm:flex-row gap-3 sm:shrink-0">
             <Link
               href="/legal/gdpr"
-              className="inline-flex items-center justify-center px-5 py-3 border border-white/30 rounded-lg text-sm font-semibold hover:bg-white/10 min-h-11"
+              className="inline-flex items-center justify-center px-5 py-3 border border-outline-variant rounded-lg text-sm font-semibold hover:bg-surface-container min-h-11"
             >
               Privacy
             </Link>
             <button
               type="button"
               onClick={accept}
-              className="inline-flex items-center justify-center px-5 py-3 bg-primary-container rounded-lg text-sm font-semibold hover:bg-primary min-h-11"
+              className="inline-flex items-center justify-center px-5 py-3 bg-primary-container text-white rounded-lg text-sm font-semibold hover:bg-primary min-h-11"
             >
               Accept
             </button>

@@ -52,12 +52,7 @@ export function HomePillarsBand() {
                 <Link
                   href={config.href}
                   prefetch={false}
-                  className={cn(
-                    "w-full py-3 rounded-lg font-semibold text-sm transition-colors text-center min-h-11 flex items-center justify-center",
-                    config.darkCta
-                      ? "bg-inverse-surface text-white hover:bg-black"
-                      : "bg-primary-container text-white hover:bg-primary"
-                  )}
+                  className="w-full py-3 rounded-lg font-semibold text-sm transition-colors text-center min-h-11 flex items-center justify-center bg-primary-container text-white hover:bg-primary"
                 >
                   {config.ctaLabel}
                 </Link>

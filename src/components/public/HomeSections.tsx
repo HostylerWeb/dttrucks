@@ -129,13 +129,13 @@ export function HomeContactSection({
   what3words?: string | null;
 }) {
   return (
-    <section id="contact" className="page-section bg-inverse-surface text-white">
+    <section id="contact" className="page-section bg-surface-container-low text-on-background border-t border-outline-variant">
       <div className="page-container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
         <div>
           <p className="font-headline text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-5">
             Contact Us Today
           </p>
-          <p className="text-inverse-on-surface/80 text-base sm:text-lg mb-8 sm:mb-10">
+          <p className="text-secondary text-base sm:text-lg mb-8 sm:mb-10">
             Service, parts, sales - speak directly with our experienced team in Barking.
           </p>
           <div className="space-y-6">
@@ -144,10 +144,10 @@ export function HomeContactSection({
                 <span className="material-symbols-outlined text-2xl">phone_in_talk</span>
               </div>
               <div>
-                <p className="text-xs uppercase tracking-wide opacity-70 font-semibold">Service & Parts</p>
+                <p className="text-xs uppercase tracking-wide text-secondary font-semibold">Service & Parts</p>
                 <a
                   href={`tel:${phone.replace(/\s/g, "")}`}
-                  className="font-headline text-xl sm:text-2xl font-bold hover:text-primary-fixed-dim transition-colors"
+                  className="font-headline text-xl sm:text-2xl font-bold text-on-background hover:text-primary-container transition-colors"
                 >
                   {phone}
                 </a>
@@ -158,19 +158,19 @@ export function HomeContactSection({
                 <span className="material-symbols-outlined text-2xl">person</span>
               </div>
               <div>
-                <p className="text-xs uppercase tracking-wide opacity-70 font-semibold">
+                <p className="text-xs uppercase tracking-wide text-secondary font-semibold">
                   Sales - {salesName}
                 </p>
                 <a
                   href={`tel:${salesPhone.replace(/\s/g, "")}`}
-                  className="font-headline text-xl sm:text-2xl font-bold hover:text-primary-fixed-dim transition-colors"
+                  className="font-headline text-xl sm:text-2xl font-bold text-on-background hover:text-primary-container transition-colors"
                 >
                   {salesPhone}
                 </a>
                 {salesEmail && (
                   <a
                     href={`mailto:${salesEmail}`}
-                    className="text-sm text-primary-fixed-dim hover:underline block mt-1"
+                    className="text-sm text-primary-container hover:underline block mt-1"
                   >
                     {salesEmail}
                   </a>
@@ -183,10 +183,10 @@ export function HomeContactSection({
                   <span className="material-symbols-outlined text-2xl">location_on</span>
                 </div>
                 <div>
-                  <p className="text-xs uppercase tracking-wide opacity-70 font-semibold">Address</p>
-                  <p className="text-sm leading-relaxed mt-1 whitespace-pre-line">{companyAddress}</p>
+                  <p className="text-xs uppercase tracking-wide text-secondary font-semibold">Address</p>
+                  <p className="text-sm leading-relaxed mt-1 whitespace-pre-line text-secondary">{companyAddress}</p>
                   {what3words && (
-                    <p className="text-xs opacity-60 mt-2">What3Words: {`///${what3words}`}</p>
+                    <p className="text-xs text-secondary mt-2">What3Words: {`///${what3words}`}</p>
                   )}
                 </div>
               </div>

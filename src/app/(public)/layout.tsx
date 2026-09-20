@@ -60,8 +60,8 @@ async function LiveChatLoader() {
 function HeaderFallback() {
   return (
     <>
-      <div className="hidden sm:block bg-inverse-surface text-white py-2 text-sm">
-        <div className="page-container text-center text-white/90" aria-hidden>
+      <div className="hidden sm:block bg-surface-container-low text-secondary py-2 text-sm border-b border-outline-variant">
+        <div className="page-container text-center" aria-hidden>
           Loading site information…
         </div>
       </div>
@@ -71,7 +71,7 @@ function HeaderFallback() {
 }
 
 function FooterFallback() {
-  return <div className="h-64 bg-inverse-surface animate-pulse" />;
+  return <div className="h-64 bg-surface-container-low animate-pulse border-t border-outline-variant" />;
 }
 
 export default function PublicLayout({

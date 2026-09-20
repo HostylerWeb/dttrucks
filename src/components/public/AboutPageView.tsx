@@ -178,11 +178,11 @@ export function AboutPageView() {
                   Established
                 </p>
               </div>
-              <div className="absolute -top-3 right-2 sm:-top-4 sm:-right-4 md:-top-5 md:-right-5 bg-inverse-surface text-white px-3 py-2 sm:px-4 sm:py-3 rounded-xl shadow-industrial border border-white/10 max-w-[180px] sm:max-w-[200px]">
-                <p className="text-xs uppercase tracking-wide text-white/70 font-semibold">
+              <div className="absolute -top-3 right-2 sm:-top-4 sm:-right-4 md:-top-5 md:-right-5 bg-white text-on-background px-3 py-2 sm:px-4 sm:py-3 rounded-xl shadow-industrial border border-outline-variant max-w-[180px] sm:max-w-[200px]">
+                <p className="text-xs uppercase tracking-wide text-secondary font-semibold">
                   London & Essex
                 </p>
-                <p className="font-headline font-bold text-sm mt-0.5">Isuzu dealership</p>
+                <p className="font-headline font-bold text-sm mt-0.5 text-primary-container">Isuzu dealership</p>
               </div>
             </div>
           </div>
@@ -190,18 +190,18 @@ export function AboutPageView() {
       </section>
 
       {/* Stats band */}
-      <section className="bg-inverse-surface py-10 sm:py-14 lg:py-16 relative overflow-hidden">
-        <div className="absolute top-0 right-0 opacity-[0.05] pointer-events-none translate-x-1/4">
-          <span className="material-symbols-outlined text-[240px] text-white">history_edu</span>
+      <section className="bg-surface-container-low py-10 sm:py-14 lg:py-16 relative overflow-hidden border-y border-outline-variant">
+        <div className="absolute top-0 right-0 opacity-[0.06] pointer-events-none translate-x-1/4 text-primary-container">
+          <span className="material-symbols-outlined text-[240px]">history_edu</span>
         </div>
         <div className="page-container relative z-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {ABOUT_STATS.map((stat) => (
               <div key={stat.label} className="text-center p-2">
-                <p className="text-primary-fixed-dim font-headline text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-1">
+                <p className="text-primary-container font-headline text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-1">
                   {stat.value}
                 </p>
-                <p className="text-inverse-on-surface/75 text-sm font-medium">{stat.label}</p>
+                <p className="text-secondary text-sm font-medium">{stat.label}</p>
               </div>
             ))}
           </div>

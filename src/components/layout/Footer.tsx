@@ -12,7 +12,7 @@ import { formatOpeningHoursList } from "@/lib/format-opening-hours";
 type Settings = Record<string, string | undefined>;
 
 const footerLinkClass =
-  "inline-flex items-center min-h-11 py-2 hover:text-primary-fixed-dim transition-colors";
+  "inline-flex items-center min-h-11 py-2 text-secondary hover:text-primary-container transition-colors";
 
 function SocialIconLink({
   href,
@@ -28,7 +28,7 @@ function SocialIconLink({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center justify-center min-h-11 min-w-11 rounded-md hover:text-white hover:bg-white/10 transition-colors"
+      className="inline-flex items-center justify-center min-h-11 min-w-11 rounded-md text-secondary hover:text-primary-container hover:bg-surface-container transition-colors"
       aria-label={label}
     >
       {children}
@@ -43,21 +43,21 @@ export function Footer({ settings }: { settings: Settings }) {
   const openingHours = formatOpeningHoursList(settings.opening_hours);
 
   return (
-    <footer className="bg-inverse-surface text-white border-t border-white/10">
+    <footer className="bg-surface-container-low text-on-background border-t border-outline-variant">
       <div className="page-container py-10 sm:py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10">
         <div className="lg:col-span-1">
           <FooterLogo />
-          <p className="text-surface-variant text-sm leading-relaxed mb-4">
+          <p className="text-secondary text-sm leading-relaxed mb-4">
             Authorised Isuzu Dealer for London & Essex. Sales, parts and service since 1995.
           </p>
           {settings.company_address && (
-            <p className="text-surface-variant text-sm mb-3">{settings.company_address}</p>
+            <p className="text-secondary text-sm mb-3">{settings.company_address}</p>
           )}
-          <p className="text-surface-variant text-sm space-y-2">
+          <p className="text-secondary text-sm space-y-2">
             {settings.company_email && (
               <a
                 href={`mailto:${settings.company_email}`}
-                className="inline-block py-1 hover:text-white min-h-6"
+                className="inline-block py-1 hover:text-primary-container min-h-6"
               >
                 {settings.company_email}
               </a>
@@ -65,7 +65,7 @@ export function Footer({ settings }: { settings: Settings }) {
             {settings.company_phone && (
               <a
                 href={`tel:${settings.company_phone.replace(/\s/g, "")}`}
-                className="inline-block py-1 hover:text-white min-h-6"
+                className="inline-block py-1 hover:text-primary-container min-h-6"
               >
                 {settings.company_phone}
               </a>
@@ -73,8 +73,8 @@ export function Footer({ settings }: { settings: Settings }) {
           </p>
         </div>
         <div>
-          <p className="font-semibold mb-4">Quick Links</p>
-          <ul className="space-y-2 text-sm text-surface-variant">
+          <p className="font-semibold mb-4 text-on-background">Quick Links</p>
+          <ul className="space-y-2 text-sm">
             {footerQuickLinks.map((link) => (
               <li key={link.href}>
                 <Link href={link.href} className={footerLinkClass}>
@@ -85,19 +85,19 @@ export function Footer({ settings }: { settings: Settings }) {
           </ul>
         </div>
         <div>
-          <p className="font-semibold mb-4">Opening Hours</p>
-          <ul className="space-y-1.5 text-sm text-surface-variant">
+          <p className="font-semibold mb-4 text-on-background">Opening Hours</p>
+          <ul className="space-y-1.5 text-sm text-secondary">
             {openingHours.map((row) => (
               <li key={row.day} className="flex justify-between gap-4">
                 <span>{row.day}</span>
-                <span className="text-white/90">{row.hours}</span>
+                <span className="text-on-background font-medium">{row.hours}</span>
               </li>
             ))}
           </ul>
         </div>
         <div>
-          <p className="font-semibold mb-4">Services</p>
-          <ul className="space-y-2 text-sm text-surface-variant">
+          <p className="font-semibold mb-4 text-on-background">Services</p>
+          <ul className="space-y-2 text-sm">
             {footerServiceLinks.map((link) => (
               <li key={link.href}>
                 <Link href={link.href} className={footerLinkClass}>
@@ -108,8 +108,8 @@ export function Footer({ settings }: { settings: Settings }) {
           </ul>
         </div>
         <div>
-          <p className="font-semibold mb-4">Legal</p>
-          <ul className="space-y-2 text-sm text-surface-variant">
+          <p className="font-semibold mb-4 text-on-background">Legal</p>
+          <ul className="space-y-2 text-sm">
             {footerLegalLinks.map((link) => (
               <li key={link.href}>
                 <Link href={link.href} className={footerLinkClass}>
@@ -137,8 +137,8 @@ export function Footer({ settings }: { settings: Settings }) {
           </div>
         </div>
       </div>
-      <div className="border-t border-white/10 py-6 page-container">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-surface-variant text-center md:text-left">
+      <div className="border-t border-outline-variant py-6 page-container">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-secondary text-center md:text-left">
           <p>
             © <FooterYear /> {settings.company_name ?? "DT Trucks Limited"}. Registered in England No.{" "}
             {settings.company_registration ?? "9501804"}
@@ -148,7 +148,7 @@ export function Footer({ settings }: { settings: Settings }) {
               href={facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center min-h-11 py-2 hover:text-white"
+              className="inline-flex items-center min-h-11 py-2 hover:text-primary-container"
             >
               Facebook
             </a>
@@ -156,7 +156,7 @@ export function Footer({ settings }: { settings: Settings }) {
               href={linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center min-h-11 py-2 hover:text-white"
+              className="inline-flex items-center min-h-11 py-2 hover:text-primary-container"
             >
               LinkedIn
             </a>
@@ -164,7 +164,7 @@ export function Footer({ settings }: { settings: Settings }) {
               href={instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center min-h-11 py-2 hover:text-white"
+              className="inline-flex items-center min-h-11 py-2 hover:text-primary-container"
             >
               Instagram
             </a>

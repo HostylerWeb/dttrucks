@@ -77,7 +77,7 @@ export const homePillarConfig = [
     icon: "build_circle",
     href: "/service",
     ctaLabel: "Book Service",
-    darkCta: true,
+    darkCta: false,
   },
 ];
 

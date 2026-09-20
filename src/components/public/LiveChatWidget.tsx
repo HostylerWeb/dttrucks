@@ -14,7 +14,7 @@ export function LiveChatWidget({ phone }: { phone: string }) {
           role="dialog"
           aria-label="Live chat"
         >
-          <div className="bg-inverse-surface text-white px-5 py-4 font-semibold">
+          <div className="bg-primary-container text-white px-5 py-4 font-semibold">
             DT Trucks Support
           </div>
           <div className="p-5 text-sm text-secondary">
