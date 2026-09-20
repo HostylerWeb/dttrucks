@@ -9,6 +9,7 @@ import {
   selectClassName,
   textareaClassName,
 } from "@/components/admin/form-field";
+import { formatEnquiryMetadataLines, parseEnquiryMetadata } from "@/lib/enquiries/format-metadata";
 import { format } from "date-fns";
 
 export default async function EnquiryDetailPage({
@@ -23,6 +24,9 @@ export default async function EnquiryDetailPage({
     include: { assigned_to: true },
   });
   if (!enquiry) notFound();
+
+  const metadataObj = parseEnquiryMetadata(enquiry.metadata);
+  const metadataLines = formatEnquiryMetadataLines(metadataObj ?? undefined);
 
   const users = await prisma.users.findMany({
     where: { is_active: true },
@@ -63,7 +67,17 @@ export default async function EnquiryDetailPage({
           <strong>Message</strong>
           <p className="mt-2 whitespace-pre-wrap text-on-surface">{enquiry.message}</p>
         </div>
-        {enquiry.metadata && (
+        {metadataLines.length > 0 && (
+          <div>
+            <strong>Structured details</strong>
+            <ul className="mt-2 list-disc pl-5 space-y-1 text-on-surface">
+              {metadataLines.map((line) => (
+                <li key={line}>{line}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+        {enquiry.metadata && metadataLines.length === 0 && (
           <div>
             <strong>Metadata</strong>
             <pre className="mt-2 rounded bg-surface-container p-3 text-xs overflow-auto">{enquiry.metadata}</pre>

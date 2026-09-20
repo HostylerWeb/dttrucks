@@ -7,7 +7,7 @@ export const bodyTypes = [
   { value: "dropside", label: "Dropside" },
   { value: "fridge", label: "Fridge body" },
   { value: "freezer", label: "Freezer body" },
-  { value: "dual_temp", label: "Dual temperature" },
+  { value: "dual_temp", label: "Fridge freezer dual temp" },
   { value: "utilitruck", label: "Utilitruck / platform" },
   { value: "recovery", label: "Recovery / plant" },
   { value: "other", label: "Other (describe in message)" },

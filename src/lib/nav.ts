@@ -8,7 +8,15 @@ export type NavItemLink = {
 
 export type NavItem = NavItemLink & {
   children?: NavItemLink[];
+  /** First link in dropdown/details when `children` is set */
+  childrenOverviewLabel?: string;
 };
+
+export const salesNavChildren: NavItemLink[] = [
+  { label: "Specification sheets", href: "/sales/specification-sheets" },
+  { label: "Body quote request", href: "/sales/body-quote" },
+  { label: "P700 range overview", href: "/blog/p700-isuzu-range-at-dt-trucks" },
+];
 
 export const serviceNavChildren: NavItemLink[] = getAllServices().map((service) => ({
   label: service.title,
@@ -18,7 +26,7 @@ export const serviceNavChildren: NavItemLink[] = getAllServices().map((service) 
 export const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Isuzu Truck Sales", shortLabel: "Truck Sales", href: "/sales" },
+  { label: "Isuzu Truck Sales", shortLabel: "Truck Sales", href: "/sales", childrenOverviewLabel: "Browse truck range", children: salesNavChildren },
   {
     label: "Service & Parts",
     href: "/service",
@@ -37,6 +45,8 @@ export const navItems: NavItem[] = [
 export const footerQuickLinks = [
   { label: "About Us", href: "/about" },
   { label: "Isuzu Truck Sales", href: "/sales" },
+  { label: "Specification sheets", href: "/sales/specification-sheets" },
+  { label: "Body quote", href: "/sales/body-quote" },
   { label: "Service & Parts", href: "/service" },
   { label: "Blog", href: "/blog" },
   { label: "Careers", href: "/careers" },

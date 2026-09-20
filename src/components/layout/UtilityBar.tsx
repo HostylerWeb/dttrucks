@@ -35,15 +35,15 @@ export function UtilityBar({
   const hours = formatOpeningHoursSummary(settings.opening_hours);
 
   return (
-    <div className="hidden sm:block bg-inverse-surface text-white py-2 text-sm">
+    <div className="hidden sm:block bg-surface-container-low text-on-background border-b border-outline-variant py-2 text-sm">
       <div className="page-container flex items-center justify-between gap-4">
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 min-w-0 flex-1 justify-center lg:justify-start">
-          <span className="flex items-center gap-1.5">
-            <IconSchedule className="w-[17px] h-[17px] shrink-0 opacity-90" />
+          <span className="flex items-center gap-1.5 text-secondary">
+            <IconSchedule className="w-[17px] h-[17px] shrink-0 text-primary-container" />
             {hours}
           </span>
-          <span className="hidden md:flex items-center gap-1.5 text-white/80">
-            <IconLocation className="w-[17px] h-[17px] shrink-0 opacity-90" />
+          <span className="hidden md:flex items-center gap-1.5 text-secondary">
+            <IconLocation className="w-[17px] h-[17px] shrink-0 text-primary-container" />
             Barking, Essex · London & Essex Dealer
           </span>
         </div>

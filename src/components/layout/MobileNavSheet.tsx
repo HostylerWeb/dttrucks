@@ -120,7 +120,7 @@ function MobileNavItem({
             className="block rounded-lg px-3 py-2.5 text-sm font-semibold text-primary-container hover:bg-white"
             onClick={onNavigate}
           >
-            All services & parts
+            {item.childrenOverviewLabel ?? "All services & parts"}
           </Link>
           <ul className="mt-1 space-y-0.5">
             {item.children.map((child) => (

@@ -5,16 +5,33 @@ export const BLOG_POSTS = [
     excerpt:
       "The P700 generation brings updated N-Series and F-Series cabs, advanced safety, 175 PS with ISIM on 7.5t, crew cab options and clearer 11t and 13.5t choices — spec the right truck from our Barking dealership.",
     content: `
-<p>Isuzu’s P700 generation is now at the heart of the range we sell and support from <strong>DT Trucks in Barking</strong>, serving London, Essex and surrounding counties. Whether you run distribution, recovery, plant hire or specialist bodywork, the latest chassis combine improved cabs, safety technology and powertrain choice — without changing what makes Isuzu dependable day to day.</p>
-<h2>7.5 tonne N-Series</h2>
-<p>The 7.5t band remains a workhorse for urban delivery and recovery. P700 adds the <strong>175 PS 3.0-litre</strong> option with <strong>ISIM nine-speed</strong> transmission alongside established manual and Easyshift choices. Day cab and crew cab variants, multiple wheelbases and strong payload help you match the truck to the job — not the other way around.</p>
-<h2>11t and 13.5t F-Series</h2>
-<p>Heavier work is clearer on our sales pages: <strong>11 tonne</strong> and <strong>13.5 tonne</strong> F-Series are listed separately so you can compare F110 and F135 models directly. Tipper, beavertail, box and curtainside operators can step up from N-Series with compact cab manoeuvrability and P700 safety kit.</p>
+<p>Isuzu has introduced one of the biggest updates to its UK truck line-up in thirty years. The new <strong>P700 generation</strong> is now at the heart of the range we sell and support from <strong>DT Trucks in Barking</strong>, serving London, Essex and Hertfordshire. Fresh cab designs, more variants, updated safety technology, better in-cab equipment and a new engine and transmission combination for 7.5-tonne operators — but the real question is what those changes mean when the vehicle is working day in, day out.</p>
+<h2>A new generation across the range</h2>
+<p>P700 covers 3.5-tonne Grafter models through 7.5-tonne N-Series and 11-tonne and 13.5-tonne F-Series — the spread George and our sales team discuss with operators every week. Isuzu developed the generation around safety, comfort and efficiency while keeping the rugged reliability the brand is known for. Additional cab and chassis options matter because there is rarely a one-size-fits-all commercial vehicle: local delivery, recovery, construction and specialist bodywork all need different wheelbase, cab and powertrain combinations.</p>
+<h2>More equipment in the cab</h2>
+<p>On applicable models, standard equipment now includes LED lighting, air conditioning and satellite navigation, plus infotainment with <strong>Apple CarPlay</strong> and <strong>Android Auto</strong>. For drivers behind the wheel all day, that is not brochure filler — it changes the daily environment and keeps navigation and phone use familiar and safe.</p>
+<h2>More choice for operators</h2>
+<p>The launch expands the line-up, not just replaces older trucks. Examples include a <strong>6.5-tonne crew cab</strong> alongside the established 7.5-tonne crew option — important for recovery and similar sectors — and a longer <strong>5,320&nbsp;mm wheelbase</strong> on 13.5-tonne F-Series, with five wheelbase lengths from 3,790&nbsp;mm upward. The right chassis depends on the body you fit and the work the truck will do.</p>
+<h2>175&nbsp;PS and ISIM for 7.5-tonne work</h2>
+<p>A third engine joins the 7.5-tonne range: a <strong>3.0-litre 175&nbsp;PS</strong> turbo diesel between the 150&nbsp;PS 3.0-litre and 190&nbsp;PS 5.2-litre options — a sweet spot when you need more power without stepping straight to the larger engine. It is paired with Isuzu’s <strong>ISIM nine-speed dual-clutch</strong> transmission (Isuzu Smooth Intelligent Transmission), available across N-Series from 5.5 to 7.5 tonnes. Evaluate the whole powertrain when comparing 7.5-tonne options, not the engine alone.</p>
+<h2>Safety technology</h2>
+<p>P700 adds driver-assistance on applicable models, including:</p>
+<ul>
+<li>Blind Spot Information System (BSIS)</li>
+<li>Distance Warning System (DWS)</li>
+<li>Traffic Sign Recognition (TSR)</li>
+<li>Tyre Pressure Monitoring System (TPMS)</li>
+</ul>
+<p>Training, maintenance and sensible specification remain the foundation of fleet safety — these systems add extra information for the driver in busy traffic.</p>
+<h2>11t and 13.5t on our sales pages</h2>
+<p>Heavier work is clearer on <a href="/sales">our truck sales pages</a>: <strong>11 tonne</strong> and <strong>13.5 tonne</strong> F-Series are separate tabs so you can compare F110 and F135 models directly. Tipper, beavertail, box and curtainside operators can step up from N-Series with compact cab manoeuvrability and P700 safety kit.</p>
 <h2>Cab colours and specification</h2>
-<p>N-Series and general cab colours include white, silver, blue, flint grey and metallic blue. <strong>Red is available on F-Series</strong> — ask our sales team for current availability. Download official <a href="/sales/specification-sheets">specification sheets</a> by weight class, or send a structured <a href="/sales/body-quote">body quote request</a> with dimensions and options — we’ll come back with specification advice and pricing.</p>
-<h2>Talk to sales</h2>
-<p>George Smith and the DT Trucks sales team can walk you through chassis, body and finance options. <a href="/contact">Contact us</a> or call the numbers on our <a href="/sales">truck sales page</a> — we’re here to help you spec for the job.</p>
-<p><em>Stock and model availability varies — confirm with sales before ordering.</em></p>
+<p>Isuzu now offers a wider cab colour choice. On N-Series and general applications you can specify silver, blue, flint grey and metallic blue (white remains common). <strong>Red is available on F-Series</strong> — confirm current availability with our sales team. Download official <a href="/sales/specification-sheets">specification sheets</a> by weight class, or use our <a href="/sales/body-quote">body quote request</a> to send body type, dimensions and options such as tail lift or crane — we will respond with specification advice and a quotation.</p>
+<h2>Choosing the right truck</h2>
+<p>Payload, body type, wheelbase, cab configuration and where the vehicle operates still drive the decision. Getting the specification right at the start is as important as choosing the brand.</p>
+<h2>Talk to DT Trucks</h2>
+<p>George Smith and the sales team provide Isuzu truck sales, parts and workshop support from Barking with Isuzu-trained technicians. <a href="/contact">Contact us</a> to discuss the P700 range, finance and the specification your operation needs.</p>
+<p><em>Stock and model availability varies — confirm with sales before ordering. We can advise when particular models such as the N75.190 are available; wording on the site is updated when stock is confirmed.</em></p>
 `.trim(),
     featured_image: "/media/sales/7.5-tonnes-GVW.webp",
     category_slug: "commercial-vehicle-news",

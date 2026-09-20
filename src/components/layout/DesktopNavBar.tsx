@@ -124,7 +124,7 @@ function NavDropdown({ item }: { item: NavItem }) {
                 className="block px-4 py-2.5 text-sm font-semibold text-primary-container border-b border-outline-variant/80 hover:bg-surface-container-low"
                 onClick={() => setOpen(false)}
               >
-                All services & parts
+                {item.childrenOverviewLabel ?? "All services & parts"}
               </Link>
               <ul className="py-1 max-h-[min(70vh,420px)] overflow-y-auto">
                 {item.children.map((child) => {
