@@ -168,6 +168,13 @@ async function main() {
         "The 3.5t Grafter is a light truck that’s more than capable of handling a busy workload - named Best Builders’ Truck seven years in a row by Trade Van Driver. Two models: 1.9L 123PS Grafter Green (N35.125) and 3.0L 150PS Grafter Blue (N35.150). Single or twin rear wheels, 3.5-tonne towing, and short Driveaway lead times.",
       image_url: "/media/sales/3.5-tonnes-GVW.jpg",
       sort_order: 1,
+      cab_colours: JSON.stringify([
+        { name: "White", hex: "#f5f5f5" },
+        { name: "Silver", hex: "#c0c0c0" },
+        { name: "Blue", hex: "#1e4a8a" },
+        { name: "Flint grey", hex: "#6b7280" },
+        { name: "Metallic blue", hex: "#2563eb" },
+      ]),
     },
     {
       slug: "5-5-6-5t-gvw",
@@ -176,22 +183,60 @@ async function main() {
         "More payload with the compact cab and body design of the Grafter range. Popular with arborists, breweries and local authorities. N55.150 (narrow cab option) and N65.150 (manual or Easyshift).",
       image_url: "/media/sales/5.5-6.5-tonnes-GVW.jpg",
       sort_order: 2,
+      cab_colours: JSON.stringify([
+        { name: "White", hex: "#f5f5f5" },
+        { name: "Silver", hex: "#c0c0c0" },
+        { name: "Blue", hex: "#1e4a8a" },
+        { name: "Flint grey", hex: "#6b7280" },
+        { name: "Metallic blue", hex: "#2563eb" },
+      ]),
     },
     {
       slug: "7-5t-gvw",
       name: "7.5 tonnes GVW",
       description:
-        "Market leaders in key sectors including recovery. Outstanding payload and reliability for distribution, local delivery and plant hire. N75.150 (3.0L urban) and N75.190 Forward (5.2L, day/crew cab, manual and Easyshift).",
-      image_url: "/media/sales/7.5-tonnes-GVW.jpg",
+        "P700 N75 range: multiple wheelbases, the new 175 PS 3.0-litre option with ISIM nine-speed transmission, day and crew cabs, and advanced safety technology. Market leaders in recovery, distribution and plant hire.",
+      image_url: "/media/sales/7.5-tonnes-GVW.webp",
       sort_order: 3,
+      cab_colours: JSON.stringify([
+        { name: "White", hex: "#f5f5f5" },
+        { name: "Silver", hex: "#c0c0c0" },
+        { name: "Blue", hex: "#1e4a8a" },
+        { name: "Flint grey", hex: "#6b7280" },
+        { name: "Metallic blue", hex: "#2563eb" },
+      ]),
     },
     {
-      slug: "11-13-5t-gvw",
-      name: "11 & 13.5 tonnes GVW",
+      slug: "11t-gvw",
+      name: "11 tonnes GVW",
       description:
-        "‘Big truck’ performance with a ‘small truck’ footprint. F110.210 for tipper and beavertail with compact cab; F135.240 with Easyshift for scaffolders and box/curtainside - the ideal step up from N-Series.",
+        "F-Series 11 tonne chassis on the P700 generation — compact cab, strong payload and manoeuvrability for tipper, beavertail and urban applications.",
       image_url: "/media/sales/11-13.5-tonnes-GVW.jpg",
       sort_order: 4,
+      cab_colours: JSON.stringify([
+        { name: "White", hex: "#f5f5f5" },
+        { name: "Silver", hex: "#c0c0c0" },
+        { name: "Blue", hex: "#1e4a8a" },
+        { name: "Flint grey", hex: "#6b7280" },
+        { name: "Metallic blue", hex: "#2563eb" },
+        { name: "Red (F-Series)", hex: "#c8102e" },
+      ]),
+    },
+    {
+      slug: "13-5t-gvw",
+      name: "13.5 tonnes GVW",
+      description:
+        "F135.240 and extended wheelbase options on P700 — ideal for scaffolders, box and curtainside operators stepping up from N-Series.",
+      image_url: "/media/sales/11-13.5-tonnes-GVW.jpg",
+      sort_order: 5,
+      cab_colours: JSON.stringify([
+        { name: "White", hex: "#f5f5f5" },
+        { name: "Silver", hex: "#c0c0c0" },
+        { name: "Blue", hex: "#1e4a8a" },
+        { name: "Flint grey", hex: "#6b7280" },
+        { name: "Metallic blue", hex: "#2563eb" },
+        { name: "Red (F-Series)", hex: "#c8102e" },
+      ]),
     },
     {
       slug: "driveaway",
@@ -199,7 +244,7 @@ async function main() {
       description:
         "Ready-to-work tipper, dropside, utilitruck, box and curtainsider models available with short lead times from Barking.",
       image_url: "/media/sales/Isuzu-3.5-Tonne-Tipper.jpg",
-      sort_order: 5,
+      sort_order: 6,
     },
   ];
 

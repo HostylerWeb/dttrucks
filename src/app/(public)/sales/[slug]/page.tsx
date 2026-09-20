@@ -8,6 +8,9 @@ import { SpecificationsTable, parseSpecifications } from "@/components/public/Sp
 import { ContactForm } from "@/components/public/ContactForm";
 import { TruckCard } from "@/components/public/TruckCard";
 import { ShareButtons } from "@/components/public/ShareButtons";
+import { SpecSheetDownloadLink } from "@/components/public/SpecSheetDownloadLink";
+import { CabColoursFromJson } from "@/components/public/CabColoursBand";
+import Link from "next/link";
 import { ProductJsonLd } from "@/components/seo/ProductJsonLd";
 import { absoluteUrl } from "@/lib/site";
 import { prisma } from "@/lib/prisma";
@@ -91,6 +94,16 @@ export default async function TruckDetailPage({
               <p className="mt-1 text-sm text-secondary">{model.category.name}</p>
             </div>
             <p className="text-secondary leading-relaxed">{model.description}</p>
+            <div className="flex flex-wrap gap-3">
+              <SpecSheetDownloadLink model={model} />
+              <Link
+                href={`/sales/body-quote?model=${encodeURIComponent(model.slug)}`}
+                className="inline-flex min-h-11 items-center justify-center rounded-lg border border-outline-variant bg-white px-5 py-2.5 text-sm font-semibold hover:border-primary-container/40 transition-colors"
+              >
+                Request body quote
+              </Link>
+            </div>
+            <CabColoursFromJson cabColoursJson={model.category.cab_colours} />
             {Object.keys(specs).length > 0 && (
               <div>
                 <h2 className="font-headline text-lg font-semibold mb-4">Specifications</h2>

@@ -76,6 +76,16 @@ const nextConfig: NextConfig = {
         destination: "/blog/exclusive-discount-on-ac-regassing",
         permanent: true,
       },
+      {
+        source: "/sales/f110-210",
+        destination: "/sales/f110-240",
+        permanent: true,
+      },
+      {
+        source: "/sales/f110-210/",
+        destination: "/sales/f110-240",
+        permanent: true,
+      },
     ];
   },
 };

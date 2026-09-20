@@ -114,6 +114,7 @@ model truck_categories {
   name        String
   description String?
   image_url   String?
+  cab_colours String?
   sort_order  Int      @default(0)
   created_at  DateTime @default(now())
   updated_at  DateTime @updatedAt
@@ -129,9 +130,11 @@ model truck_models {
   name           String
   model_code     String?
   description    String
-  specifications String?
-  image_url      String?
-  is_driveaway   Boolean        @default(false)
+  specifications   String?
+  spec_sheet_url   String?
+  spec_sheet_label String?
+  image_url        String?
+  is_driveaway     Boolean        @default(false)
   driveaway_type String?
   status         content_status @default(draft)
   sort_order     Int            @default(0)

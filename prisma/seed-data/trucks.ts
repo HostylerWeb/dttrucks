@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/prisma";
 import type { content_status } from "../../src/generated/prisma/client";
+import { defaultSpecSheetsByModelCode } from "../../src/content/isuzu-spec-links";
 
 type TruckModelSeed = {
   slug: string;
@@ -12,13 +13,16 @@ type TruckModelSeed = {
   driveaway_type?: string;
   image_url?: string;
   specifications?: Record<string, string>;
+  spec_sheet_url?: string;
+  spec_sheet_label?: string;
 };
 
 const IMG = {
   gvw35: "/media/sales/3.5-tonnes-GVW.jpg",
   gvw55: "/media/sales/5.5-6.5-tonnes-GVW.jpg",
-  gvw75: "/media/sales/7.5-tonnes-GVW.jpg",
+  gvw75: "/media/sales/7.5-tonnes-GVW.webp",
   gvw11: "/media/sales/11-13.5-tonnes-GVW.jpg",
+  gvw135: "/media/sales/11-13.5-tonnes-GVW.jpg",
   tipper35: "/media/sales/Isuzu-3.5-Tonne-Tipper.jpg",
   tipper75: "/media/sales/Isuzu-7.5-Tonne-Tipper.jpg",
   dropside35: "/media/sales/Isuzu-3.5-Tonne-Dropside.jpg",
@@ -27,6 +31,13 @@ const IMG = {
   box75: "/media/sales/Isuzu-7.5-Tonne-Box.jpg",
   curtainsider: "/media/sales/Isuzu-7.5-Tonne-Curtainsider.jpg",
 };
+
+function specForCode(code?: string) {
+  if (!code) return {};
+  const sheet = defaultSpecSheetsByModelCode[code];
+  if (!sheet) return {};
+  return { spec_sheet_url: sheet.url, spec_sheet_label: sheet.label };
+}
 
 const truckModels: TruckModelSeed[] = [
   {
@@ -38,7 +49,8 @@ const truckModels: TruckModelSeed[] = [
       "The 3.5t Grafter is a light truck that’s more than capable of handling a busy workload. Named Best Builders’ Truck seven years in a row by Trade Van Driver. The 1.9 litre, 123PS Grafter Green (N35.125) comes with single or twin rear wheels, can tow 3.5 tonnes, and is available with short lead times as part of our Driveaway range.",
     sort_order: 1,
     image_url: IMG.gvw35,
-    specifications: { engine: "1.9L 123PS", gvw: "3.5t" },
+    specifications: { engine: "1.9L 123PS", gvw: "3.5t", generation: "P700" },
+    ...specForCode("N35.125"),
   },
   {
     category_slug: "3-5t-gvw",
@@ -49,7 +61,8 @@ const truckModels: TruckModelSeed[] = [
       "The 3.0 litre, 150PS Grafter Blue (N35.150) sits alongside the Grafter Green in the award-winning 3.5t range. Single or twin rear wheels, 3.5-tonne towing capability, and short lead times via our Driveaway programme.",
     sort_order: 2,
     image_url: IMG.gvw35,
-    specifications: { engine: "3.0L 150PS", gvw: "3.5t" },
+    specifications: { engine: "3.0L 150PS", gvw: "3.5t", generation: "P700" },
+    ...specForCode("N35.150"),
   },
   {
     category_slug: "5-5-6-5t-gvw",
@@ -60,7 +73,8 @@ const truckModels: TruckModelSeed[] = [
       "For customers who need more payload but still want the compact cab and body design of our award-winning Grafter range, a 5.5t truck could be the answer. Popular with arborists, breweries and local authorities. The N55 even has a narrow cab option.",
     sort_order: 1,
     image_url: IMG.gvw55,
-    specifications: { gvw: "5.5t" },
+    specifications: { gvw: "5.5t", generation: "P700" },
+    ...specForCode("N55.150"),
   },
   {
     category_slug: "5-5-6-5t-gvw",
@@ -68,10 +82,11 @@ const truckModels: TruckModelSeed[] = [
     name: "N65.150",
     model_code: "N65.150",
     description:
-      "The N65 offers a step up in payload without the extra size and weight normally associated with larger trucks. Available with a standard manual gearbox or our popular Easyshift automated transmission.",
+      "The N65 offers a step up in payload with crew cab options on the P700 generation — popular for recovery and specialist operators. Available with manual gearbox or ISIM automated transmission.",
     sort_order: 2,
     image_url: IMG.gvw55,
-    specifications: { gvw: "6.5t" },
+    specifications: { gvw: "6.5t", generation: "P700" },
+    ...specForCode("N65.150"),
   },
   {
     category_slug: "7-5t-gvw",
@@ -82,7 +97,8 @@ const truckModels: TruckModelSeed[] = [
       "For customers who carry out low mileage, urban deliveries, the N75.150 features a more efficient 3.0 litre engine. Part of our market-leading 7.5t range trusted for distribution, local delivery and plant hire.",
     sort_order: 1,
     image_url: IMG.gvw75,
-    specifications: { engine: "3.0L", gvw: "7.5t" },
+    specifications: { engine: "3.0L 150PS", gvw: "7.5t", generation: "P700" },
+    ...specForCode("N75.150"),
   },
   {
     category_slug: "7-5t-gvw",
@@ -90,32 +106,35 @@ const truckModels: TruckModelSeed[] = [
     name: "N75.190 Forward",
     model_code: "N75.190",
     description:
-      "Our N75 Forward range includes standard day cab and crew cab versions of our popular 5.2 litre N75.190 truck, as well as manual and Easyshift options. Outstanding payload and reliability for weight-critical applications including recovery.",
+      "Our N75 Forward range includes day cab and crew cab versions with manual and Easyshift options. LED lighting, air conditioning and connectivity are standard on applicable P700 models — outstanding payload for recovery and distribution.",
     sort_order: 2,
     image_url: IMG.gvw75,
-    specifications: { engine: "5.2L 190PS", gvw: "7.5t" },
+    specifications: { engine: "5.2L 190PS", gvw: "7.5t", generation: "P700" },
+    ...specForCode("N75.190"),
   },
   {
-    category_slug: "11-13-5t-gvw",
-    slug: "f110-210",
-    name: "F110.210",
-    model_code: "F110.210",
+    category_slug: "11t-gvw",
+    slug: "f110-240",
+    name: "F110.240 Forward",
+    model_code: "F110.240",
     description:
-      "Our F-Series 11t trucks offer ‘big truck’ performance with a ‘small truck’ footprint. Well suited to tipper and beavertail operations, with a compact cab and lower chassis design for driver comfort - the ideal step up from N-Series.",
+      "Our 11 tonne F-Series delivers big-truck capability with a compact footprint — ideal for tipper, beavertail and urban work. P700 cab options include multiple factory colours; red is available on F-Series.",
     sort_order: 1,
     image_url: IMG.gvw11,
-    specifications: { gvw: "11t" },
+    specifications: { gvw: "11t", generation: "P700" },
+    ...specForCode("F110.240"),
   },
   {
-    category_slug: "11-13-5t-gvw",
+    category_slug: "13-5t-gvw",
     slug: "f135-240",
-    name: "F135.240",
+    name: "F135.240 Forward",
     model_code: "F135.240",
     description:
-      "At 13.5 tonnes we offer an Easyshift vehicle that’s ideal for scaffolders and box or curtainside applications. Lightweight option at the heavier weight ranges, still capable in the most demanding locations.",
-    sort_order: 2,
-    image_url: IMG.gvw11,
-    specifications: { gvw: "13.5t" },
+      "At 13.5 tonnes, the F135.240 with Easyshift is ideal for scaffolders, box and curtainside applications — with extended wheelbase options on the P700 generation for demanding body requirements.",
+    sort_order: 1,
+    image_url: IMG.gvw135,
+    specifications: { gvw: "13.5t", generation: "P700" },
+    ...specForCode("F135.240"),
   },
   {
     category_slug: "driveaway",
@@ -196,7 +215,37 @@ const truckModels: TruckModelSeed[] = [
   },
 ];
 
+export async function migrateLegacyTruckCategories() {
+  const legacy = await prisma.truck_categories.findUnique({
+    where: { slug: "11-13-5t-gvw" },
+  });
+  const cat11 = await prisma.truck_categories.findUnique({ where: { slug: "11t-gvw" } });
+  const cat135 = await prisma.truck_categories.findUnique({ where: { slug: "13-5t-gvw" } });
+  if (!legacy || !cat11 || !cat135) return;
+
+  await prisma.truck_models.updateMany({
+    where: { category_id: legacy.id, slug: { in: ["f110-210", "f110-240"] } },
+    data: { category_id: cat11.id },
+  });
+  await prisma.truck_models.updateMany({
+    where: { category_id: legacy.id, slug: "f135-240" },
+    data: { category_id: cat135.id },
+  });
+
+  const remaining = await prisma.truck_models.count({ where: { category_id: legacy.id } });
+  if (remaining === 0) {
+    await prisma.truck_categories.delete({ where: { id: legacy.id } }).catch(() => undefined);
+  }
+
+  await prisma.truck_models.updateMany({
+    where: { slug: "f110-210" },
+    data: { slug: "f110-240", name: "F110.240 Forward", model_code: "F110.240" },
+  });
+}
+
 export async function seedTruckModels(status: content_status) {
+  await migrateLegacyTruckCategories();
+
   const categories = await prisma.truck_categories.findMany();
   const bySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
 
@@ -214,6 +263,8 @@ export async function seedTruckModels(status: content_status) {
       driveaway_type: model.driveaway_type ?? null,
       image_url: model.image_url ?? null,
       specifications: model.specifications ? JSON.stringify(model.specifications) : null,
+      spec_sheet_url: model.spec_sheet_url ?? null,
+      spec_sheet_label: model.spec_sheet_label ?? null,
       status,
       published_at: new Date(),
     };

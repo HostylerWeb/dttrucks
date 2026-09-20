@@ -5,6 +5,18 @@ test.describe("Public content pages", () => {
     await page.goto("/sales");
     await expect(page.locator("main#main")).toBeVisible();
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    await expect(page.getByRole("link", { name: /specification sheets/i }).first()).toBeVisible();
+  });
+
+  test("specification sheets hub loads", async ({ page }) => {
+    await page.goto("/sales/specification-sheets");
+    await expect(page.getByRole("heading", { level: 1, name: /specification sheets/i })).toBeVisible();
+  });
+
+  test("body quote form loads", async ({ page }) => {
+    await page.goto("/sales/body-quote");
+    await expect(page.getByRole("heading", { level: 1, name: /body specification quote/i })).toBeVisible();
+    await expect(page.getByRole("button", { name: /continue/i })).toBeVisible();
   });
 
   test("can open a truck detail page from sales", async ({ page }) => {

@@ -108,6 +108,31 @@ export function TruckModelForm({
           media={media}
           hint="Main photo on the truck detail page and sales listings."
         />
+        <div className="rounded-lg border border-outline-variant bg-surface-container-low p-4 space-y-3">
+          <p className="text-sm font-semibold text-on-background">Specification sheet (PDF)</p>
+          <FormField
+            label="Spec sheet URL"
+            name="spec_sheet_url"
+            hint="Path under /media/specs/… or full Isuzu UK PDF URL. Shown on the model page and specification sheets hub."
+          >
+            <input
+              id="spec_sheet_url"
+              name="spec_sheet_url"
+              defaultValue={model?.spec_sheet_url ?? ""}
+              className={inputClassName}
+              placeholder="https://www.isuzutruck.co.uk/… or /media/specs/…"
+            />
+          </FormField>
+          <FormField label="Download link label" name="spec_sheet_label">
+            <input
+              id="spec_sheet_label"
+              name="spec_sheet_label"
+              defaultValue={model?.spec_sheet_label ?? ""}
+              className={inputClassName}
+              placeholder="F110.240 Manual Chassis Spec Sheet"
+            />
+          </FormField>
+        </div>
         <div className="grid gap-4 sm:grid-cols-2">
           <FormField label="Status" name="status">
             <select id="status" name="status" defaultValue={model?.status ?? "draft"} className={selectClassName}>

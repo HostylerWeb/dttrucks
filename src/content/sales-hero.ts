@@ -5,5 +5,8 @@ export const defaultSalesHero = {
   subtitle: "The Best Trucks At Unbeatable Prices",
   tagline: "Authorised Isuzu dealer - London & Essex",
   minHeight: "min-h-[320px] lg:min-h-[380px]",
-  ctas: [{ label: "Contact sales", href: "/contact", variant: "primary" as const }],
+  ctas: [
+    { label: "Specification sheets", href: "/sales/specification-sheets", variant: "primary" as const },
+    { label: "Contact sales", href: "/contact", variant: "secondary" as const },
+  ],
 };

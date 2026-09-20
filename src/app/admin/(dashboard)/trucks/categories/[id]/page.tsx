@@ -58,6 +58,19 @@ export default async function EditCategoryPage({
             className={inputClassName}
           />
         </FormField>
+        <FormField
+          label="Cab colours (JSON)"
+          name="cab_colours"
+          hint='Array of objects, e.g. [{"name":"Silver","hex":"#c0c0c0"}]. Shown on sales category tabs when set.'
+        >
+          <textarea
+            id="cab_colours"
+            name="cab_colours"
+            defaultValue={category.cab_colours ?? ""}
+            className={textareaClassName}
+            rows={6}
+          />
+        </FormField>
         <AdminButton type="submit">Save category</AdminButton>
       </form>
     </div>

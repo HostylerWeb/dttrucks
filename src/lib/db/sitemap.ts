@@ -16,6 +16,8 @@ export async function getSitemapPaths() {
     "/about",
     "/contact",
     "/sales",
+    "/sales/specification-sheets",
+    "/sales/body-quote",
     "/service",
     "/specialist-applications",
     "/ebay",

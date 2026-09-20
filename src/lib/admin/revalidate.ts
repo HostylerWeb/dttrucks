@@ -45,6 +45,7 @@ export async function revalidateService(slug: string) {
 
 export async function revalidateTruck(slug: string) {
   cacheTags.trucks();
+  cacheTags.truckCategories();
   cacheTags.truck(slug);
   cacheTags.sitemap();
 }

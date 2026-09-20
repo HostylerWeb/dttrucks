@@ -19,6 +19,7 @@ const categorySchema = z.object({
   slug: slugSchema,
   description: z.string().optional(),
   image_url: z.string().optional(),
+  cab_colours: z.string().optional(),
   sort_order: z.coerce.number().int().default(0),
 });
 
@@ -29,6 +30,8 @@ const modelSchema = z.object({
   model_code: z.string().optional(),
   description: z.string().min(1),
   specifications: z.string().optional(),
+  spec_sheet_url: z.string().optional(),
+  spec_sheet_label: z.string().optional(),
   image_url: z.string().optional(),
   is_driveaway: z.string().optional(),
   driveaway_type: z.string().optional(),
@@ -48,6 +51,7 @@ export async function updateCategory(id: string, formData: FormData): Promise<vo
       slug: parsed.data.slug,
       description: parsed.data.description || null,
       image_url: parsed.data.image_url || null,
+      cab_colours: parsed.data.cab_colours?.trim() || null,
       sort_order: parsed.data.sort_order,
     },
   });
@@ -55,6 +59,7 @@ export async function updateCategory(id: string, formData: FormData): Promise<vo
   await cacheTags.truckCategories();
   await cacheTags.trucks();
   revalidatePath("/admin/trucks");
+  revalidatePath("/sales");
 }
 
 export async function createModel(formData: FormData) {
@@ -71,6 +76,8 @@ export async function createModel(formData: FormData) {
       model_code: data.model_code || null,
       description: data.description,
       specifications: data.specifications || null,
+      spec_sheet_url: data.spec_sheet_url?.trim() || null,
+      spec_sheet_label: data.spec_sheet_label?.trim() || null,
       image_url: data.image_url || null,
       is_driveaway: checkboxValue(formData.get("is_driveaway")),
       driveaway_type: data.driveaway_type || null,
@@ -103,6 +110,8 @@ export async function updateModel(id: string, formData: FormData) {
       model_code: data.model_code || null,
       description: data.description,
       specifications: data.specifications || null,
+      spec_sheet_url: data.spec_sheet_url?.trim() || null,
+      spec_sheet_label: data.spec_sheet_label?.trim() || null,
       image_url: data.image_url || null,
       is_driveaway: checkboxValue(formData.get("is_driveaway")),
       driveaway_type: data.driveaway_type || null,

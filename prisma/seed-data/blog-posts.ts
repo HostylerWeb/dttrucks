@@ -1,5 +1,29 @@
 export const BLOG_POSTS = [
   {
+    slug: "p700-isuzu-range-at-dt-trucks",
+    title: "P700 Isuzu range — what’s new at DT Trucks",
+    excerpt:
+      "The P700 generation brings updated N-Series and F-Series cabs, advanced safety, 175 PS with ISIM on 7.5t, crew cab options and clearer 11t and 13.5t choices — spec the right truck from our Barking dealership.",
+    content: `
+<p>Isuzu’s P700 generation is now at the heart of the range we sell and support from <strong>DT Trucks in Barking</strong>, serving London, Essex and surrounding counties. Whether you run distribution, recovery, plant hire or specialist bodywork, the latest chassis combine improved cabs, safety technology and powertrain choice — without changing what makes Isuzu dependable day to day.</p>
+<h2>7.5 tonne N-Series</h2>
+<p>The 7.5t band remains a workhorse for urban delivery and recovery. P700 adds the <strong>175 PS 3.0-litre</strong> option with <strong>ISIM nine-speed</strong> transmission alongside established manual and Easyshift choices. Day cab and crew cab variants, multiple wheelbases and strong payload help you match the truck to the job — not the other way around.</p>
+<h2>11t and 13.5t F-Series</h2>
+<p>Heavier work is clearer on our sales pages: <strong>11 tonne</strong> and <strong>13.5 tonne</strong> F-Series are listed separately so you can compare F110 and F135 models directly. Tipper, beavertail, box and curtainside operators can step up from N-Series with compact cab manoeuvrability and P700 safety kit.</p>
+<h2>Cab colours and specification</h2>
+<p>N-Series and general cab colours include white, silver, blue, flint grey and metallic blue. <strong>Red is available on F-Series</strong> — ask our sales team for current availability. Download official <a href="/sales/specification-sheets">specification sheets</a> by weight class, or send a structured <a href="/sales/body-quote">body quote request</a> with dimensions and options — we’ll come back with specification advice and pricing.</p>
+<h2>Talk to sales</h2>
+<p>George Smith and the DT Trucks sales team can walk you through chassis, body and finance options. <a href="/contact">Contact us</a> or call the numbers on our <a href="/sales">truck sales page</a> — we’re here to help you spec for the job.</p>
+<p><em>Stock and model availability varies — confirm with sales before ordering.</em></p>
+`.trim(),
+    featured_image: "/media/sales/7.5-tonnes-GVW.webp",
+    category_slug: "commercial-vehicle-news",
+    published_at: "2026-03-20T10:00:00.000Z",
+    meta_title: "P700 Isuzu range at DT Trucks - London & Essex",
+    meta_description:
+      "P700 N-Series and F-Series updates, 175 PS ISIM, 11t and 13.5t F-Series, cab colours and spec sheets — from authorised Isuzu dealer DT Trucks in Barking.",
+  },
+  {
     slug: "exclusive-discount-on-ac-regassing",
     title: "Exclusive Discount on AC Regassing!",
     excerpt:

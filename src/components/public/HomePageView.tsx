@@ -2,6 +2,7 @@ import { DealerStats } from "@/components/public/DealerStats";
 import { FeatureGrid } from "@/components/public/FeatureGrid";
 import { HomeContactSection, HomeIntroSection } from "@/components/public/HomeSections";
 import { HomePillarsBand } from "@/components/public/HomePillarsBand";
+import { P700RangeBand } from "@/components/public/P700RangeBand";
 import { HomeSpecialistGrid } from "@/components/public/HomeSpecialistGrid";
 import { VideoGalleryGrid } from "@/components/public/VideoGalleryGrid";
 import type { getHomepageVideos } from "@/lib/db/videos";
@@ -60,6 +61,8 @@ export function HomePageView({
       <div className="content-defer">
         <HomePillarsBand />
       </div>
+
+      <P700RangeBand compact />
 
       <div className="content-defer">
         <HomeSpecialistGrid />

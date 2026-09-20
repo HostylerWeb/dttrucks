@@ -7,6 +7,9 @@ import { buildPageMetadata } from "@/lib/metadata";
 import { HeroSection } from "@/components/public/HeroSection";
 import { BreadcrumbsBar } from "@/components/layout/BreadcrumbsBar";
 import { SalesIntroSection } from "@/components/public/SalesIntroSection";
+import { SalesWhyChooseSection } from "@/components/public/SalesWhyChooseSection";
+import { P700RangeBand } from "@/components/public/P700RangeBand";
+import { CabColoursFromJson } from "@/components/public/CabColoursBand";
 import { TruckCard } from "@/components/public/TruckCard";
 import { Tabs } from "@/components/ui/tabs";
 import { defaultSalesHero } from "@/content/sales-hero";
@@ -74,6 +77,10 @@ async function SalesPageContent() {
         {category.description && (
           <p className="text-secondary max-w-3xl leading-relaxed">{category.description}</p>
         )}
+        <CabColoursFromJson
+          cabColoursJson={category.cab_colours}
+          note="Standard cab colour options for this weight class. F-Series red is available on 11t and 13.5t models — confirm availability with sales."
+        />
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {category.truck_models.map((model) => (
             <li key={model.id}>
@@ -101,9 +108,18 @@ async function SalesPageContent() {
             </p>
             <h2 className="font-headline text-2xl lg:text-3xl font-bold mb-3">Isuzu Truck Range</h2>
             <p className="text-secondary leading-relaxed">
-              Browse Isuzu chassis by gross vehicle weight - from the 3.5t Grafter through to 11t and
-              13.5t F-Series. Choose the weight class that fits your payload and operation, then
-              enquire about the right model.
+              Browse Isuzu chassis by gross vehicle weight — from the 3.5t Grafter through separate{" "}
+              <strong className="font-semibold text-on-background">11 tonne</strong> and{" "}
+              <strong className="font-semibold text-on-background">13.5 tonne</strong> F-Series tabs.
+              Download{" "}
+              <a href="/sales/specification-sheets" className="font-semibold text-primary-container hover:underline">
+                specification sheets
+              </a>{" "}
+              or build a{" "}
+              <a href="/sales/body-quote" className="font-semibold text-primary-container hover:underline">
+                body quote request
+              </a>
+              .
             </p>
           </div>
           {tabs.length > 0 ? (
@@ -158,9 +174,11 @@ export default function SalesPage() {
       <BreadcrumbsBar items={[{ label: "Home", href: "/" }, { label: "Isuzu Truck Sales" }]} />
       <link rel="preload" as="image" href="/media/sales/7.5-tonnes-GVW.webp" fetchPriority="high" />
       <StaticSalesHero />
+      <P700RangeBand compact />
       <Suspense fallback={<SalesContentSkeleton />}>
         <SalesPageContent />
       </Suspense>
+      <SalesWhyChooseSection />
     </>
   );
 }
