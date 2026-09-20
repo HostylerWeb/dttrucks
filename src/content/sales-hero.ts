@@ -6,7 +6,8 @@ export const defaultSalesHero = {
   tagline: "Authorised Isuzu dealer - London & Essex",
   minHeight: "min-h-[320px] lg:min-h-[380px]",
   ctas: [
-    { label: "Specification sheets", href: "/sales/specification-sheets", variant: "primary" as const },
-    { label: "Contact sales", href: "/contact", variant: "secondary" as const },
+    { label: "Browse truck range", href: "/sales", variant: "primary" as const },
+    { label: "Specification sheets", href: "/sales/specification-sheets", variant: "secondary" as const },
+    { label: "Body quote request", href: "/sales/body-quote", variant: "link" as const },
   ],
 };

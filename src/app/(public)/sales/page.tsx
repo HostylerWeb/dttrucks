@@ -10,6 +10,7 @@ import { SalesIntroSection } from "@/components/public/SalesIntroSection";
 import { SalesWhyChooseSection } from "@/components/public/SalesWhyChooseSection";
 import { P700RangeBand } from "@/components/public/P700RangeBand";
 import { CabColoursFromJson } from "@/components/public/CabColoursBand";
+import { cabColourNoteForCategory } from "@/lib/trucks/cab-colour-copy";
 import { TruckCard } from "@/components/public/TruckCard";
 import { Tabs } from "@/components/ui/tabs";
 import { defaultSalesHero } from "@/content/sales-hero";
@@ -79,7 +80,7 @@ async function SalesPageContent() {
         )}
         <CabColoursFromJson
           cabColoursJson={category.cab_colours}
-          note="Standard cab colour options for this weight class. F-Series red is available on 11t and 13.5t models — confirm availability with sales."
+          note={cabColourNoteForCategory(category.slug)}
         />
         <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {category.truck_models.map((model) => (

@@ -8,8 +8,9 @@ export const defaultHomeHero = {
   subtitle: "Van and Truck Services, Your Trusted Commercial Vehicle Partner",
   tagline: "ISUZU SALES, PARTS & SERVICE DEALER",
   ctas: [
-    { label: "Truck Sales", href: "/sales", variant: "primary" as const },
-    { label: "Service & Parts", href: "/service", variant: "secondary" as const },
-    { label: "Contact Us", href: "#contact", variant: "link" as const },
+    { label: "Isuzu truck sales", href: "/sales", variant: "primary" as const },
+    { label: "Specification sheets", href: "/sales/specification-sheets", variant: "secondary" as const },
+    { label: "Body quote request", href: "/sales/body-quote", variant: "link" as const },
+    { label: "Service & parts", href: "/service", variant: "link" as const },
   ],
 };

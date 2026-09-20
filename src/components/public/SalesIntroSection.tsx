@@ -72,11 +72,11 @@ export function SalesIntroSection({
                     Sales contact
                   </div>
                 )}
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-inverse-surface/90 to-transparent p-5 pt-16">
-                  <p className="text-xs font-bold uppercase tracking-widest text-primary-fixed-dim">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-on-background/85 via-on-background/40 to-transparent p-5 pt-16">
+                  <p className="text-xs font-bold uppercase tracking-widest text-primary-container">
                     Sales specialist
                   </p>
-                  <p className="font-headline text-2xl font-bold text-white">{displayName}</p>
+                  <p className="font-headline text-2xl font-bold text-on-background">{displayName}</p>
                 </div>
               </div>
 
@@ -116,6 +116,19 @@ export function SalesIntroSection({
                   )}
                 </div>
 
+                <div className="flex flex-col gap-2 pt-1">
+                <Link
+                  href="/sales/specification-sheets"
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-primary-container hover:underline"
+                >
+                  Download specification sheets
+                </Link>
+                <Link
+                  href="/sales/body-quote"
+                  className="inline-flex items-center gap-1 text-sm font-semibold text-primary-container hover:underline"
+                >
+                  Build a body quote request
+                </Link>
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-1 text-sm font-semibold text-primary-container hover:underline"
@@ -125,6 +138,7 @@ export function SalesIntroSection({
                     arrow_forward
                   </span>
                 </Link>
+                </div>
               </div>
             </div>
           </div>

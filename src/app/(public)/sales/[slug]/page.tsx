@@ -10,6 +10,7 @@ import { TruckCard } from "@/components/public/TruckCard";
 import { ShareButtons } from "@/components/public/ShareButtons";
 import { SpecSheetDownloadLink } from "@/components/public/SpecSheetDownloadLink";
 import { CabColoursFromJson } from "@/components/public/CabColoursBand";
+import { cabColourNoteForCategory } from "@/lib/trucks/cab-colour-copy";
 import Link from "next/link";
 import { ProductJsonLd } from "@/components/seo/ProductJsonLd";
 import { absoluteUrl } from "@/lib/site";
@@ -103,7 +104,10 @@ export default async function TruckDetailPage({
                 Request body quote
               </Link>
             </div>
-            <CabColoursFromJson cabColoursJson={model.category.cab_colours} />
+            <CabColoursFromJson
+              cabColoursJson={model.category.cab_colours}
+              note={cabColourNoteForCategory(model.category.slug)}
+            />
             {Object.keys(specs).length > 0 && (
               <div>
                 <h2 className="font-headline text-lg font-semibold mb-4">Specifications</h2>

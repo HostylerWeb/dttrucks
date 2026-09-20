@@ -19,6 +19,12 @@ test.describe("Public content pages", () => {
     await expect(page.getByRole("button", { name: /continue/i })).toBeVisible();
   });
 
+  test("sales index shows separate 11t and 13.5t tabs", async ({ page }) => {
+    await page.goto("/sales");
+    await expect(page.getByRole("button", { name: /11 tonnes GVW/i })).toBeVisible();
+    await expect(page.getByRole("button", { name: /13\.5 tonnes GVW/i })).toBeVisible();
+  });
+
   test("can open a truck detail page from sales", async ({ page }) => {
     await page.goto("/sales");
     const truckLink = page.locator("main a[href^='/sales/']").first();

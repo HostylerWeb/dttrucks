@@ -294,9 +294,9 @@ export function AboutPageView() {
                   height={ABOUT_IMAGES.eastley.height}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-inverse-surface/70 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
                 <figcaption className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
-                  <p className="text-xs font-bold uppercase tracking-widest text-primary-fixed-dim">
+                  <p className="text-xs font-bold uppercase tracking-widest text-white/80">
                     Where it began
                   </p>
                   <p className="font-headline font-bold text-lg mt-1">Eastley Commercials, 1995</p>
@@ -313,9 +313,9 @@ export function AboutPageView() {
                   height={ABOUT_IMAGES.team.height}
                   className="w-full h-full object-cover object-[center_20%] transition-transform duration-700 group-hover:scale-[1.02]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-inverse-surface/70 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
                 <figcaption className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
-                  <p className="text-xs font-bold uppercase tracking-widest text-primary-fixed-dim">
+                  <p className="text-xs font-bold uppercase tracking-widest text-white/80">
                     Today
                   </p>
                   <p className="font-headline font-bold text-lg mt-1">DT Trucks, Barking</p>
