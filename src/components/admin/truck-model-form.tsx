@@ -113,7 +113,7 @@ export function TruckModelForm({
           <FormField
             label="Spec sheet URL"
             name="spec_sheet_url"
-            hint="Path under /media/specs/… or full Isuzu UK PDF URL. Shown on the model page and specification sheets hub."
+            hint="Path under /media/specs/… or full URL from isuzutruck.co.uk/specification-sheets (use /media/… links, not old wp-content/uploads)."
           >
             <input
               id="spec_sheet_url"

@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getCategories } from "@/lib/db/trucks";
 import { resolveSpecSheet } from "@/lib/trucks/spec-sheet";
-import { isuzuBrochureLinks } from "@/content/isuzu-spec-links";
+import {
+  isuzuAdditionalSpecSheets,
+  isuzuBrochureLinks,
+  ISUZU_SPEC_SHEETS_PAGE,
+} from "@/content/isuzu-spec-links";
 import { BreadcrumbsBar } from "@/components/layout/BreadcrumbsBar";
 import { absoluteUrl } from "@/lib/site";
 
@@ -86,7 +90,37 @@ export default async function SpecificationSheetsPage() {
           })}
         </div>
 
-        <footer className="mt-16 pt-10 border-t border-outline-variant">
+        <footer className="mt-16 pt-10 border-t border-outline-variant space-y-10">
+          <div>
+            <h2 className="font-headline text-lg font-bold mb-4">More specification sheets</h2>
+            <p className="text-sm text-secondary mb-4">
+              Additional variants on the{" "}
+              <a
+                href={ISUZU_SPEC_SHEETS_PAGE}
+                className="font-semibold text-primary-container hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Isuzu Truck UK specification sheets page
+              </a>
+              .
+            </p>
+            <ul className="space-y-2">
+              {isuzuAdditionalSpecSheets.map((link) => (
+                <li key={link.url}>
+                  <a
+                    href={link.url}
+                    className="text-sm font-semibold text-primary-container hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {link.label} ({link.gvw}) →
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
           <h2 className="font-headline text-lg font-bold mb-4">Brochures &amp; downloads</h2>
           <ul className="space-y-2">
             {isuzuBrochureLinks.map((link) => (
@@ -102,6 +136,7 @@ export default async function SpecificationSheetsPage() {
               </li>
             ))}
           </ul>
+          </div>
         </footer>
       </section>
     </>
