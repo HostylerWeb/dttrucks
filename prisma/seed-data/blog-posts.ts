@@ -3,11 +3,12 @@ export const BLOG_POSTS = [
     slug: "p700-isuzu-range-at-dt-trucks",
     title: "P700 Isuzu range — what’s new at DT Trucks",
     excerpt:
-      "The P700 generation brings updated N-Series and F-Series cabs, advanced safety, 175 PS with ISIM on 7.5t, crew cab options and clearer 11t and 13.5t choices — spec the right truck from our Barking dealership.",
+      "The P700 generation brings updated N-Series and F-Series cabs, advanced safety equipment and air conditioning as standard. The Isuzu 7.5 tonne 3.0 Litre range has an additional 175 PS option. Both 150 and 175 have the option of the new Isim 9 speed transmission system which is a 9-speed dual clutch, automated transmission system. — spec the right truck from our Barking dealership.",
     content: `
-<p>Isuzu has introduced one of the biggest updates to its UK truck line-up in thirty years. The new <strong>P700 generation</strong> is now at the heart of the range we sell and support from <strong>DT Trucks in Barking</strong>, serving London, Essex and Hertfordshire. Fresh cab designs, more variants, updated safety technology, better in-cab equipment and a new engine and transmission combination for 7.5-tonne operators — but the real question is what those changes mean when the vehicle is working day in, day out.</p>
+<p>The P700 generation brings updated N-Series and F-Series cabs, advanced safety equipment and air conditioning as standard. The Isuzu 7.5 tonne 3.0 Litre range has an additional 175 PS option. Both 150 and 175 have the option of the new Isim 9 speed transmission system which is a 9-speed dual clutch, automated transmission system. — spec the right truck from our Barking dealership.</p>
+<p>Isuzu has introduced one of the biggest updates to its UK truck line-up in thirty years. The new <strong>P700 generation</strong> is now at the heart of the range we sell and support from <strong>DT Trucks in Barking</strong>, serving London, Essex and Kent. Fresh cab designs, more variants, updated safety technology, better in-cab equipment and a new engine and transmission combination for 7.5-tonne operators — but the real question is what those changes mean when the vehicle is working day in, day out.</p>
 <h2>A new generation across the range</h2>
-<p>P700 covers 3.5-tonne Grafter models through 7.5-tonne N-Series and 11-tonne and 13.5-tonne F-Series — the spread George and our sales team discuss with operators every week. Isuzu developed the generation around safety, comfort and efficiency while keeping the rugged reliability the brand is known for. Additional cab and chassis options matter because there is rarely a one-size-fits-all commercial vehicle: local delivery, recovery, construction and specialist bodywork all need different wheelbase, cab and powertrain combinations.</p>
+<p>P700 covers 3.5-tonne Grafter models through 7.5-tonne N-Series and 11-tonne and 13.5-tonne F-Series — the spread our sales team discuss with operators every week. Isuzu developed the generation around safety, comfort and efficiency while keeping the rugged reliability the brand is known for. Additional cab and chassis options matter because there is rarely a one-size-fits-all commercial vehicle: local delivery, recovery, construction and specialist bodywork all need different wheelbase, cab and powertrain combinations.</p>
 <h2>More equipment in the cab</h2>
 <p>On applicable models, standard equipment now includes LED lighting, air conditioning and satellite navigation, plus infotainment with <strong>Apple CarPlay</strong> and <strong>Android Auto</strong>. For drivers behind the wheel all day, that is not brochure filler — it changes the daily environment and keeps navigation and phone use familiar and safe.</p>
 <h2>More choice for operators</h2>
@@ -38,7 +39,7 @@ export const BLOG_POSTS = [
     published_at: "2026-03-20T10:00:00.000Z",
     meta_title: "P700 Isuzu range at DT Trucks - London & Essex",
     meta_description:
-      "P700 N-Series and F-Series updates, 175 PS ISIM, 11t and 13.5t F-Series, cab colours and spec sheets — from authorised Isuzu dealer DT Trucks in Barking.",
+      "P700 N-Series and F-Series cabs, safety equipment, A/C standard, 175 PS 7.5t option and Isim 9-speed on 150/175 — DT Trucks, Barking.",
   },
   {
     slug: "exclusive-discount-on-ac-regassing",

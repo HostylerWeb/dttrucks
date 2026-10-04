@@ -48,7 +48,7 @@ export function Footer({ settings }: { settings: Settings }) {
         <div className="lg:col-span-1">
           <FooterLogo />
           <p className="text-secondary text-sm leading-relaxed mb-4">
-            Authorised Isuzu Dealer for London & Essex. Sales, parts and service since 1995.
+            Authorised Isuzu Dealer for London, Essex & Kent. Sales, Service & Parts since 1995.
           </p>
           {settings.company_address && (
             <p className="text-secondary text-sm mb-3">{settings.company_address}</p>
