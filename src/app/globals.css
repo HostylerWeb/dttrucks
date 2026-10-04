@@ -192,6 +192,22 @@ body {
   outline-offset: 2px;
 }
 
+@keyframes contact-fab-pulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-primary-container) 45%, transparent);
+  }
+  65% {
+    box-shadow: 0 0 0 16px color-mix(in srgb, var(--color-primary-container) 0%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+@utility animate-contact-fab-pulse {
+  animation: contact-fab-pulse 2.8s ease-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

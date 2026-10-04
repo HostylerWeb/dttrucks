@@ -114,7 +114,9 @@ export default async function TruckDetailPage({
                 <SpecificationsTable specifications={specs} />
               </div>
             )}
-          <ShareButtons url={siteUrl} title={model.name} />
+            <div className="pt-4 border-t border-outline-variant">
+              <ShareButtons url={siteUrl} title={model.name} />
+            </div>
           </div>
         </div>
 

@@ -1,4 +1,4 @@
-import { revalidateTag, updateTag } from "next/cache";
+import { revalidatePath, revalidateTag, updateTag } from "next/cache";
 
 function invalidateTag(tag: string) {
   try {
@@ -48,6 +48,7 @@ export async function revalidateTruck(slug: string) {
   cacheTags.truckCategories();
   cacheTags.truck(slug);
   cacheTags.sitemap();
+  revalidatePath("/sales/specification-sheets");
 }
 
 export async function revalidateBlogPost(slug: string) {

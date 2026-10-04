@@ -1,3 +1,5 @@
+import { buildWhatsAppHref } from "@/lib/contact/external-links";
+
 export function WhatsAppButton({
   phone,
   message,
@@ -7,10 +9,7 @@ export function WhatsAppButton({
   message?: string;
   className?: string;
 }) {
-  const digits = phone.replace(/\D/g, "");
-  const href = message
-    ? `https://wa.me/${digits}?text=${encodeURIComponent(message)}`
-    : `https://wa.me/${digits}`;
+  const href = buildWhatsAppHref(phone, message);
 
   return (
     <a

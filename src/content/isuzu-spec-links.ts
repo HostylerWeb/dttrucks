@@ -2,8 +2,6 @@
  * Official Isuzu UK spec sheet PDFs — sync from
  * https://www.isuzutruck.co.uk/specification-sheets/ when links break.
  */
-export const ISUZU_SPEC_SHEETS_PAGE = "https://www.isuzutruck.co.uk/specification-sheets/";
-
 /** Closest current Isuzu sheet per DT model code (Isuzu may list N35.120 etc.). */
 export const defaultSpecSheetsByModelCode: Record<
   string,
@@ -70,9 +68,5 @@ export const isuzuBrochureLinks = [
   {
     label: "Isuzu F-Series range brochure 2026",
     url: "https://www.isuzutruck.co.uk/media/t4nahrtm/isuzu_fseries-range_ituk2026.pdf",
-  },
-  {
-    label: "All brochures on Isuzu Truck UK downloads page",
-    url: "https://www.isuzutruck.co.uk/downloads/",
   },
 ] as const;

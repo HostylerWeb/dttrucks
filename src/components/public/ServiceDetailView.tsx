@@ -93,7 +93,9 @@ export function ServiceDetailView({
               </div>
             )}
 
-            <ShareButtons url={siteUrl} title={service.title} />
+            <div className="pt-6 sm:pt-8 border-t border-outline-variant">
+              <ShareButtons url={siteUrl} title={service.title} />
+            </div>
           </article>
 
           <aside

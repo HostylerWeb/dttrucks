@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { StaticSiteHeader } from "@/components/layout/StaticSiteHeader";
 import { Footer } from "@/components/layout/Footer";
 import { DeferredPublicWidgets } from "@/components/public/DeferredPublicWidgets";
+import { QuickContactWidgetLoader } from "@/components/public/QuickContactWidgetLoader";
 import { DeferredMaterialSymbols } from "@/components/layout/DeferredMaterialSymbols";
 import { DeferredLiveChat } from "@/components/public/DeferredLiveChat";
 import { LocalBusinessJsonLd } from "@/components/seo/LocalBusinessJsonLd";
@@ -95,6 +96,9 @@ export default function PublicLayout({
         <LiveChatLoader />
       </Suspense>
       <DeferredMaterialSymbols />
+      <Suspense fallback={null}>
+        <QuickContactWidgetLoader />
+      </Suspense>
       <DeferredPublicWidgets />
     </div>
   );

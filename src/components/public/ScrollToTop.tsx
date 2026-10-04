@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { loadMaterialSymbols } from "@/lib/material-symbols-loader";
 
 export function ScrollToTop() {
   const [visible, setVisible] = useState(false);
@@ -14,6 +15,10 @@ export function ScrollToTop() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (visible) loadMaterialSymbols();
+  }, [visible]);
+
   return (
     <button
       type="button"
@@ -23,7 +28,9 @@ export function ScrollToTop() {
       }`}
       aria-label="Go to top"
     >
-      <span className="material-symbols-outlined">expand_less</span>
+      <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+        <path d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z" />
+      </svg>
     </button>
   );
 }

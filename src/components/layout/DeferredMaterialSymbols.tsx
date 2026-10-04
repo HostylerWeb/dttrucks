@@ -1,29 +1,22 @@
 "use client";
 
 import { useEffect } from "react";
+import { loadMaterialSymbols } from "@/lib/material-symbols-loader";
 
 const INTERACTION_EVENTS = ["scroll", "click", "touchstart", "keydown"] as const;
 
 /**
- * Defers Material Symbols (~320KB) until after idle or first user interaction.
+ * Defers Material Symbols (~320KB) until idle or first interaction.
+ * Fixed UI (contact FAB, scroll-to-top) uses inline SVGs so it stays crisp before this loads.
  */
 export function DeferredMaterialSymbols() {
   useEffect(() => {
-    const id = "material-symbols-css";
     let loaded = false;
 
     const load = () => {
-      if (loaded || document.getElementById(id)) {
-        loaded = true;
-        return;
-      }
+      if (loaded) return;
       loaded = true;
-
-      const link = document.createElement("link");
-      link.id = id;
-      link.rel = "stylesheet";
-      link.href = "/material-symbols.css";
-      document.head.appendChild(link);
+      loadMaterialSymbols();
     };
 
     const onInteract = () => {
@@ -38,7 +31,7 @@ export function DeferredMaterialSymbols() {
     }
 
     if ("requestIdleCallback" in window) {
-      const idleId = window.requestIdleCallback(load, { timeout: 5000 });
+      const idleId = window.requestIdleCallback(load, { timeout: 2500 });
       return () => {
         window.cancelIdleCallback(idleId);
         for (const eventName of INTERACTION_EVENTS) {
@@ -47,7 +40,7 @@ export function DeferredMaterialSymbols() {
       };
     }
 
-    const timeoutId = setTimeout(load, 4000);
+    const timeoutId = setTimeout(load, 2500);
     return () => {
       clearTimeout(timeoutId);
       for (const eventName of INTERACTION_EVENTS) {
