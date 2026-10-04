@@ -155,7 +155,7 @@ export function ContactPageView({
 
       <section className="page-section border-y border-outline-variant bg-surface-container-low">
         <div className="page-container">
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-14 items-start">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-14 items-start lg:items-stretch">
             <div className="lg:col-span-4">
               <h2 className="font-headline text-xl sm:text-2xl font-bold mb-2">Visit us</h2>
               <p className="text-secondary text-sm leading-relaxed mb-6">
@@ -206,13 +206,13 @@ export function ContactPageView({
               </ul>
             </div>
 
-            <div className="lg:col-span-8">
+            <div className="lg:col-span-8 flex flex-col min-h-0">
               <h3 className="font-headline font-bold text-lg mb-4">DT Trucks Location</h3>
               <MapEmbed
                 embedUrl={mapsEmbedUrl}
                 address={address}
                 title="DT Trucks location map"
-                className="aspect-[4/3] lg:aspect-auto lg:min-h-[420px] rounded-xl overflow-hidden border border-outline-variant shadow-industrial"
+                className="flex-1 w-full lg:min-h-[480px]"
               />
             </div>
           </div>

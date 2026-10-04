@@ -1,3 +1,8 @@
+import { cn } from "@/lib/utils";
+
+const defaultShellClass =
+  "relative w-full overflow-hidden rounded-xl border border-outline-variant shadow-industrial";
+
 export function MapEmbed({
   embedUrl,
   address,
@@ -18,10 +23,11 @@ export function MapEmbed({
   if (!resolvedUrl) {
     return (
       <div
-        className={
-          className ??
-          "flex aspect-video items-center justify-center rounded-xl border border-outline-variant bg-surface-container text-secondary text-sm"
-        }
+        className={cn(
+          defaultShellClass,
+          "flex aspect-[4/3] lg:aspect-auto lg:h-[480px] items-center justify-center bg-surface-container text-secondary text-sm",
+          className
+        )}
       >
         Map embed URL not configured
       </div>
@@ -29,11 +35,17 @@ export function MapEmbed({
   }
 
   return (
-    <div className={className ?? "aspect-video rounded-xl overflow-hidden border border-outline-variant shadow-industrial"}>
+    <div
+      className={cn(
+        defaultShellClass,
+        "aspect-[4/3] lg:aspect-auto lg:h-[480px] min-h-[240px]",
+        className
+      )}
+    >
       <iframe
         src={resolvedUrl}
         title={title}
-        className="h-full w-full border-0"
+        className="absolute inset-0 h-full w-full border-0"
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
         allowFullScreen
