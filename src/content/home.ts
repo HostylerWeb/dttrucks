@@ -102,9 +102,9 @@ export const homeHighlights = [
 ];
 
 export const homeDealerSection = {
-  title: "DT Trucks: Your Number One Isuzu Dealer in London & Essex",
+  title: "DT Trucks: Your Number One Isuzu Dealer in London, Essex & Kent",
   intro:
-    "At DT Trucks, we're proud to be recognised as a leading Isuzu dealership in London & Essex, offering expert servicing, genuine parts, and complete transport solutions. With decades of experience and state-of-the-art diagnostic equipment, your vehicle is always in the safest hands.",
+    "At DT Trucks, we're proud to be recognised as a leading Isuzu dealership in London, Essex and Kent, offering expert servicing, genuine parts, and complete transport solutions. With decades of experience and state-of-the-art diagnostic equipment, your vehicle is always in the safest hands.",
   fleet:
     "We currently maintain a high volume of commercial vehicles - from single operators to fleets of over 150 trucks. Our services cover everything from a simple bulb replacement to full engine rebuilds. No job is too big or too small, and every task is handled with precision and care.",
   partsNote:

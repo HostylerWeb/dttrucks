@@ -10,8 +10,8 @@ function NavLabel({ item }: { item: NavItem }) {
   if (item.shortLabel) {
     return (
       <>
-        <span className="xl:hidden">{item.shortLabel}</span>
-        <span className="hidden xl:inline">{item.label}</span>
+        <span className="2xl:hidden">{item.shortLabel}</span>
+        <span className="hidden 2xl:inline">{item.label}</span>
       </>
     );
   }
@@ -26,7 +26,7 @@ function NavLink({ href, label, shortLabel }: { href: string; label: string; sho
     <Link
       href={href}
       className={cn(
-        "px-1.5 lg:px-2 xl:px-2.5 py-2 text-[12px] lg:text-[13px] xl:text-sm whitespace-nowrap transition-colors",
+        "px-1.5 xl:px-2 2xl:px-2.5 py-2 text-[12px] xl:text-[13px] 2xl:text-sm whitespace-nowrap transition-colors",
         active
           ? "text-primary-container font-bold border-b-2 border-primary-container"
           : "text-secondary font-semibold hover:text-primary-container"
@@ -34,8 +34,8 @@ function NavLink({ href, label, shortLabel }: { href: string; label: string; sho
     >
       {shortLabel ? (
         <>
-          <span className="xl:hidden">{shortLabel}</span>
-          <span className="hidden xl:inline">{label}</span>
+          <span className="2xl:hidden">{shortLabel}</span>
+          <span className="hidden 2xl:inline">{label}</span>
         </>
       ) : (
         label
@@ -80,7 +80,7 @@ function NavDropdown({ item }: { item: NavItem }) {
         <Link
           href={item.href}
           className={cn(
-            "px-1.5 lg:px-2 xl:px-2.5 py-2 text-[12px] lg:text-[13px] xl:text-sm whitespace-nowrap transition-colors",
+            "px-1.5 xl:px-2 2xl:px-2.5 py-2 text-[12px] xl:text-[13px] 2xl:text-sm whitespace-nowrap transition-colors",
             active
               ? "text-primary-container font-bold"
               : "text-secondary font-semibold hover:text-primary-container"
@@ -164,8 +164,8 @@ export function DesktopNavBar({
   phoneHref: string;
 }) {
   return (
-    <div className="hidden lg:grid flex-1 grid-cols-[minmax(0,1fr)_auto] items-center gap-3 xl:gap-4 min-w-0">
-      <div className="flex items-center gap-0.5 xl:gap-1 min-w-0 overflow-visible">
+    <div className="hidden xl:grid flex-1 grid-cols-[minmax(0,1fr)_auto] items-center gap-2 2xl:gap-4 min-w-0">
+      <div className="flex items-center gap-0 2xl:gap-0.5 min-w-0 overflow-visible">
         {navItems.map((item) =>
           item.children?.length ? (
             <NavDropdown key={item.href} item={item} />
@@ -180,17 +180,17 @@ export function DesktopNavBar({
         )}
       </div>
 
-      <div className="flex items-center shrink-0 pl-2 xl:pl-3 border-l border-outline-variant/60">
+      <div className="flex items-center shrink-0 pl-2 2xl:pl-3 border-l border-outline-variant/60">
         <a
           href={phoneHref}
-          className="hidden lg:flex xl:hidden items-center justify-center w-10 h-10 bg-primary-container text-white rounded-lg shadow-industrial hover:bg-primary transition-all shrink-0"
-          aria-label={`Call ${phone}`}
+          className="flex 2xl:hidden items-center justify-center w-10 h-10 bg-primary-container text-white rounded-lg shadow-industrial hover:bg-primary transition-all shrink-0"
+          aria-label={`Call office ${phone}`}
         >
           <IconCall className="w-[22px] h-[22px]" />
         </a>
         <a
           href={phoneHref}
-          className="hidden xl:flex items-center gap-2 bg-primary-container text-white px-4 py-2.5 rounded-lg font-semibold text-sm shadow-industrial hover:bg-primary transition-all active:scale-[0.98] whitespace-nowrap shrink-0"
+          className="hidden 2xl:flex items-center gap-2 bg-primary-container text-white px-4 py-2.5 rounded-lg font-semibold text-sm shadow-industrial hover:bg-primary transition-all active:scale-[0.98] whitespace-nowrap shrink-0"
         >
           <IconCall className="w-5 h-5" />
           {phone}

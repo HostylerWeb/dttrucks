@@ -128,6 +128,7 @@ export function BodyQuoteForm({ chassisModels, initialModelSlug }: Props) {
         {STEPS.map((label, index) => (
           <li
             key={label}
+            aria-current={index === step ? "step" : undefined}
             className={`rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wide ${
               index === step
                 ? "bg-primary-container text-white"

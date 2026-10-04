@@ -7,15 +7,18 @@ import { Footer } from "@/components/layout/Footer";
 import { DeferredPublicWidgets } from "@/components/public/DeferredPublicWidgets";
 import { QuickContactWidgetLoader } from "@/components/public/QuickContactWidgetLoader";
 import { DeferredMaterialSymbols } from "@/components/layout/DeferredMaterialSymbols";
-import { DeferredLiveChat } from "@/components/public/DeferredLiveChat";
 import { LocalBusinessJsonLd } from "@/components/seo/LocalBusinessJsonLd";
 import { WebSiteJsonLd } from "@/components/seo/WebSiteJsonLd";
 import { socialLinks } from "@/lib/nav";
+import { formatOpeningHoursSummary } from "@/lib/format-opening-hours";
 
 async function PublicSiteHeader() {
   const settings = await getAllSettings();
-  const phone = settings.company_phone ?? "020 8595 4400";
-  const phoneHref = `tel:${phone.replace(/\s/g, "")}`;
+  const companyPhone = settings.company_phone ?? "020 8595 4400";
+  const salesPhone = settings.sales_phone?.trim() || companyPhone;
+  const phoneHref = `tel:${companyPhone.replace(/\s/g, "")}`;
+  const salesPhoneHref = `tel:${salesPhone.replace(/\s/g, "")}`;
+  const hoursSummary = formatOpeningHoursSummary(settings.opening_hours);
 
   return (
     <>
@@ -28,8 +31,11 @@ async function PublicSiteHeader() {
         socialInstagram={settings.social_instagram || socialLinks.instagram}
       />
       <Header
-        phone={phone}
+        phone={companyPhone}
         phoneHref={phoneHref}
+        salesPhone={salesPhone}
+        salesPhoneHref={salesPhoneHref}
+        hoursSummary={hoursSummary}
         socialFacebook={settings.social_facebook || socialLinks.facebook}
         socialLinkedin={settings.social_linkedin || socialLinks.linkedin}
         socialInstagram={settings.social_instagram || socialLinks.instagram}
@@ -41,21 +47,6 @@ async function PublicSiteHeader() {
 async function PublicSiteFooter() {
   const settings = await getAllSettings();
   return <Footer settings={settings} />;
-}
-
-async function LiveChatLoader() {
-  const settings = await getAllSettings();
-  const liveChatEnabled = settings.live_chat_enabled === "true";
-  const liveChatId = settings.live_chat_id || process.env.LIVE_CHAT_ID;
-
-  if (!liveChatEnabled) return null;
-
-  return (
-    <DeferredLiveChat
-      phone={settings.company_phone ?? "020 8595 4400"}
-      liveChatId={liveChatId}
-    />
-  );
 }
 
 function HeaderFallback() {
@@ -91,9 +82,6 @@ export default function PublicLayout({
       </main>
       <Suspense fallback={<FooterFallback />}>
         <PublicSiteFooter />
-      </Suspense>
-      <Suspense fallback={null}>
-        <LiveChatLoader />
       </Suspense>
       <DeferredMaterialSymbols />
       <Suspense fallback={null}>

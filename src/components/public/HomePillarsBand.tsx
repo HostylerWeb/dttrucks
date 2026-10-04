@@ -11,8 +11,8 @@ export function HomePillarsBand() {
             Parts, Sales & Workshop
           </h2>
           <p className="text-secondary mt-3 leading-relaxed">
-            Your complete commercial vehicle partner at one authorised Isuzu dealership in London
-            & Essex.
+            Your complete commercial vehicle partner at one authorised Isuzu dealership in London,
+            Essex & Kent.
           </p>
         </div>
 

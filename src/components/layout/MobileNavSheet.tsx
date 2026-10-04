@@ -151,6 +151,9 @@ export function MobileNavSheet({
   onClose,
   phone,
   phoneHref,
+  salesPhone,
+  salesPhoneHref,
+  hoursSummary,
   socialFacebook,
   socialLinkedin,
   socialInstagram,
@@ -159,10 +162,14 @@ export function MobileNavSheet({
   onClose: () => void;
   phone: string;
   phoneHref: string;
+  salesPhone: string;
+  salesPhoneHref: string;
+  hoursSummary?: string;
   socialFacebook?: string;
   socialLinkedin?: string;
   socialInstagram?: string;
 }) {
+  const showSalesLine = salesPhone.replace(/\s/g, "") !== phone.replace(/\s/g, "");
   return (
     <Sheet open={open} onClose={onClose} side="right">
       <div className="flex items-center justify-between gap-3 pb-5 border-b border-outline-variant">
@@ -202,14 +209,30 @@ export function MobileNavSheet({
         </ul>
       </nav>
 
-      <div className="mt-6 pt-5 border-t border-outline-variant space-y-4">
+      <div className="mt-6 pt-5 border-t border-outline-variant space-y-3">
+        {hoursSummary && (
+          <p className="text-xs text-secondary leading-relaxed px-1">{hoursSummary}</p>
+        )}
         <a
           href={phoneHref}
-          className="flex items-center justify-center gap-2 w-full bg-primary-container text-white py-3.5 rounded-xl font-semibold shadow-industrial hover:bg-primary transition-colors"
+          className="flex items-center justify-center gap-2 w-full border border-outline-variant bg-white text-on-background py-3 rounded-xl font-semibold hover:border-primary-container/40 transition-colors"
         >
-          <IconCall className="w-5 h-5 shrink-0" />
-          {phone}
+          <IconCall className="w-5 h-5 shrink-0 text-primary-container" />
+          <span>
+            Office <span className="text-secondary font-normal">·</span> {phone}
+          </span>
         </a>
+        {showSalesLine && (
+          <a
+            href={salesPhoneHref}
+            className="flex items-center justify-center gap-2 w-full bg-primary-container text-white py-3.5 rounded-xl font-semibold shadow-industrial hover:bg-primary transition-colors"
+          >
+            <IconCall className="w-5 h-5 shrink-0" />
+            <span>
+              Sales <span className="opacity-80 font-normal">·</span> {salesPhone}
+            </span>
+          </a>
+        )}
         {(socialFacebook || socialLinkedin || socialInstagram) && (
           <div className="flex justify-center gap-2">
             {socialFacebook && (

@@ -8,6 +8,8 @@ import {
   buildWhatsAppHref,
 } from "@/lib/contact/external-links";
 import { SALES_EMAIL_SUBJECT, SALES_OUTREACH_MESSAGE } from "@/lib/contact/sales-contact";
+import { useCookieConsentVisible } from "@/hooks/useCookieConsentVisible";
+
 type QuickContactWidgetProps = {
   phone: string;
   email: string;
@@ -54,6 +56,7 @@ export function QuickContactWidget({
   whatsAppMessage = SALES_OUTREACH_MESSAGE,
 }: QuickContactWidgetProps) {
   const [open, setOpen] = useState(false);
+  const cookieBarVisible = useCookieConsentVisible();
   const rootRef = useRef<HTMLDivElement>(null);
   const menuId = useId();
 
@@ -123,7 +126,10 @@ export function QuickContactWidget({
   return (
     <div
       ref={rootRef}
-      className="fixed bottom-6 right-4 sm:right-6 z-50 h-36 w-36 pb-[env(safe-area-inset-bottom)] pointer-events-none"
+      className={cn(
+        "fixed right-4 sm:right-6 z-50 h-36 w-36 pb-[env(safe-area-inset-bottom)] pointer-events-none transition-[bottom] duration-300",
+        cookieBarVisible ? "bottom-[5.5rem] sm:bottom-24" : "bottom-6"
+      )}
       aria-live="polite"
     >
       <div

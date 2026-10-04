@@ -180,7 +180,7 @@ export function AboutPageView() {
               </div>
               <div className="absolute -top-3 right-2 sm:-top-4 sm:-right-4 md:-top-5 md:-right-5 bg-white text-on-background px-3 py-2 sm:px-4 sm:py-3 rounded-xl shadow-industrial border border-outline-variant max-w-[180px] sm:max-w-[200px]">
                 <p className="text-xs uppercase tracking-wide text-secondary font-semibold">
-                  London & Essex
+                  London, Essex & Kent
                 </p>
                 <p className="font-headline font-bold text-sm mt-0.5 text-primary-container">Isuzu dealership</p>
               </div>
@@ -278,7 +278,7 @@ export function AboutPageView() {
           <SectionHeading
             eyebrow="The people behind DT Trucks"
             title="Get to know a little about our team!"
-            description="Leadership, workshop and office - the team that keeps London and Essex moving."
+            description="Leadership, workshop and office — the team that keeps London, Essex and Kent moving."
             headingLevel="h3"
           />
 

@@ -15,7 +15,7 @@ export function HomeSpecialistGrid() {
             </h2>
             <p className="text-secondary leading-relaxed">
               A&E, PTS, air conditioning, and VOSA compliance - expertise for niche commercial
-              fleets across London and Essex.
+              fleets across London, Essex and Kent.
             </p>
           </div>
           <Link

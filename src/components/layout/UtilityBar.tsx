@@ -1,4 +1,5 @@
 import { formatOpeningHoursSummary } from "@/lib/format-opening-hours";
+import { DEALER_UTILITY_LOCATION } from "@/lib/dealer-copy";
 import { UtilityBarSocialGroup } from "@/components/layout/UtilityBarSocialGroup";
 
 type Settings = Record<string, string | undefined>;
@@ -44,7 +45,7 @@ export function UtilityBar({
           </span>
           <span className="hidden md:flex items-center gap-1.5 text-secondary">
             <IconLocation className="w-[17px] h-[17px] shrink-0 text-primary-container" />
-            Barking, Essex · London & Essex Dealer
+            {DEALER_UTILITY_LOCATION}
           </span>
         </div>
 

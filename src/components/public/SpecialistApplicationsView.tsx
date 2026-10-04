@@ -211,7 +211,7 @@ export function SpecialistApplicationsView({
 
       <CTABanner
         title="Need workshop support?"
-        description="Our Barking workshop services commercial fleets across London and Essex."
+        description="Our Barking workshop services commercial fleets across London, Essex and Kent."
         buttonLabel="Service & Parts"
         buttonHref="/service"
         variant="dark"

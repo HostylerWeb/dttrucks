@@ -14,7 +14,9 @@ export function Tabs({
 
   return (
     <div>
-      <div className="mobile-bleed-x sm:mx-0 sm:px-0 overflow-x-auto scrollbar-none">
+      <div
+        className="mobile-bleed-x sm:mx-0 sm:px-0 overflow-x-auto scrollbar-none sticky top-16 xl:top-[4.5rem] 2xl:top-20 z-30 -mx-[var(--spacing-margin-mobile)] px-[var(--spacing-margin-mobile)] sm:mx-0 sm:px-0 bg-surface/95 backdrop-blur-sm py-1"
+      >
         <div className="flex gap-1 min-w-max border-b border-outline-variant">
           {tabs.map((tab) => (
             <button

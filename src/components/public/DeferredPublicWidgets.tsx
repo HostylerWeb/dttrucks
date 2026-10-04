@@ -7,16 +7,6 @@ const CookieConsent = dynamic(
   { ssr: false }
 );
 
-const ScrollToTop = dynamic(
-  () => import("@/components/public/ScrollToTop").then((m) => m.ScrollToTop),
-  { ssr: false }
-);
-
 export function DeferredPublicWidgets() {
-  return (
-    <>
-      <CookieConsent />
-      <ScrollToTop />
-    </>
-  );
+  return <CookieConsent />;
 }

@@ -3,7 +3,7 @@ export const defaultSalesHero = {
   imageAlt: "Isuzu truck range - DT Trucks sales",
   title: "Isuzu Sales",
   subtitle: "The Best Trucks At Unbeatable Prices",
-  tagline: "Authorised Isuzu dealer - London & Essex",
+  tagline: "Authorised Isuzu dealer — London, Essex & Kent",
   minHeight: "min-h-[320px] lg:min-h-[380px]",
   ctas: [
     { label: "Browse truck range", href: "/sales", variant: "primary" as const },

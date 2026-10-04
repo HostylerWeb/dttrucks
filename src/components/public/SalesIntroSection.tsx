@@ -86,7 +86,7 @@ export function SalesIntroSection({
                     30+ years experience
                   </span>
                   <span className="rounded-full bg-surface-container px-3 py-1 text-xs font-semibold text-secondary">
-                    London, Essex & Hertfordshire
+                    London, Essex & Kent
                   </span>
                 </div>
 

@@ -10,7 +10,7 @@ import { absoluteUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: { absolute: "Isuzu specification sheets - DT Trucks" },
   description:
-    "Download Isuzu chassis specification sheets by gross vehicle weight — 3.5t through to 13.5t. Authorised dealer serving London and Essex from Barking.",
+    "Download Isuzu chassis specification sheets by gross vehicle weight — 3.5t through to 13.5t. Authorised dealer serving London, Essex and Kent from Barking.",
   alternates: { canonical: absoluteUrl("/sales/specification-sheets") },
 };
 

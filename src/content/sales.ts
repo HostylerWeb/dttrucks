@@ -3,7 +3,7 @@ export const salesIntro = {
   title: "Welcome to our truck sales page",
   paragraphs: [
     "Explore our wide selection of trucks available for purchase. Whether you know exactly what you need or require some assistance in finding the perfect truck, I'm here to help. Feel free to contact me - call my mobile number below, fill in the contact form with your truck requirements, or send me an email. I am always ready to assist.",
-    "With over 30 years of experience in the commercial vehicle industry, I specialise in Isuzu truck sales, covering London, Essex, and Hertfordshire. I support transport managers, fleet managers, and business owners in choosing the right truck for their needs.",
+    "With over 30 years of experience in the commercial vehicle industry, I specialise in Isuzu truck sales, covering London, Essex and Kent. I support transport managers, fleet managers, and business owners in choosing the right truck for their needs.",
     "Get in touch today to learn more about how I can assist with your truck needs.",
   ],
   specialistTitle: "Your Isuzu truck sales specialist and consultant",

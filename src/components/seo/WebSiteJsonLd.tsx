@@ -13,7 +13,7 @@ export function WebSiteJsonLd() {
         url: siteUrl,
         name: "DT Trucks",
         description:
-          "Authorised Isuzu dealer in Barking, Essex. Truck sales, service, parts and fleet support.",
+          "Authorised Isuzu dealer in Barking, Essex. Truck sales, service, parts and fleet support across London, Essex and Kent.",
         inLanguage: "en-GB",
         publisher: { "@id": `${siteUrl}/#organization` },
       },

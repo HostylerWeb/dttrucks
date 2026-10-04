@@ -1,5 +1,5 @@
 export const DEALER_HEADING =
-  "DT Trucks: Your Number One Isuzu Dealer in London & Essex";
+  "DT Trucks: Your Number One Isuzu Dealer in London, Essex & Kent";
 
 export const DEALER_STATS = [
   { value: "96%", label: "Parts first-time pick" },
@@ -14,7 +14,7 @@ export const DEALER_INSIGHTS = [
     title: "Authorised Isuzu expertise",
     summary:
       "Expert servicing, genuine parts, and complete transport solutions with decades of experience and state-of-the-art diagnostic equipment.",
-    points: ["London & Essex dealership", "Vehicles always in the safest hands"],
+    points: ["London, Essex & Kent dealership", "Vehicles always in the safest hands"],
   },
   {
     icon: "local_shipping",
@@ -56,7 +56,7 @@ export const HOME_PILLARS: HomePillar[] = [
     icon: "inventory_2",
     badge: "2 Year Warranty on all Parts",
     title: "Parts",
-    lead: "Comprehensive genuine Isuzu parts with industry-leading availability across London and Essex.",
+    lead: "Comprehensive genuine Isuzu parts with industry-leading availability across London, Essex and Kent.",
     bullets: [
       "Typically over 95% first-time pick availability",
       "Order before 6:00pm - on premises by 12pm next day (99% guarantee)",

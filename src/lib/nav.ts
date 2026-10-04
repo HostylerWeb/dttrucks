@@ -25,10 +25,11 @@ export const serviceNavChildren: NavItemLink[] = getAllServices().map((service) 
 
 export const navItems: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
+  { label: "About Us", shortLabel: "About", href: "/about" },
   { label: "Isuzu Truck Sales", shortLabel: "Truck Sales", href: "/sales", childrenOverviewLabel: "Browse truck range", children: salesNavChildren },
   {
     label: "Service & Parts",
+    shortLabel: "Service",
     href: "/service",
     children: serviceNavChildren,
   },
@@ -43,19 +44,19 @@ export const navItems: NavItem[] = [
 ];
 
 export const footerQuickLinks = [
-  { label: "About Us", href: "/about" },
-  { label: "Isuzu Truck Sales", href: "/sales" },
-  { label: "Specification sheets", href: "/sales/specification-sheets" },
-  { label: "Body quote", href: "/sales/body-quote" },
-  { label: "Service & Parts", href: "/service" },
+  { label: "About", href: "/about" },
+  { label: "Truck sales", href: "/sales" },
+  { label: "Spec sheets", href: "/sales/specification-sheets" },
+  { label: "Service & parts", href: "/service" },
   { label: "Blog", href: "/blog" },
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ] as const;
 
+/** Short list for footer — full list lives on /service */
 export const footerServiceLinks: NavItemLink[] = [
   { label: "All services", href: "/service" },
-  ...serviceNavChildren,
+  ...serviceNavChildren.slice(0, 3),
 ];
 
 export const footerLegalLinks = [

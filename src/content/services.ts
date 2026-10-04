@@ -218,7 +218,7 @@ export const SERVICES: ServiceDefinition[] = [
       "From phone call to kerbside in under 90 minutes. We understand the importance of your valuable asset - and the cost of every minute off the road.",
     ],
     bullets: [
-      "24/7/365 coverage across London and Essex",
+      "24/7/365 coverage across London, Essex and Kent",
       "Multiple fully equipped service vehicles",
       "Phone call to kerbside in under 90 minutes",
       "Experienced commercial vehicle technicians",
@@ -341,7 +341,7 @@ export const SERVICE_INDEX_INTRO =
 
 export const SERVICE_INDEX_PARAGRAPHS = [
   SERVICE_INDEX_INTRO,
-  "Our workshop at Castle Works, Barking supports fleets across London and Essex with IRTEC-accredited technicians, a DVSA-approved tachograph centre, 24/7 roadside cover, and genuine Isuzu parts with a strong first-time pick rate.",
+  "Our workshop at Castle Works, Barking supports fleets across London, Essex and Kent with IRTEC-accredited technicians, a DVSA-approved tachograph centre, 24/7 roadside cover, and genuine Isuzu parts with a strong first-time pick rate.",
 ];
 
 export function getAllServices() {

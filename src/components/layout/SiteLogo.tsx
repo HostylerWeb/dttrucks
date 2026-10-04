@@ -36,16 +36,16 @@ export function HeaderLogo({
         <source
           type="image/webp"
           srcSet={`${HEADER_LOGO.standard} 300w, ${HEADER_LOGO.retina} 433w`}
-          sizes="(max-width: 1024px) 220px, 300px"
+          sizes="(max-width: 1279px) 200px, (max-width: 1535px) 240px, 300px"
         />
         <img
           src={HEADER_LOGO.standardPng}
           srcSet={`${HEADER_LOGO.standardPng} 300w, ${HEADER_LOGO.retinaPng} 433w`}
-          sizes="(max-width: 1024px) 220px, 300px"
+          sizes="(max-width: 1279px) 200px, (max-width: 1535px) 240px, 300px"
           alt={HEADER_LOGO.alt}
           width={HEADER_LOGO.width}
           height={HEADER_LOGO.height}
-          className="h-11 sm:h-12 lg:h-14 w-auto max-w-[220px] lg:max-w-[300px] object-contain object-left"
+          className="h-10 sm:h-11 xl:h-12 2xl:h-14 w-auto max-w-[200px] xl:max-w-[240px] 2xl:max-w-[300px] object-contain object-left"
           fetchPriority="high"
         />
       </picture>
@@ -57,7 +57,7 @@ export function FooterLogo() {
   return (
     <Link
       href="/"
-      className="inline-flex items-center min-h-11 py-2 -my-2 mb-2"
+      className="inline-flex items-center py-1 mb-1"
       aria-label="DT Trucks home"
     >
       <picture>

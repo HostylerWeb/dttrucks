@@ -46,6 +46,7 @@ export async function LocalBusinessJsonLd() {
     areaServed: [
       { "@type": "AdministrativeArea", name: "London" },
       { "@type": "AdministrativeArea", name: "Essex" },
+      { "@type": "AdministrativeArea", name: "Kent" },
       { "@type": "AdministrativeArea", name: "South East England" },
     ],
     parentOrganization: { "@id": `${siteUrl}/#organization` },

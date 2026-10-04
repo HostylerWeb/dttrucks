@@ -14,6 +14,9 @@ const MobileNavSheet = dynamic(
 type HeaderProps = {
   phone: string;
   phoneHref: string;
+  salesPhone: string;
+  salesPhoneHref: string;
+  hoursSummary?: string;
   socialFacebook?: string;
   socialLinkedin?: string;
   socialInstagram?: string;
@@ -38,6 +41,9 @@ function IconMenu({ className }: { className?: string }) {
 export function Header({
   phone,
   phoneHref,
+  salesPhone,
+  salesPhoneHref,
+  hoursSummary,
   socialFacebook,
   socialLinkedin,
   socialInstagram,
@@ -63,22 +69,22 @@ export function Header({
         )}
       >
         <nav
-          className="page-container h-16 lg:h-[72px] xl:h-20 flex items-center gap-3 sm:gap-4"
+          className="page-container h-16 xl:h-[72px] 2xl:h-20 flex items-center gap-2 sm:gap-3"
           aria-label="Main"
         >
-          <div className="shrink-0 pr-3 sm:pr-5 lg:pr-6 max-w-[min(100%,220px)] lg:max-w-[260px] xl:max-w-[280px]">
+          <div className="shrink-0 pr-2 sm:pr-4 xl:pr-5 max-w-[min(100%,200px)] xl:max-w-[240px] 2xl:max-w-[280px]">
             <HeaderLogo />
           </div>
 
-          <div className="hidden lg:flex flex-1 items-center min-w-0 min-h-[40px]">
+          <div className="hidden xl:flex flex-1 items-center min-w-0 min-h-[40px]">
             <DesktopNavBar phone={phone} phoneHref={phoneHref} />
           </div>
 
-          <div className="flex lg:hidden items-center gap-2 shrink-0 ml-auto">
+          <div className="flex xl:hidden items-center gap-2 shrink-0 ml-auto">
             <a
               href={phoneHref}
               className="flex items-center justify-center w-10 h-10 bg-primary-container text-white rounded-lg shrink-0 shadow-industrial"
-              aria-label={`Call ${phone}`}
+              aria-label={`Call office ${phone}`}
             >
               <IconCall className="w-[22px] h-[22px]" />
             </a>
@@ -101,6 +107,9 @@ export function Header({
           onClose={closeMenu}
           phone={phone}
           phoneHref={phoneHref}
+          salesPhone={salesPhone}
+          salesPhoneHref={salesPhoneHref}
+          hoursSummary={hoursSummary}
           socialFacebook={socialFacebook}
           socialLinkedin={socialLinkedin}
           socialInstagram={socialInstagram}

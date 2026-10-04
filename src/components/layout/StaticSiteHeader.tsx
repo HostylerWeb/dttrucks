@@ -29,29 +29,29 @@ export function StaticSiteHeader({
   return (
     <header className="sticky top-0 z-50 bg-surface border-b border-outline-variant overflow-visible">
       <nav
-        className="page-container h-16 lg:h-[72px] xl:h-20 flex items-center gap-3 sm:gap-4"
+        className="page-container h-16 xl:h-[72px] 2xl:h-20 flex items-center gap-2 sm:gap-3"
         aria-label="Main"
       >
-        <div className="shrink-0 pr-3 sm:pr-5 lg:pr-6 max-w-[min(100%,220px)] lg:max-w-[260px] xl:max-w-[280px]">
+        <div className="shrink-0 pr-2 sm:pr-4 xl:pr-5 max-w-[min(100%,200px)] xl:max-w-[240px] 2xl:max-w-[280px]">
           <HeaderLogo />
         </div>
 
-        <div className="hidden lg:flex flex-1 items-center justify-between min-w-0 gap-4 xl:gap-8 min-h-[40px]">
-          <div className="flex items-center gap-0.5 xl:gap-1 min-w-0">
+        <div className="hidden xl:flex flex-1 items-center justify-between min-w-0 gap-3 2xl:gap-6 min-h-[40px]">
+          <div className="flex items-center gap-0.5 min-w-0">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-2 xl:px-2.5 py-2 text-[13px] xl:text-sm whitespace-nowrap text-secondary font-semibold"
+                className="px-1.5 2xl:px-2.5 py-2 text-[12px] 2xl:text-sm whitespace-nowrap text-secondary font-semibold"
               >
-                {item.label}
+                {item.shortLabel ?? item.label}
               </Link>
             ))}
           </div>
-          <div className="flex items-center gap-2 shrink-0 pl-2 xl:pl-4 border-l border-outline-variant/60">
+          <div className="flex items-center gap-2 shrink-0 pl-2 2xl:pl-4 border-l border-outline-variant/60">
             <a
               href={phoneHref}
-              className="hidden xl:flex items-center gap-2 bg-primary-container text-white px-4 py-2.5 rounded-lg font-semibold text-sm shadow-industrial whitespace-nowrap shrink-0"
+              className="hidden 2xl:flex items-center gap-2 bg-primary-container text-white px-4 py-2.5 rounded-lg font-semibold text-sm shadow-industrial whitespace-nowrap shrink-0"
             >
               <IconCall className="w-5 h-5" />
               {phone}
@@ -59,7 +59,7 @@ export function StaticSiteHeader({
           </div>
         </div>
 
-        <div className="flex lg:hidden items-center gap-2 shrink-0 ml-auto">
+        <div className="flex xl:hidden items-center gap-2 shrink-0 ml-auto">
           <a
             href={phoneHref}
             className="flex items-center justify-center w-10 h-10 bg-primary-container text-white rounded-lg shrink-0 shadow-industrial"

@@ -7,7 +7,7 @@ import { absoluteUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: { absolute: "Body specification quote - DT Trucks" },
   description:
-    "Build a body specification and request a quote from DT Trucks — Isuzu authorised dealer in Barking, London and Essex. No online pricing.",
+    "Build a body specification and request a quote from DT Trucks — Isuzu authorised dealer in Barking, serving London, Essex and Kent. No online pricing.",
   alternates: { canonical: absoluteUrl("/sales/body-quote") },
 };
 
