@@ -1,14 +1,15 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
-import { preload } from "react-dom";
 import { getHomepageVideos } from "@/lib/db/videos";
 import { getAllSettings } from "@/lib/db/settings";
 import { getCategories } from "@/lib/db/trucks";
 import { getPosts } from "@/lib/db/blog";
 import { buildPageMetadata } from "@/lib/metadata";
 import { HomePageView } from "@/components/public/HomePageView";
-import { HomeHeroCarousel } from "@/components/public/isuzu/HomeHeroCarousel";
+import { HomeHeroCarouselStatic } from "@/components/public/isuzu/HomeHeroCarouselStatic";
+import { HomeHeroCarouselMount } from "@/components/public/isuzu/HomeHeroCarouselMount";
 import { homeHeroSlides } from "@/content/home-carousel";
+import { oemHeroMedia } from "@/content/oem-hero-assets";
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildPageMetadata("home");
@@ -52,13 +53,21 @@ function HomeContentSkeleton() {
 
 export default function Home() {
   const firstSlide = homeHeroSlides[0];
-  if (firstSlide) {
-    preload(firstSlide.truckImage, { as: "image", fetchPriority: "high" });
-  }
 
   return (
     <>
-      <HomeHeroCarousel slides={homeHeroSlides} />
+      {firstSlide && (
+        <>
+          <link rel="preload" as="image" href={firstSlide.truckImage} fetchPriority="high" />
+          <link rel="preload" as="image" href={oemHeroMedia.gridBackground} />
+        </>
+      )}
+      <div className="relative">
+        <HomeHeroCarouselStatic />
+        <div className="absolute inset-0 z-[1]">
+          <HomeHeroCarouselMount slides={homeHeroSlides} />
+        </div>
+      </div>
       <Suspense fallback={<HomeContentSkeleton />}>
         <HomePageContent />
       </Suspense>
