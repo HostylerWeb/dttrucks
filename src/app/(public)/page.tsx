@@ -62,9 +62,9 @@ export default function Home() {
           <link rel="preload" as="image" href={oemHeroMedia.gridBackground} />
         </>
       )}
-      <div className="relative">
+      <div className="relative min-h-[min(640px,92vh)] sm:min-h-[min(560px,85vh)]">
         <HomeHeroCarouselStatic />
-        <div className="absolute inset-0 z-[1]">
+        <div className="absolute inset-0 z-[1] min-h-[inherit]">
           <HomeHeroCarouselMount slides={homeHeroSlides} />
         </div>
       </div>
