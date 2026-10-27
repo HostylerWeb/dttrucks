@@ -31,7 +31,7 @@ export function SiteActionBar({ phoneHref }: { phoneHref: string }) {
           <Link href="/contact" className="hover:text-primary-fixed-dim px-1">
             Contact us
           </Link>
-          <span className="text-primary-container hidden sm:inline" aria-hidden>/</span>
+          <span className="text-primary hidden sm:inline" aria-hidden>/</span>
           <Link
             href="/contact#contact-form"
             className="hover:text-primary-fixed-dim px-1 hidden sm:inline"
