@@ -4,7 +4,8 @@ import Image from "next/image";
 import { getCategories, getDriveawayModels } from "@/lib/db/trucks";
 import { getAllSettings } from "@/lib/db/settings";
 import { buildPageMetadata } from "@/lib/metadata";
-import { HeroSection } from "@/components/public/HeroSection";
+import { OfficialBannerHero } from "@/components/public/OfficialBannerHero";
+import { p700LaunchMedia } from "@/content/p700-launch-assets";
 import { BreadcrumbsBar } from "@/components/layout/BreadcrumbsBar";
 import { SalesIntroSection } from "@/components/public/SalesIntroSection";
 import { SalesWhyChooseSection } from "@/components/public/SalesWhyChooseSection";
@@ -13,7 +14,6 @@ import { CabColoursFromJson } from "@/components/public/CabColoursBand";
 import { cabColourNoteForCategory } from "@/lib/trucks/cab-colour-copy";
 import { TruckCard } from "@/components/public/TruckCard";
 import { Tabs } from "@/components/ui/tabs";
-import { defaultSalesHero } from "@/content/sales-hero";
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildPageMetadata("sales");
@@ -32,21 +32,6 @@ function SalesContentSkeleton() {
         ))}
       </div>
     </div>
-  );
-}
-
-function StaticSalesHero() {
-  return (
-    <HeroSection
-      backgroundImage={defaultSalesHero.backgroundImage}
-      imageAlt={defaultSalesHero.imageAlt}
-      title={defaultSalesHero.title}
-      subtitle={defaultSalesHero.subtitle}
-      subtitleTag="h2"
-      tagline={defaultSalesHero.tagline}
-      minHeight={defaultSalesHero.minHeight}
-      ctas={defaultSalesHero.ctas}
-    />
   );
 }
 
@@ -173,8 +158,12 @@ export default function SalesPage() {
   return (
     <>
       <BreadcrumbsBar items={[{ label: "Home", href: "/" }, { label: "Isuzu Truck Sales" }]} />
-      <link rel="preload" as="image" href="/media/sales/7.5-tonnes-GVW.webp" fetchPriority="high" />
-      <StaticSalesHero />
+      <link rel="preload" as="image" href={p700LaunchMedia.p700Range.hero} fetchPriority="high" />
+      <OfficialBannerHero
+        src={p700LaunchMedia.p700Range.hero}
+        alt={p700LaunchMedia.p700Range.alt}
+        priority
+      />
       <P700RangeBand compact />
       <Suspense fallback={<SalesContentSkeleton />}>
         <SalesPageContent />

@@ -44,114 +44,81 @@ export function HomeHeroCarousel({ slides }: { slides: HomeHeroSlide[] }) {
     <section
       className="relative bg-isuzu-hero text-on-background overflow-hidden"
       aria-roledescription="carousel"
-      aria-label="Isuzu truck range"
+      aria-label="Isuzu P700 truck range"
     >
-      <div className="absolute inset-0 bg-isuzu-grid-floor opacity-90 pointer-events-none" aria-hidden />
+      <h1 className="sr-only">{slide.imageAlt}</h1>
 
-      <div
-        className="relative page-container py-8 sm:py-10 lg:py-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 xl:gap-14 items-center lg:min-h-[min(640px,calc(100vh-9rem))]"
-      >
-        <div className="relative z-10 order-1 flex flex-col justify-center">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-secondary mb-2">Range</p>
-          <h2 className="font-headline text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold uppercase tracking-tight text-on-background">
-            {slide.rangeLabel}
-          </h2>
-          {slide.subline && (
-            <p className="mt-2 text-sm sm:text-base font-semibold text-secondary uppercase tracking-wide">
-              {slide.subline}
-            </p>
-          )}
-          <h1 className="mt-5 sm:mt-6 font-headline text-xl sm:text-2xl lg:text-3xl font-extrabold uppercase leading-tight tracking-tight max-w-md">
-            {slide.headline}
-          </h1>
-          <div className="mt-6 sm:mt-8">
-            <Link href={slide.ctaHref} className="btn-isuzu-dark inline-flex items-center gap-2">
-              {slide.ctaLabel}
-              <span aria-hidden>→</span>
-            </Link>
-          </div>
+      <div className="relative w-full">
+        <div
+          className="relative w-full aspect-[4/5] sm:aspect-[16/10] lg:aspect-[16/9] min-h-[min(72vw,520px)] sm:min-h-[min(50vw,480px)] lg:min-h-[min(56vh,620px)] max-h-[min(90vh,820px)]"
+        >
+          {slides.map((s, i) => (
+            <div
+              key={s.id}
+              className={cn(
+                "absolute inset-0 transition-opacity duration-700",
+                i === index ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
+              )}
+              aria-hidden={i !== index}
+            >
+              <Image
+                src={s.image}
+                alt={s.imageAlt}
+                fill
+                priority={i === 0}
+                className="object-cover object-[left_center] sm:object-[left_center] lg:object-center"
+                sizes="100vw"
+                unoptimized
+              />
+            </div>
+          ))}
 
           {count > 1 && (
-            <div className="mt-8 flex gap-2 lg:hidden" aria-label="Slide pagination">
-              {slides.map((s, i) => (
-                <button
-                  key={s.id}
-                  type="button"
-                  className={cn(
-                    "h-2.5 w-2.5 rounded-full transition-colors",
-                    i === index ? "bg-corporate-dark" : "bg-outline-variant hover:bg-secondary/50"
-                  )}
-                  aria-label={`Slide ${i + 1}: ${s.rangeLabel}`}
-                  aria-current={i === index}
-                  onClick={() => setIndex(i)}
-                />
-              ))}
-            </div>
-          )}
-        </div>
-
-        <div className="relative order-2 w-full z-0">
-          <div className="relative mx-auto w-full max-w-[640px] lg:max-w-none aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3] lg:max-h-[min(72vh,560px)]">
-            {slides.map((s, i) => (
-              <div
-                key={s.id}
-                className={cn(
-                  "absolute inset-0 flex items-center justify-center transition-opacity duration-700",
-                  i === index ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
-                )}
-                aria-hidden={i !== index}
+            <>
+              <button
+                type="button"
+                className="isuzu-carousel-control isuzu-carousel-control--in-stage left-2 sm:left-4"
+                onClick={() => go(-1)}
+                aria-label="Previous slide"
               >
-                <Image
-                  src={s.image}
-                  alt={s.imageAlt}
-                  width={960}
-                  height={540}
-                  priority={i === 0}
-                  className="max-h-full max-w-full w-auto h-auto object-contain object-center drop-shadow-[0_20px_40px_rgba(0,0,0,0.1)]"
-                  sizes="(max-width: 1024px) 90vw, 45vw"
-                />
-              </div>
-            ))}
-
-            {count > 1 && (
-              <>
-                <button
-                  type="button"
-                  className="isuzu-carousel-control isuzu-carousel-control--in-stage left-1 sm:left-2"
-                  onClick={() => go(-1)}
-                  aria-label="Previous slide"
-                >
-                  <IconChevron direction="left" />
-                </button>
-                <button
-                  type="button"
-                  className="isuzu-carousel-control isuzu-carousel-control--in-stage right-1 sm:right-2"
-                  onClick={() => go(1)}
-                  aria-label="Next slide"
-                >
-                  <IconChevron direction="right" />
-                </button>
-              </>
-            )}
-          </div>
-
-          {count > 1 && (
-            <div className="hidden lg:flex justify-center gap-2 mt-6" aria-label="Slide pagination">
-              {slides.map((s, i) => (
-                <button
-                  key={s.id}
-                  type="button"
-                  className={cn(
-                    "h-2.5 w-2.5 rounded-full transition-colors",
-                    i === index ? "bg-corporate-dark" : "bg-outline-variant hover:bg-secondary/50"
-                  )}
-                  aria-label={`Slide ${i + 1}: ${s.rangeLabel}`}
-                  aria-current={i === index}
-                  onClick={() => setIndex(i)}
-                />
-              ))}
-            </div>
+                <IconChevron direction="left" />
+              </button>
+              <button
+                type="button"
+                className="isuzu-carousel-control isuzu-carousel-control--in-stage right-2 sm:right-4"
+                onClick={() => go(1)}
+                aria-label="Next slide"
+              >
+                <IconChevron direction="right" />
+              </button>
+            </>
           )}
+
+          <div className="absolute inset-x-0 bottom-0 z-20 pointer-events-none bg-gradient-to-t from-black/35 via-black/10 to-transparent pt-16 pb-4 sm:pb-5">
+            <div className="page-container flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 pointer-events-auto">
+              <Link href={slide.ctaHref} className="btn-isuzu-dark inline-flex w-fit items-center gap-2 shadow-lg">
+                {slide.ctaLabel}
+                <span aria-hidden>→</span>
+              </Link>
+              {count > 1 && (
+                <div className="flex gap-2" aria-label="Slide pagination">
+                  {slides.map((s, i) => (
+                    <button
+                      key={s.id}
+                      type="button"
+                      className={cn(
+                        "h-2.5 w-2.5 rounded-full transition-colors border border-white/40",
+                        i === index ? "bg-white" : "bg-white/30 hover:bg-white/50"
+                      )}
+                      aria-label={`Slide ${i + 1}`}
+                      aria-current={i === index}
+                      onClick={() => setIndex(i)}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </section>

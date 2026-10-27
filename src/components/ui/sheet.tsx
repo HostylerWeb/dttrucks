@@ -9,12 +9,14 @@ export function Sheet({
   title,
   children,
   side = "right",
+  panelClassName,
 }: {
   open: boolean;
   onClose: () => void;
   title?: string;
   children: React.ReactNode;
   side?: "left" | "right";
+  panelClassName?: string;
 }) {
   useEffect(() => {
     if (!open) return;
@@ -45,12 +47,13 @@ export function Sheet({
         aria-label={title ?? "Panel"}
         className={cn(
           "absolute top-0 h-full w-full max-w-[min(100%,20rem)] bg-surface shadow-2xl flex flex-col p-5 sm:p-6",
-          side === "right" ? "right-0" : "left-0"
+          side === "right" ? "right-0" : "left-0",
+          panelClassName
         )}
       >
         {title && (
           <div className="flex justify-between items-center mb-6">
-            <span className="font-headline font-bold text-primary-container">{title}</span>
+            <span className="font-headline font-bold text-corporate-dark">{title}</span>
             <button
               type="button"
               onClick={onClose}

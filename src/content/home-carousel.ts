@@ -1,55 +1,43 @@
+import { p700LaunchMedia } from "@/content/p700-launch-assets";
+
 export type HomeHeroSlide = {
   id: string;
-  rangeLabel: string;
-  headline: string;
-  subline?: string;
+  /** Screen-reader label — marketing headline is in the artwork */
+  imageAlt: string;
+  image: string;
   ctaLabel: string;
   ctaHref: string;
-  image: string;
-  imageAlt: string;
 };
 
-/** Homepage hero slides — product-led, aligned with isuzutruck.co.uk structure */
+/** Homepage hero — official ITUK P700 dealer composites (copy is baked into images). */
 export const homeHeroSlides: HomeHeroSlide[] = [
   {
-    id: "n75",
-    rangeLabel: "N-Series",
-    headline: "Moving the world for you",
-    subline: "N75 Range",
-    ctaLabel: "Discover the 7.5t range",
+    id: "n-series",
+    image: p700LaunchMedia.nSeries.hero,
+    imageAlt: p700LaunchMedia.nSeries.alt,
+    ctaLabel: "Discover the N-Series range",
     ctaHref: "/sales",
-    image: "/media/sales/7.5-tonnes-GVW.webp",
-    imageAlt: "Isuzu N-Series 7.5 tonne range",
   },
   {
     id: "f-series",
-    rangeLabel: "F-Series",
-    headline: "Moving the world for you",
-    subline: "F110 & F135 Range",
-    ctaLabel: "Discover the 11 & 13.5t range",
+    image: p700LaunchMedia.fSeries.hero,
+    imageAlt: p700LaunchMedia.fSeries.alt,
+    ctaLabel: "Discover the F-Series range",
     ctaHref: "/sales",
-    image: "/media/sales/11-13.5-tonnes-GVW.jpg",
-    imageAlt: "Isuzu F-Series 11 and 13.5 tonne range",
   },
   {
     id: "grafter",
-    rangeLabel: "N-Series",
-    headline: "Moving the world for you",
-    subline: "N35 Grafter",
-    ctaLabel: "Discover the 3.5t Grafter range",
+    image: p700LaunchMedia.grafter.hero,
+    imageAlt: p700LaunchMedia.grafter.alt,
+    ctaLabel: "Discover the Grafter range",
     ctaHref: "/sales",
-    image: "/media/sales/3.5-tonnes-GVW.jpg",
-    imageAlt: "Isuzu Grafter 3.5 tonne",
   },
   {
-    id: "range",
-    rangeLabel: "Range",
-    headline: "Moving the world for you",
-    subline: "N-Series & F-Series",
-    ctaLabel: "Explore the Isuzu truck range",
+    id: "p700-range",
+    image: p700LaunchMedia.p700Range.hero,
+    imageAlt: p700LaunchMedia.p700Range.alt,
+    ctaLabel: "Explore the full truck range",
     ctaHref: "/sales",
-    image: "/media/home/hero-3-in-range.webp",
-    imageAlt: "Isuzu truck range at DT Trucks",
   },
 ];
 
@@ -86,32 +74,27 @@ export const homeQuickLinks = [
   },
 ] as const;
 
-export const homePromoPanels = [
+/** Full-width promo banners — official artwork only, no duplicate headings */
+export const homePromoBanners = [
   {
-    eyebrow: "Discover",
-    title: "The Isuzu truck range",
-    body: "From our popular 3.5 tonne Isuzu Grafter through to our largest 13.5 tonne F-Series — supplied and supported by DT Trucks in London, Essex & Kent.",
-    cta: "View the range",
+    id: "range",
+    image: p700LaunchMedia.p700Range.hero,
+    alt: p700LaunchMedia.p700Range.alt,
     href: "/sales",
-    image: "/media/home/hero-3-in-range.webp",
-    imageAlt: "Isuzu truck range",
+    cta: "View the range",
   },
   {
-    eyebrow: "We care",
-    title: "Isuzu parts",
-    body: "Genuine OE parts engineered to factory specification — fitted by our Isuzu-trained team with a 96% first-time pick rate.",
-    cta: "Service & parts",
+    id: "parts",
+    image: p700LaunchMedia.parts.hero,
+    alt: p700LaunchMedia.parts.alt,
     href: "/service",
-    image: "/media/about/eastley-commercials.jpg",
-    imageAlt: "DT Trucks workshop and parts",
+    cta: "Parts & service",
   },
   {
-    eyebrow: "Complete service",
-    title: "Aftersales support",
-    body: "Workshop, MOT, tachograph and warranty support for your fleet — all under one authorised Isuzu dealership.",
-    cta: "Read more",
+    id: "aftersales",
+    image: p700LaunchMedia.aftersales.hero,
+    alt: p700LaunchMedia.aftersales.alt,
     href: "/service",
-    image: "/media/about/dt-trucks-new.jpg",
-    imageAlt: "DT Trucks aftersales",
+    cta: "Aftersales support",
   },
 ] as const;

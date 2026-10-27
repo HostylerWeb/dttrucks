@@ -32,7 +32,7 @@ export function HomePillarsBand() {
                 )}
               >
                 <span
-                  className="material-symbols-outlined text-4xl sm:text-5xl text-primary-container mb-4 sm:mb-5"
+                  className="material-symbols-outlined text-4xl sm:text-5xl text-corporate-dark mb-4 sm:mb-5"
                   aria-hidden
                 >
                   {config.icon}
@@ -45,7 +45,7 @@ export function HomePillarsBand() {
                 <h3 className="font-headline text-lg sm:text-xl font-bold mb-3">{pillar.title}</h3>
                 <p className="text-secondary text-sm leading-relaxed mb-4 flex-1">{pillar.body}</p>
                 {pillar.note && (
-                  <p className="text-sm font-semibold text-primary-container mb-4 leading-relaxed">
+                  <p className="text-sm font-semibold text-corporate-dark mb-4 leading-relaxed">
                     {pillar.note}
                   </p>
                 )}

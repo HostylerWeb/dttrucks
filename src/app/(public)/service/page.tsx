@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllSettings } from "@/lib/db/settings";
 import { buildPageMetadata } from "@/lib/metadata";
-import { HeroSection } from "@/components/public/HeroSection";
+import { OfficialBannerHero } from "@/components/public/OfficialBannerHero";
+import { p700LaunchMedia } from "@/content/p700-launch-assets";
 import { BreadcrumbsBar } from "@/components/layout/BreadcrumbsBar";
 import { ContactForm } from "@/components/public/ContactForm";
 import { CTABanner } from "@/components/public/CTABanner";
@@ -24,18 +25,17 @@ export default async function ServiceIndexPage() {
     <>
       <BreadcrumbsBar items={[{ label: "Home", href: "/" }, { label: "Service & Parts" }]} />
 
-      <HeroSection
-        eyebrow="Authorised Isuzu Dealer · Barking"
-        title="Service & Parts"
-        titleTag="p"
-        subtitle="Castle Works, 721 Ripple Road, Barking IG11 0SN"
-        tagline="THE ONE-STOP REPAIR SHOP"
-        minHeight="min-h-[240px] sm:min-h-[280px] lg:min-h-[320px]"
-        ctas={[
-          { label: phone, href: phoneHref, variant: "primary" },
-          { label: "Workshop enquiry", href: "#workshop-enquiry", variant: "secondary" },
-        ]}
+      <OfficialBannerHero
+        src={p700LaunchMedia.aftersales.hero}
+        alt={p700LaunchMedia.aftersales.alt}
+        priority
       />
+      <div className="page-container py-4 flex flex-wrap gap-3 border-b border-outline-variant bg-isuzu-hero">
+        <a href={phoneHref} className="btn-isuzu-dark">{phone}</a>
+        <a href="#workshop-enquiry" className="inline-flex min-h-11 items-center border border-outline-variant bg-white px-5 text-xs font-bold uppercase tracking-wider hover:border-corporate-dark">
+          Workshop enquiry
+        </a>
+      </div>
 
       <section className="page-section page-container">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">

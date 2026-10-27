@@ -34,7 +34,7 @@ function SocialIconLink({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex h-9 w-9 items-center justify-center rounded-md text-secondary hover:text-primary-container hover:bg-surface-container transition-colors"
+      className="inline-flex h-9 w-9 items-center justify-center rounded-md text-secondary hover:text-corporate-dark hover:bg-surface-container transition-colors"
       aria-label={label}
     >
       {children}
@@ -120,7 +120,7 @@ export function Footer({ settings }: { settings: Settings }) {
               {settings.company_email && (
                 <a
                   href={`mailto:${settings.company_email}`}
-                  className="text-secondary hover:text-primary-container w-fit"
+                  className="text-secondary hover:text-corporate-dark w-fit"
                 >
                   {settings.company_email}
                 </a>
@@ -128,7 +128,7 @@ export function Footer({ settings }: { settings: Settings }) {
               {settings.company_phone && (
                 <a
                   href={`tel:${settings.company_phone.replace(/\s/g, "")}`}
-                  className="text-secondary hover:text-primary-container font-medium w-fit"
+                  className="text-secondary hover:text-corporate-dark font-medium w-fit"
                 >
                   {settings.company_phone}
                 </a>

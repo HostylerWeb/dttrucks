@@ -3,12 +3,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
-import { homePromoPanels } from "@/content/home-carousel";
+import { homePromoBanners } from "@/content/home-carousel";
 import { cn } from "@/lib/utils";
+
+function IconChevron({ direction }: { direction: "left" | "right" }) {
+  return (
+    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      {direction === "left" ? (
+        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+      ) : (
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+      )}
+    </svg>
+  );
+}
 
 export function HomePromoPanels() {
   const [index, setIndex] = useState(0);
-  const panels = homePromoPanels;
+  const panels = homePromoBanners;
   const count = panels.length;
 
   const go = useCallback(
@@ -24,58 +36,70 @@ export function HomePromoPanels() {
   const panel = panels[index] ?? panels[0];
 
   return (
-    <section className="relative bg-corporate-dark text-white overflow-hidden">
-      <div className="absolute inset-0 opacity-40" aria-hidden>
-        <Image
-          src={panel?.image ?? panels[0].image}
-          alt=""
-          fill
-          className="object-cover"
-          sizes="100vw"
-          priority={false}
-        />
-      </div>
-      <div className="absolute inset-0 bg-gradient-to-r from-corporate-dark via-corporate-dark/95 to-corporate-dark/70" />
-
-      <div className="relative page-container min-h-[380px] sm:min-h-[420px] flex flex-col justify-center py-12 sm:py-16">
+    <section className="relative bg-isuzu-hero border-y border-outline-variant" aria-label="Promotions">
+      <div className="relative w-full aspect-[4/5] sm:aspect-[16/10] lg:aspect-[16/9] min-h-[min(70vw,480px)] sm:min-h-[360px] max-h-[720px]">
         {panels.map((p, i) => (
-          <div
-            key={p.title}
+          <Link
+            key={p.id}
+            href={p.href}
             className={cn(
-              "transition-opacity duration-700 max-w-xl",
-              i === index ? "opacity-100" : "opacity-0 absolute pointer-events-none"
+              "absolute inset-0 block transition-opacity duration-700",
+              i === index ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
             )}
             aria-hidden={i !== index}
           >
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/70">{p.eyebrow}</p>
-            <h2 className="mt-3 font-headline text-3xl sm:text-4xl font-extrabold uppercase tracking-tight">
-              {p.title}
-            </h2>
-            <p className="mt-4 text-sm sm:text-base text-white/85 leading-relaxed">{p.body}</p>
-            <Link
-              href={p.href}
-              className="mt-8 inline-flex items-center gap-2 border border-white/80 px-6 py-3 text-sm font-bold uppercase tracking-wider hover:bg-white hover:text-corporate-dark transition-colors"
-            >
-              {p.cta}
-              <span aria-hidden>→</span>
-            </Link>
-          </div>
+            <Image
+              src={p.image}
+              alt={p.alt}
+              fill
+              className="object-cover object-[left_center] lg:object-center"
+              sizes="100vw"
+              unoptimized
+            />
+            <span className="sr-only">{p.cta}</span>
+          </Link>
         ))}
 
         {count > 1 && (
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
-            {panels.map((p, i) => (
-              <button
-                key={p.title}
-                type="button"
-                className={cn(
-                  "h-2 w-2 rounded-full",
-                  i === index ? "bg-white" : "bg-white/40 hover:bg-white/60"
-                )}
-                aria-label={`Promo: ${p.title}`}
-                onClick={() => setIndex(i)}
-              />
-            ))}
+          <>
+            <button
+              type="button"
+              className="isuzu-carousel-control isuzu-carousel-control--in-stage left-2 sm:left-4 z-20"
+              onClick={() => go(-1)}
+              aria-label="Previous promotion"
+            >
+              <IconChevron direction="left" />
+            </button>
+            <button
+              type="button"
+              className="isuzu-carousel-control isuzu-carousel-control--in-stage right-2 sm:right-4 z-20"
+              onClick={() => go(1)}
+              aria-label="Next promotion"
+            >
+              <IconChevron direction="right" />
+            </button>
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+              {panels.map((p, i) => (
+                <button
+                  key={p.id}
+                  type="button"
+                  className={cn(
+                    "h-2 w-2 rounded-full border border-white/50",
+                    i === index ? "bg-white" : "bg-white/35"
+                  )}
+                  aria-label={p.cta}
+                  onClick={() => setIndex(i)}
+                />
+              ))}
+            </div>
+          </>
+        )}
+
+        {panel && (
+          <div className="absolute bottom-4 left-4 z-20 hidden sm:block">
+            <Link href={panel.href} className="btn-isuzu-dark text-xs sm:text-sm shadow-lg">
+              {panel.cta} →
+            </Link>
           </div>
         )}
       </div>
