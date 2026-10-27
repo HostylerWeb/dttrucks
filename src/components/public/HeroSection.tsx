@@ -94,12 +94,12 @@ export function HeroSection({
       <div className="relative z-10 w-full page-container py-10 sm:py-12 lg:py-16">
         <div className="max-w-2xl">
           {badge && (
-            <span className="bg-primary-container text-white px-3 py-1 text-[11px] sm:text-xs font-bold uppercase tracking-widest rounded mb-4 sm:mb-5 inline-block">
+            <span className="bg-corporate-dark text-white px-3 py-1 text-[11px] sm:text-xs font-bold uppercase tracking-widest mb-4 sm:mb-5 inline-block">
               {badge}
             </span>
           )}
           {eyebrow && (
-            <p className="text-primary-container text-xs sm:text-sm font-semibold uppercase tracking-wide mb-2">
+            <p className="text-secondary text-xs sm:text-sm font-semibold uppercase tracking-wide mb-2">
               {eyebrow}
             </p>
           )}
@@ -127,7 +127,7 @@ export function HeroSection({
               </p>
             ))}
           {tagline && (
-            <p className="text-primary-container font-headline text-lg sm:text-xl md:text-2xl font-bold mb-6 sm:mb-8 leading-snug">
+            <p className="text-on-background font-headline text-lg sm:text-xl md:text-2xl font-bold mb-6 sm:mb-8 leading-snug">
               {tagline}
             </p>
           )}
@@ -140,7 +140,7 @@ export function HeroSection({
                       key={cta.href}
                       href={cta.href}
                       prefetch={false}
-                      className="inline-flex items-center justify-center sm:justify-start text-primary-container hover:text-primary px-4 py-3 font-semibold text-sm underline-offset-4 hover:underline min-h-11"
+                      className="inline-flex items-center justify-center sm:justify-start text-corporate-dark hover:text-on-background px-4 py-3 font-semibold text-sm underline-offset-4 hover:underline min-h-11"
                     >
                       {cta.label}
                     </Link>

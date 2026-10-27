@@ -26,7 +26,7 @@ export function Tabs({
               className={cn(
                 "shrink-0 px-3 sm:px-4 py-2.5 text-sm font-semibold transition-colors border-b-2 -mb-px min-h-11",
                 active === tab.id
-                  ? "border-primary-container text-primary-container"
+                  ? "border-corporate-dark text-corporate-dark"
                   : "border-transparent text-secondary hover:text-on-surface"
               )}
             >

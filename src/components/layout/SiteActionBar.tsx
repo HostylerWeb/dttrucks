@@ -27,7 +27,7 @@ export function SiteActionBar({ phoneHref }: { phoneHref: string }) {
           <Link href="/sales/specification-sheets" className="hover:text-primary-fixed-dim px-1">
             Specification sheets
           </Link>
-          <span className="text-primary-container" aria-hidden>/</span>
+          <span className="text-primary" aria-hidden>/</span>
           <Link href="/contact" className="hover:text-primary-fixed-dim px-1">
             Contact us
           </Link>

@@ -52,7 +52,7 @@ export function HomeNewsSection({ posts }: { posts: Post[] }) {
                   <h3 className="font-headline text-lg font-bold leading-snug">
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="hover:text-primary-container transition-colors"
+                      className="hover:text-corporate-dark transition-colors"
                     >
                       {post.title}
                     </Link>
@@ -62,7 +62,7 @@ export function HomeNewsSection({ posts }: { posts: Post[] }) {
                   )}
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="mt-4 text-sm font-bold uppercase tracking-wide text-primary-container hover:underline w-fit"
+                    className="mt-4 text-sm font-bold uppercase tracking-wide text-corporate-dark hover:underline w-fit"
                   >
                     Read more
                   </Link>

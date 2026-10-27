@@ -20,7 +20,7 @@ export function DesktopNavBar() {
               href={item.href}
               className={cn(
                 "px-1 py-1 text-[11px] xl:text-xs font-bold uppercase tracking-wide whitespace-nowrap transition-colors",
-                active ? "text-primary-container" : "text-on-background hover:text-primary-container"
+                active ? "text-corporate-dark" : "text-on-background hover:text-corporate-dark"
               )}
               aria-current={active ? "page" : undefined}
             >

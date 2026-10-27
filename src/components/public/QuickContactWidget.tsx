@@ -174,7 +174,7 @@ export function QuickContactWidget({
         aria-label={open ? "Close contact options" : "Contact us — WhatsApp, email or phone"}
         onClick={() => setOpen((value) => !value)}
         className={cn(
-          "pointer-events-auto absolute bottom-0 right-0 flex h-14 w-14 items-center justify-center rounded-full bg-primary-container text-white shadow-industrial transition-transform duration-300 hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-container",
+          "pointer-events-auto absolute bottom-0 right-0 flex h-14 w-14 items-center justify-center rounded-full bg-corporate-dark text-white shadow-industrial transition-transform duration-300 hover:bg-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-corporate-dark",
           open ? "z-20 scale-105" : "z-10 motion-safe:animate-contact-fab-pulse"
         )}
       >

@@ -29,7 +29,7 @@ export function P700RangeBand({ compact = false }: { compact?: boolean }) {
             <li>
               <Link
                 href="/sales/specification-sheets"
-                className="inline-flex min-h-11 items-center justify-center rounded-lg bg-primary-container px-5 py-2.5 text-sm font-semibold text-white hover:bg-primary transition-colors"
+                className="btn-isuzu-dark"
               >
                 Specification sheets
               </Link>
@@ -45,7 +45,7 @@ export function P700RangeBand({ compact = false }: { compact?: boolean }) {
             <li>
               <Link
                 href={`/blog/${P700_BLOG_SLUG}`}
-                className="inline-flex min-h-11 items-center justify-center rounded-lg border border-transparent px-5 py-2.5 text-sm font-semibold text-primary-container hover:underline"
+                className="inline-flex min-h-11 items-center justify-center px-5 py-2.5 text-sm font-semibold text-corporate-dark hover:underline"
               >
                 Read the full article
               </Link>

@@ -46,7 +46,7 @@ export function HomeChooseTruckSection({ cards }: { cards: ChooseTruckCard[] }) 
           <div className="hidden sm:flex gap-2">
             <button
               type="button"
-              className="isuzu-carousel-control static translate-none"
+              className="isuzu-carousel-control shrink-0"
               onClick={() => scroll(-320)}
               aria-label="Scroll truck cards left"
             >
@@ -54,7 +54,7 @@ export function HomeChooseTruckSection({ cards }: { cards: ChooseTruckCard[] }) 
             </button>
             <button
               type="button"
-              className="isuzu-carousel-control static translate-none"
+              className="isuzu-carousel-control shrink-0"
               onClick={() => scroll(320)}
               aria-label="Scroll truck cards right"
             >
@@ -71,7 +71,7 @@ export function HomeChooseTruckSection({ cards }: { cards: ChooseTruckCard[] }) 
             <Link
               key={card.slug}
               href={card.href}
-              className="group snap-start shrink-0 w-[min(100%,300px)] sm:w-[320px] border border-outline-variant bg-surface hover:border-primary-container/30 transition-colors"
+              className="group snap-start shrink-0 w-[min(100%,300px)] sm:w-[320px] border border-outline-variant bg-surface hover:border-corporate-dark/25 transition-colors"
             >
               {card.imageUrl && (
                 <div className="relative aspect-[16/10] bg-isuzu-hero overflow-hidden">
@@ -85,7 +85,7 @@ export function HomeChooseTruckSection({ cards }: { cards: ChooseTruckCard[] }) 
                 </div>
               )}
               <div className="p-5">
-                <h3 className="font-headline text-lg font-extrabold uppercase tracking-tight group-hover:text-primary-container transition-colors">
+                <h3 className="font-headline text-lg font-extrabold uppercase tracking-tight group-hover:text-corporate-dark transition-colors">
                   {card.title}
                 </h3>
                 <p className="mt-2 text-sm text-secondary leading-relaxed line-clamp-4">

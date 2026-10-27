@@ -10,7 +10,7 @@ import {
 type Settings = Record<string, string | undefined>;
 
 const footerLinkClass =
-  "text-sm text-secondary hover:text-primary-container transition-colors";
+  "text-sm text-secondary hover:text-corporate-dark transition-colors";
 
 function FooterHeading({ children }: { children: React.ReactNode }) {
   return (

@@ -54,10 +54,10 @@ export function HomeQuickLinksRow() {
                 href={item.href}
                 className="flex flex-col items-center text-center gap-3 group"
               >
-                <span className="flex h-14 w-14 items-center justify-center rounded-full border border-outline-variant bg-white group-hover:border-primary-container/40 transition-colors">
+                <span className="flex h-14 w-14 items-center justify-center rounded-full border border-outline-variant bg-white group-hover:border-corporate-dark/30 transition-colors">
                   <QuickLinkIcon type={item.icon} />
                 </span>
-                <span className="text-xs sm:text-sm font-bold uppercase tracking-wide leading-snug group-hover:text-primary-container transition-colors">
+                <span className="text-xs sm:text-sm font-bold uppercase tracking-wide leading-snug group-hover:text-corporate-dark transition-colors">
                   {item.title}
                 </span>
               </Link>
