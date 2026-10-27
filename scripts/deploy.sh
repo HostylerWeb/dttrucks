@@ -18,6 +18,9 @@ echo "==> Prisma generate + migrations..."
 npx prisma generate
 npx prisma migrate deploy
 
+echo "==> Seeding database (upserts content; safe on production)..."
+npm run db:seed
+
 echo "==> Building Next.js..."
 npm run build
 
