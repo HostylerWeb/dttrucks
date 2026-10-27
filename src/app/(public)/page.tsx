@@ -53,7 +53,7 @@ function HomeContentSkeleton() {
 export default function Home() {
   const firstSlide = homeHeroSlides[0];
   if (firstSlide) {
-    preload(firstSlide.image, { as: "image", fetchPriority: "high" });
+    preload(firstSlide.truckImage, { as: "image", fetchPriority: "high" });
   }
 
   return (
