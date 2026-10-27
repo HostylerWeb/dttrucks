@@ -34,7 +34,7 @@ export const BLOG_POSTS = [
 <p>George Smith and the sales team provide Isuzu truck sales, parts and workshop support from Barking with Isuzu-trained technicians. <a href="/contact">Contact us</a> to discuss the P700 range, finance and the specification your operation needs.</p>
 <p><em>Stock and model availability varies — confirm with sales before ordering. We can advise when particular models such as the N75.190 are available; wording on the site is updated when stock is confirmed.</em></p>
 `.trim(),
-    featured_image: "/media/sales/7.5-tonnes-GVW.webp",
+    featured_image: "/media/p700-launch/p700-range-1980x1080.jpg",
     category_slug: "commercial-vehicle-news",
     published_at: "2026-03-20T10:00:00.000Z",
     meta_title: "P700 Isuzu range at DT Trucks - London & Essex",
@@ -55,7 +55,7 @@ export const BLOG_POSTS = [
 <p>DT Trucks</p>
 <p>Feel free to share our post!</p>
 `.trim(),
-    featured_image: "/media/blog/ac-regas-end-of-season.png",
+    featured_image: "/media/about/eastley-commercials.jpg",
     category_slug: "commercial-vehicle-news",
     published_at: "2025-09-17T19:48:31.000Z",
     meta_title: "Exclusive Discount on AC Regassing! - DT Trucks",
@@ -91,7 +91,7 @@ export const BLOG_POSTS = [
 <p>These are just a few of the reasons we think Isuzu trucks are perfect for small business owners. There are other options, and some of them may excel in single areas, but Isuzu trucks are excellent all-rounders that can weather difficult journeys and deliver incredible value for money for your business. If you haven't considered your logistics yet, it's important to start doing so; it's the cornerstone of your delivery, after all, and if you don't emphasis the method of delivering your products, you'll never build trust amongst your customer base.</p>
 <p>Feel free to share our post!</p>
 `.trim(),
-    featured_image: "/media/blog/isuzu-for-small-businesses.jpg",
+    featured_image: "/media/p700-launch/grafter-1980x1080.jpg",
     category_slug: "uncategorized",
     published_at: "2021-01-22T16:21:17.000Z",
     meta_title: "Why Isuzu Trucks are Great for Small Businesses - DT Trucks",

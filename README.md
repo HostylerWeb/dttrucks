@@ -28,7 +28,7 @@ Default seed admin: `admin@dttrucks.com` / `changeme` (see `SEED_*` in `.env.loc
 
 ## PostgreSQL
 
-Docker Compose runs Postgres on **localhost:5435** (avoids conflicts with other local Postgres instances).
+Docker Compose runs Postgres on **localhost:5436** (avoids conflicts with other local Postgres instances on 5435).
 
 ```bash
 docker compose up -d

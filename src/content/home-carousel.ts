@@ -26,7 +26,7 @@ export const homeHeroSlides: HomeHeroSlide[] = [
     truckImage: oemHeroMedia.trucks.nSeries75.src,
     truckImageAlt: oemHeroMedia.trucks.nSeries75.alt,
     ctaLabel: "Discover the 7.5t range",
-    ctaHref: "/sales",
+    ctaHref: "/sales?range=7-5t-gvw",
   },
   {
     id: "f-series",
@@ -38,7 +38,7 @@ export const homeHeroSlides: HomeHeroSlide[] = [
     truckImage: oemHeroMedia.trucks.fSeries.src,
     truckImageAlt: oemHeroMedia.trucks.fSeries.alt,
     ctaLabel: "Discover the 11 & 13.5t range",
-    ctaHref: "/sales",
+    ctaHref: "/sales?range=11t-gvw",
   },
   {
     id: "grafter",
@@ -50,7 +50,7 @@ export const homeHeroSlides: HomeHeroSlide[] = [
     truckImage: oemHeroMedia.trucks.grafter.src,
     truckImageAlt: oemHeroMedia.trucks.grafter.alt,
     ctaLabel: "Discover the 3.5t Grafter range",
-    ctaHref: "/sales",
+    ctaHref: "/sales?range=3-5t-gvw",
   },
   {
     id: "range",

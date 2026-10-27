@@ -1,9 +1,9 @@
-/* Loaded after first paint — keeps 320KB icon font off the LCP critical path */
+/* Legacy standalone sheet — icon font is defined in globals.css for first paint. */
 @font-face {
   font-family: "Material Symbols Outlined";
   font-style: normal;
   font-weight: 400;
-  font-display: optional;
+  font-display: swap;
   src: url("/fonts/material-symbols-outlined.woff2") format("woff2");
 }
 

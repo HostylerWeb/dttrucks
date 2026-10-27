@@ -21,7 +21,7 @@ export function OfficialBannerHero({
           "relative w-full",
           aspect === "band"
             ? "aspect-[1980/620] min-h-[200px] max-h-[420px]"
-            : "aspect-[4/5] sm:aspect-[16/10] lg:aspect-[16/9] min-h-[min(65vw,440px)] sm:min-h-[320px] max-h-[min(75vh,720px)]"
+            : "aspect-[16/9] w-full min-h-[min(52vw,200px)] max-h-[min(72vh,720px)]"
         )}
       >
         <Image
@@ -29,7 +29,11 @@ export function OfficialBannerHero({
           alt={alt}
           fill
           priority={priority}
-          className="object-cover object-[left_center] lg:object-center"
+          className={cn(
+            aspect === "band"
+              ? "object-cover object-center"
+              : "object-contain object-center"
+          )}
           sizes="100vw"
           unoptimized
         />

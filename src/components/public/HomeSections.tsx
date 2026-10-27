@@ -141,7 +141,7 @@ export function HomeContactSection({
           <div className="space-y-6">
             <div className="flex items-center gap-5">
               <div className="w-14 h-14 bg-primary-container rounded-full flex items-center justify-center shrink-0">
-                <span className="material-symbols-outlined text-2xl">phone_in_talk</span>
+                <span className="material-symbols-outlined text-2xl text-white" aria-hidden>phone_in_talk</span>
               </div>
               <div>
                 <p className="text-xs uppercase tracking-wide text-secondary font-semibold">Service & Parts</p>
@@ -155,7 +155,7 @@ export function HomeContactSection({
             </div>
             <div className="flex items-center gap-5">
               <div className="w-14 h-14 bg-primary-container rounded-full flex items-center justify-center shrink-0">
-                <span className="material-symbols-outlined text-2xl">person</span>
+                <span className="material-symbols-outlined text-2xl text-white" aria-hidden>person</span>
               </div>
               <div>
                 <p className="text-xs uppercase tracking-wide text-secondary font-semibold">
@@ -180,7 +180,7 @@ export function HomeContactSection({
             {companyAddress && (
               <div className="flex items-start gap-5">
                 <div className="w-14 h-14 bg-primary-container rounded-full flex items-center justify-center shrink-0">
-                  <span className="material-symbols-outlined text-2xl">location_on</span>
+                  <span className="material-symbols-outlined text-2xl text-white" aria-hidden>location_on</span>
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-wide text-secondary font-semibold">Address</p>

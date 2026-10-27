@@ -6,7 +6,6 @@ import { StaticSiteHeader } from "@/components/layout/StaticSiteHeader";
 import { Footer } from "@/components/layout/Footer";
 import { DeferredPublicWidgets } from "@/components/public/DeferredPublicWidgets";
 import { QuickContactWidgetLoader } from "@/components/public/QuickContactWidgetLoader";
-import { DeferredMaterialSymbols } from "@/components/layout/DeferredMaterialSymbols";
 import { LocalBusinessJsonLd } from "@/components/seo/LocalBusinessJsonLd";
 import { WebSiteJsonLd } from "@/components/seo/WebSiteJsonLd";
 import { socialLinks } from "@/lib/nav";
@@ -84,7 +83,6 @@ export default function PublicLayout({
       <Suspense fallback={<FooterFallback />}>
         <PublicSiteFooter />
       </Suspense>
-      <DeferredMaterialSymbols />
       <Suspense fallback={null}>
         <QuickContactWidgetLoader />
       </Suspense>

@@ -42,7 +42,7 @@ function buildChooseTruckCards(categories: Category[]): ChooseTruckCard[] {
       title: c.name.replace(/tonnes GVW/i, "Tonne").replace(/GVW/i, "").trim(),
       description: c.description ?? "",
       imageUrl: c.image_url,
-      href: "/sales",
+      href: `/sales?range=${c.slug}`,
     }));
 }
 

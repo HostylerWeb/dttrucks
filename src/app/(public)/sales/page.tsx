@@ -1,19 +1,17 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
-import Image from "next/image";
 import { getCategories, getDriveawayModels } from "@/lib/db/trucks";
 import { getAllSettings } from "@/lib/db/settings";
 import { buildPageMetadata } from "@/lib/metadata";
-import { OfficialBannerHero } from "@/components/public/OfficialBannerHero";
-import { p700LaunchMedia } from "@/content/p700-launch-assets";
 import { BreadcrumbsBar } from "@/components/layout/BreadcrumbsBar";
 import { SalesIntroSection } from "@/components/public/SalesIntroSection";
 import { SalesWhyChooseSection } from "@/components/public/SalesWhyChooseSection";
-import { P700RangeBand } from "@/components/public/P700RangeBand";
-import { CabColoursFromJson } from "@/components/public/CabColoursBand";
-import { cabColourNoteForCategory } from "@/lib/trucks/cab-colour-copy";
 import { TruckCard } from "@/components/public/TruckCard";
-import { Tabs } from "@/components/ui/tabs";
+import {
+  SalesRangeHeader,
+  type SalesCategoryTab,
+} from "@/components/public/sales/SalesRangeHeader";
+import { salesRangeQueryKey } from "@/lib/trucks/sales-range-banner";
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildPageMetadata("sales");
@@ -21,10 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 function SalesContentSkeleton() {
   return (
-    <div
-      className="page-container page-section space-y-8"
-      aria-hidden
-    >
+    <div className="page-container page-section space-y-8" aria-hidden>
       <div className="h-28 max-w-3xl rounded-xl bg-surface-container animate-pulse" />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {Array.from({ length: 6 }).map((_, index) => (
@@ -35,86 +30,33 @@ function SalesContentSkeleton() {
   );
 }
 
-async function SalesPageContent() {
+async function SalesPageContent({ initialRange }: { initialRange?: string }) {
   const [categories, driveaways, settings] = await Promise.all([
     getCategories(),
     getDriveawayModels(),
     getAllSettings(),
   ]);
 
-  const catalogueCategories = categories.filter((c) => c.slug !== "driveaway");
-
-  const tabs = catalogueCategories.map((category) => ({
-    id: category.slug,
-    label: category.name,
-    content: (
-      <div className="space-y-6">
-        {category.image_url && (
-          <div className="relative overflow-hidden rounded-xl border border-outline-variant aspect-[21/9] max-h-56 bg-surface-container">
-            <Image
-              src={category.image_url}
-              alt={category.name}
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 896px"
-            />
-          </div>
-        )}
-        {category.description && (
-          <p className="text-secondary max-w-3xl leading-relaxed">{category.description}</p>
-        )}
-        <CabColoursFromJson
-          cabColoursJson={category.cab_colours}
-          note={cabColourNoteForCategory(category.slug)}
-        />
-        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {category.truck_models.map((model) => (
-            <li key={model.id}>
-              <TruckCard
-                name={model.name}
-                description={model.description}
-                href={`/sales/${model.slug}`}
-                imageUrl={model.image_url}
-                badge={model.model_code}
-              />
-            </li>
-          ))}
-        </ul>
-      </div>
-    ),
-  }));
+  const catalogueCategories: SalesCategoryTab[] = categories
+    .filter((c) => c.slug !== "driveaway")
+    .map((category) => ({
+      id: category.slug,
+      label: category.name,
+      description: category.description,
+      cabColoursJson: category.cab_colours,
+      models: category.truck_models.map((model) => ({
+        id: model.id,
+        name: model.name,
+        description: model.description,
+        slug: model.slug,
+        image_url: model.image_url,
+        model_code: model.model_code,
+      })),
+    }));
 
   return (
     <>
-      <section className="page-section lg:!py-20">
-        <div className="page-container">
-          <div className="mb-8 sm:mb-10 max-w-3xl">
-            <p className="text-xs font-bold uppercase tracking-widest text-primary-container mb-3">
-              Isuzu truck range
-            </p>
-            <h2 className="font-headline text-2xl lg:text-3xl font-bold mb-3">Isuzu Truck Range</h2>
-            <p className="text-secondary leading-relaxed">
-              Browse Isuzu chassis by gross vehicle weight — from the 3.5t Grafter through separate{" "}
-              <strong className="font-semibold text-on-background">11 tonne</strong> and{" "}
-              <strong className="font-semibold text-on-background">13.5 tonne</strong> F-Series tabs.
-              Download{" "}
-              <a href="/sales/specification-sheets" className="font-semibold text-primary-container hover:underline">
-                specification sheets
-              </a>{" "}
-              or build a{" "}
-              <a href="/sales/body-quote" className="font-semibold text-primary-container hover:underline">
-                body quote request
-              </a>
-              .
-            </p>
-          </div>
-          {tabs.length > 0 ? (
-            <Tabs tabs={tabs} defaultTab={tabs[0]?.id} />
-          ) : (
-            <p className="text-secondary">No truck models published yet.</p>
-          )}
-        </div>
-      </section>
+      <SalesRangeHeader categories={catalogueCategories} initialRange={initialRange} />
 
       {driveaways.length > 0 && (
         <section className="bg-surface border-t border-outline-variant page-section">
@@ -154,19 +96,20 @@ async function SalesPageContent() {
   );
 }
 
-export default function SalesPage() {
+export default async function SalesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  const params = await searchParams;
+  const rawRange = params[salesRangeQueryKey];
+  const initialRange = typeof rawRange === "string" ? rawRange : undefined;
+
   return (
     <>
       <BreadcrumbsBar items={[{ label: "Home", href: "/" }, { label: "Isuzu Truck Sales" }]} />
-      <link rel="preload" as="image" href={p700LaunchMedia.p700Range.hero} fetchPriority="high" />
-      <OfficialBannerHero
-        src={p700LaunchMedia.p700Range.hero}
-        alt={p700LaunchMedia.p700Range.alt}
-        priority
-      />
-      <P700RangeBand compact />
       <Suspense fallback={<SalesContentSkeleton />}>
-        <SalesPageContent />
+        <SalesPageContent initialRange={initialRange} />
       </Suspense>
       <SalesWhyChooseSection />
     </>

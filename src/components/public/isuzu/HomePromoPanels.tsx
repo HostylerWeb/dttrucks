@@ -37,7 +37,7 @@ export function HomePromoPanels() {
 
   return (
     <section className="relative bg-isuzu-hero border-y border-outline-variant" aria-label="Promotions">
-      <div className="relative w-full aspect-[4/5] sm:aspect-[16/10] lg:aspect-[16/9] min-h-[min(70vw,480px)] sm:min-h-[360px] max-h-[720px]">
+      <div className="relative w-full aspect-[16/9] min-h-[min(52vw,200px)] max-h-[min(72vh,720px)]">
         {panels.map((p, i) => (
           <Link
             key={p.id}
@@ -52,7 +52,7 @@ export function HomePromoPanels() {
               src={p.image}
               alt={p.alt}
               fill
-              className="object-cover object-[left_center] lg:object-center"
+              className="object-contain object-center"
               sizes="100vw"
               unoptimized
             />

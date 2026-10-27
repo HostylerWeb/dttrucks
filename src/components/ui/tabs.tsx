@@ -6,11 +6,23 @@ import { cn } from "@/lib/utils";
 export function Tabs({
   tabs,
   defaultTab,
+  activeTab: controlledActive,
+  onTabChange,
 }: {
   tabs: { id: string; label: string; content: React.ReactNode }[];
   defaultTab?: string;
+  activeTab?: string;
+  onTabChange?: (id: string) => void;
 }) {
-  const [active, setActive] = useState(defaultTab ?? tabs[0]?.id ?? "");
+  const [internalActive, setInternalActive] = useState(defaultTab ?? tabs[0]?.id ?? "");
+  const active = controlledActive ?? internalActive;
+
+  const selectTab = (id: string) => {
+    if (controlledActive === undefined) {
+      setInternalActive(id);
+    }
+    onTabChange?.(id);
+  };
 
   return (
     <div>
@@ -22,7 +34,7 @@ export function Tabs({
             <button
               key={tab.id}
               type="button"
-              onClick={() => setActive(tab.id)}
+              onClick={() => selectTab(tab.id)}
               className={cn(
                 "shrink-0 px-3 sm:px-4 py-2.5 text-sm font-semibold transition-colors border-b-2 -mb-px min-h-11",
                 active === tab.id
