@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { HeaderLogo } from "@/components/layout/SiteLogo";
 import { DesktopNavBar } from "@/components/layout/DesktopNavBar";
@@ -38,6 +39,14 @@ function IconMenu({ className }: { className?: string }) {
   );
 }
 
+function IconSearch({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+      <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+    </svg>
+  );
+}
+
 export function Header({
   phone,
   phoneHref,
@@ -68,29 +77,44 @@ export function Header({
           scrolled && "shadow-industrial"
         )}
       >
-        <nav
-          className="page-container h-16 xl:h-[72px] 2xl:h-20 flex items-center gap-2 sm:gap-3"
+        <div
+          className="page-container h-14 sm:h-16 flex items-center gap-3 sm:gap-4"
+          role="navigation"
           aria-label="Main"
         >
-          <div className="shrink-0 pr-2 sm:pr-4 xl:pr-5 max-w-[min(100%,200px)] xl:max-w-[240px] 2xl:max-w-[280px]">
+          <div className="hidden xl:flex shrink-0 w-10">
+            <Link
+              href="/sales"
+              className="flex h-10 w-10 items-center justify-center border border-outline-variant bg-corporate-dark text-white hover:bg-black transition-colors"
+              aria-label="Browse products"
+            >
+              <IconSearch className="w-5 h-5" />
+            </Link>
+          </div>
+
+          <div className="xl:hidden shrink-0 max-w-[min(100%,200px)]">
             <HeaderLogo />
           </div>
 
-          <div className="hidden xl:flex flex-1 items-center min-w-0 min-h-[40px]">
-            <DesktopNavBar phone={phone} phoneHref={phoneHref} />
+          <div className="hidden xl:flex flex-1 items-center justify-center min-w-0 px-2">
+            <DesktopNavBar />
+          </div>
+
+          <div className="hidden xl:block shrink-0 max-w-[280px]">
+            <HeaderLogo className="flex items-center justify-end" />
           </div>
 
           <div className="flex xl:hidden items-center gap-2 shrink-0 ml-auto">
             <a
               href={phoneHref}
-              className="flex items-center justify-center w-10 h-10 bg-primary-container text-white rounded-lg shrink-0 shadow-industrial"
+              className="flex items-center justify-center w-10 h-10 bg-corporate-dark text-white shrink-0"
               aria-label={`Call office ${phone}`}
             >
               <IconCall className="w-[22px] h-[22px]" />
             </a>
             <button
               type="button"
-              className="flex items-center justify-center w-10 h-10 rounded-lg border border-surface-container-highest hover:border-primary-container bg-white text-primary-container shadow-sm transition-colors"
+              className="flex items-center justify-center w-10 h-10 border border-outline-variant bg-white text-corporate-dark"
               aria-label="Open menu"
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen(true)}
@@ -98,7 +122,7 @@ export function Header({
               <IconMenu className="w-6 h-6" />
             </button>
           </div>
-        </nav>
+        </div>
       </header>
 
       {menuOpen && (

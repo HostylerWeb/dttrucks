@@ -45,7 +45,7 @@ export function HeaderLogo({
           alt={HEADER_LOGO.alt}
           width={HEADER_LOGO.width}
           height={HEADER_LOGO.height}
-          className="h-10 sm:h-11 xl:h-12 2xl:h-14 w-auto max-w-[200px] xl:max-w-[240px] 2xl:max-w-[300px] object-contain object-left"
+          className="h-10 sm:h-11 xl:h-12 w-auto max-w-[200px] xl:max-w-[260px] object-contain object-left xl:object-right ml-auto xl:ml-0"
           fetchPriority="high"
         />
       </picture>

@@ -4,11 +4,11 @@ import { cn } from "@/lib/utils";
 
 export function HomePillarsBand() {
   return (
-    <section className="page-section bg-surface-container-low">
+    <section className="page-section bg-isuzu-hero border-y border-outline-variant">
       <div className="page-container">
         <div className="text-center mb-8 sm:mb-10 lg:mb-12 max-w-2xl mx-auto">
-          <h2 className="font-headline text-2xl sm:text-3xl font-bold text-on-background">
-            Parts, Sales & Workshop
+          <h2 className="font-headline text-2xl sm:text-3xl font-extrabold uppercase tracking-tight text-on-background">
+            Parts, sales & workshop
           </h2>
           <p className="text-secondary mt-3 leading-relaxed">
             Your complete commercial vehicle partner at one authorised Isuzu dealership in London,
@@ -16,7 +16,7 @@ export function HomePillarsBand() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 rounded-2xl overflow-hidden shadow-industrial border border-outline-variant">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 overflow-hidden border border-outline-variant bg-white">
           {homeDealerSection.pillars.map((pillar, index) => {
             const config = homePillarConfig[index];
             if (!config) return null;
@@ -52,7 +52,7 @@ export function HomePillarsBand() {
                 <Link
                   href={config.href}
                   prefetch={false}
-                  className="w-full py-3 rounded-lg font-semibold text-sm transition-colors text-center min-h-11 flex items-center justify-center bg-primary-container text-white hover:bg-primary"
+                  className="w-full py-3 font-bold text-xs uppercase tracking-wider transition-colors text-center min-h-11 flex items-center justify-center bg-corporate-dark text-white hover:bg-black"
                 >
                   {config.ctaLabel}
                 </Link>

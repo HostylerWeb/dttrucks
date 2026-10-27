@@ -1,8 +1,8 @@
 export const defaultSalesHero = {
   backgroundImage: "/media/sales/7.5-tonnes-GVW.webp",
   imageAlt: "Isuzu truck range - DT Trucks sales",
-  title: "Isuzu Sales",
-  subtitle: "The Best Trucks At Unbeatable Prices",
+  title: "Isuzu truck sales",
+  subtitle: "Moving the world for you",
   tagline: "Authorised Isuzu dealer — London, Essex & Kent",
   minHeight: "min-h-[320px] lg:min-h-[380px]",
   ctas: [

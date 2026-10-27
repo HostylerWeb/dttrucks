@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { buttonClassName } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 type Cta = {
@@ -164,7 +163,7 @@ export function HeroSection({
                     key={cta.href}
                     href={cta.href}
                     prefetch={false}
-                    className={cn(buttonClassName("primary", "lg"), "w-full sm:w-auto justify-center min-h-11")}
+                    className="btn-isuzu-dark w-full sm:w-auto justify-center"
                   >
                     {cta.label}
                   </Link>

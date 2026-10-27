@@ -23,24 +23,43 @@ export const serviceNavChildren: NavItemLink[] = getAllServices().map((service) 
   href: `/service/${service.slug}`,
 }));
 
+/** Top bar — aligned with isuzutruck.co.uk (dealer-adapted labels) */
+export const corporateNavItems: NavItemLink[] = [
+  { label: "Products", href: "/sales" },
+  { label: "Industries", href: "/specialist-applications" },
+  { label: "Aftersales & Parts", href: "/service", shortLabel: "Aftersales" },
+  { label: "News & Events", href: "/blog", shortLabel: "News" },
+  { label: "Customer Care", href: "/contact", shortLabel: "Care" },
+  { label: "About Us", href: "/about", shortLabel: "About" },
+  { label: "Visit Us", href: "/contact", shortLabel: "Visit" },
+  { label: "Contact Us", href: "/contact", shortLabel: "Contact" },
+];
+
 export const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About Us", shortLabel: "About", href: "/about" },
-  { label: "Isuzu Truck Sales", shortLabel: "Truck Sales", href: "/sales", childrenOverviewLabel: "Browse truck range", children: salesNavChildren },
   {
-    label: "Service & Parts",
-    shortLabel: "Service",
+    label: "Products",
+    shortLabel: "Products",
+    href: "/sales",
+    childrenOverviewLabel: "Browse truck range",
+    children: salesNavChildren,
+  },
+  {
+    label: "Aftersales & Parts",
+    shortLabel: "Aftersales",
     href: "/service",
     children: serviceNavChildren,
   },
   {
-    label: "Specialist Applications",
-    shortLabel: "Specialist",
+    label: "Industries",
+    shortLabel: "Industries",
     href: "/specialist-applications",
   },
+  { label: "News & Events", shortLabel: "News", href: "/blog" },
+  { label: "Customer Care", shortLabel: "Care", href: "/contact" },
   { label: "eBay Listings", shortLabel: "eBay", href: "/ebay" },
-  { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact Us", shortLabel: "Contact", href: "/contact" },
 ];
 
 export const footerQuickLinks = [

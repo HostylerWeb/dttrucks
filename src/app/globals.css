@@ -21,6 +21,7 @@
   --color-outline: #8a7170;
   --color-outline-variant: #e8dedd;
   --color-background: #ffffff;
+  --color-corporate-dark: #1f2326;
 
   --font-headline: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
   --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -54,6 +55,100 @@ body {
 .bg-grid-pattern {
   background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
   background-size: 24px 24px;
+}
+
+.bg-isuzu-hero {
+  background-color: #eceef1;
+}
+
+.bg-isuzu-grid-floor {
+  background-image:
+    linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.5) 45%, transparent 50%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.04) 0,
+      rgba(0, 0, 0, 0.04) 1px,
+      transparent 1px,
+      transparent 72px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.05) 0,
+      rgba(0, 0, 0, 0.05) 1px,
+      transparent 1px,
+      transparent 72px
+    );
+  background-size: 100% 100%, 72px 72px, 72px 72px;
+  background-position: center bottom;
+}
+
+.bg-corporate-dark {
+  background-color: var(--color-corporate-dark);
+}
+
+.text-corporate-dark {
+  color: var(--color-corporate-dark);
+}
+
+.btn-isuzu-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.625rem 1.5rem;
+  background-color: var(--color-corporate-dark);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-isuzu-dark:hover {
+  background-color: #000;
+}
+
+.isuzu-carousel-control {
+  position: absolute;
+  top: 50%;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  transform: translateY(-50%);
+  border: 1px solid var(--color-outline-variant);
+  background: var(--color-corporate-dark);
+  color: #fff;
+  transition: background-color 0.2s;
+}
+
+.isuzu-carousel-control:hover {
+  background: #000;
+}
+
+.nav-slash-item::after {
+  content: "/";
+  margin-left: 0.35rem;
+  margin-right: 0.15rem;
+  color: var(--color-primary-container);
+  font-weight: 400;
+}
+
+.nav-slash-item:last-child::after {
+  content: none;
+}
+
+.public-with-action-bar {
+  padding-bottom: 3.25rem;
+}
+
+@media (min-width: 640px) {
+  .public-with-action-bar {
+    padding-bottom: 3.5rem;
+  }
 }
 
 .hero-gradient {

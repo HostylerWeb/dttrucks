@@ -64,8 +64,48 @@ export function Footer({ settings }: { settings: Settings }) {
   const facebook = settings.social_facebook || socialLinks.facebook;
   const linkedin = settings.social_linkedin || socialLinks.linkedin;
   const instagram = settings.social_instagram || socialLinks.instagram;
+  const phone = settings.company_phone;
+  const phoneHref = phone ? `tel:${phone.replace(/\s/g, "")}` : undefined;
+
   return (
     <footer className="bg-surface-container-low text-on-background border-t border-outline-variant">
+      <div className="bg-corporate-dark text-white">
+        <div className="page-container py-8 sm:py-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-widest text-white/60 mb-2">Contact</p>
+            {settings.company_address && (
+              <p className="text-sm leading-relaxed text-white/90">{settings.company_address}</p>
+            )}
+          </div>
+          <div>
+            <p className="text-xs font-bold uppercase tracking-widest text-white/60 mb-2">Telephone</p>
+            {phoneHref && phone && (
+              <a href={phoneHref} className="text-lg font-bold hover:text-primary-fixed-dim">
+                {phone}
+              </a>
+            )}
+          </div>
+          <div>
+            <p className="text-xs font-bold uppercase tracking-widest text-white/60 mb-2">Email</p>
+            {settings.company_email && (
+              <a
+                href={`mailto:${settings.company_email}`}
+                className="text-sm font-semibold hover:text-primary-fixed-dim break-all"
+              >
+                {settings.company_email}
+              </a>
+            )}
+          </div>
+          <div className="sm:col-span-2 lg:col-span-1 lg:text-right">
+            <Link
+              href="/contact"
+              className="inline-flex border border-white/70 px-5 py-2.5 text-xs font-bold uppercase tracking-wider hover:bg-white hover:text-corporate-dark transition-colors"
+            >
+              Contact us
+            </Link>
+          </div>
+        </div>
+      </div>
       <div className="page-container py-8 lg:py-9">
         <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-4 space-y-3">

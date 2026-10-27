@@ -128,7 +128,7 @@ export function QuickContactWidget({
       ref={rootRef}
       className={cn(
         "fixed right-4 sm:right-6 z-50 h-36 w-36 pb-[env(safe-area-inset-bottom)] pointer-events-none transition-[bottom] duration-300",
-        cookieBarVisible ? "bottom-[5.5rem] sm:bottom-24" : "bottom-6"
+        cookieBarVisible ? "bottom-[8.5rem] sm:bottom-[7.5rem]" : "bottom-[4.5rem] sm:bottom-20"
       )}
       aria-live="polite"
     >

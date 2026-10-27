@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { getAllSettings } from "@/lib/db/settings";
-import { UtilityBar } from "@/components/layout/UtilityBar";
+import { SiteActionBar } from "@/components/layout/SiteActionBar";
 import { Header } from "@/components/layout/Header";
 import { StaticSiteHeader } from "@/components/layout/StaticSiteHeader";
 import { Footer } from "@/components/layout/Footer";
@@ -24,12 +24,6 @@ async function PublicSiteHeader() {
     <>
       <WebSiteJsonLd />
       <LocalBusinessJsonLd />
-      <UtilityBar
-        settings={settings}
-        socialFacebook={settings.social_facebook || socialLinks.facebook}
-        socialLinkedin={settings.social_linkedin || socialLinks.linkedin}
-        socialInstagram={settings.social_instagram || socialLinks.instagram}
-      />
       <Header
         phone={companyPhone}
         phoneHref={phoneHref}
@@ -46,7 +40,14 @@ async function PublicSiteHeader() {
 
 async function PublicSiteFooter() {
   const settings = await getAllSettings();
-  return <Footer settings={settings} />;
+  const phone = settings.company_phone ?? "020 8595 4400";
+  const phoneHref = `tel:${phone.replace(/\s/g, "")}`;
+  return (
+    <>
+      <Footer settings={settings} />
+      <SiteActionBar phoneHref={phoneHref} />
+    </>
+  );
 }
 
 function HeaderFallback() {
@@ -72,7 +73,7 @@ export default function PublicLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-1 flex-col min-h-full">
+    <div className="flex flex-1 flex-col min-h-full public-with-action-bar">
       <a className="skip-link" href="#main">Skip to content</a>
       <Suspense fallback={<HeaderFallback />}>
         <PublicSiteHeader />
