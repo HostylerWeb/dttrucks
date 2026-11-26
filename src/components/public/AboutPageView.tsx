@@ -297,9 +297,9 @@ export function AboutPageView() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
                 <figcaption className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
                   <p className="text-xs font-bold uppercase tracking-widest text-white/80">
-                    Where it began
+                    Aftersales
                   </p>
-                  <p className="font-headline font-bold text-lg mt-1">Eastley Commercials, 1995</p>
+                  <p className="font-headline font-bold text-lg mt-1">Workshop support, Barking</p>
                 </figcaption>
               </div>
             </figure>
@@ -316,9 +316,9 @@ export function AboutPageView() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
                 <figcaption className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
                   <p className="text-xs font-bold uppercase tracking-widest text-white/80">
-                    Today
+                    The range
                   </p>
-                  <p className="font-headline font-bold text-lg mt-1">DT Trucks, Barking</p>
+                  <p className="font-headline font-bold text-lg mt-1">P700 Isuzu trucks</p>
                 </figcaption>
               </div>
             </figure>

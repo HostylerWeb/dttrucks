@@ -76,16 +76,16 @@ export const ABOUT_IMAGES = {
     height: 91,
   },
   eastley: {
-    src: "/media/about/eastley-commercials.jpg",
-    alt: "DT Trucks beginning - Eastley Commercials",
-    width: 730,
-    height: 430,
+    src: "/media/p700-launch/aftersales-1980x1080.jpg",
+    alt: "Isuzu aftersales and workshop support at DT Trucks",
+    width: 1980,
+    height: 1080,
   },
   team: {
-    src: "/media/about/dt-trucks-new.jpg",
-    alt: "DT Trucks new team",
-    width: 725,
-    height: 430,
+    src: "/media/p700-launch/p700-range-1980x1080.jpg",
+    alt: "The current Isuzu P700 range at DT Trucks",
+    width: 1980,
+    height: 1080,
   },
 };
 

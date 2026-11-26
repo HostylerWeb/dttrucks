@@ -55,7 +55,7 @@ export const BLOG_POSTS = [
 <p>DT Trucks</p>
 <p>Feel free to share our post!</p>
 `.trim(),
-    featured_image: "/media/about/eastley-commercials.jpg",
+    featured_image: "/media/blog/ac-regas.jpg",
     category_slug: "commercial-vehicle-news",
     published_at: "2025-09-17T19:48:31.000Z",
     meta_title: "Exclusive Discount on AC Regassing! - DT Trucks",

@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  allowedDevOrigins: ["ddtrucks.local", "www.ddtrucks.local"],
   cacheComponents: true,
   images: {
     formats: ["image/avif", "image/webp"],
