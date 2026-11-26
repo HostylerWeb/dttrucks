@@ -75,13 +75,15 @@ export function HomeChooseTruckSection({ cards }: { cards: ChooseTruckCard[] }) 
             >
               {card.imageUrl && (
                 <div className="relative aspect-[16/10] bg-isuzu-hero overflow-hidden">
-                  <Image
-                    src={card.imageUrl}
-                    alt=""
-                    fill
-                    className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
-                    sizes="320px"
-                  />
+                  <div className="absolute inset-4">
+                    <Image
+                      src={card.imageUrl}
+                      alt=""
+                      fill
+                      className="object-contain object-center"
+                      sizes="320px"
+                    />
+                  </div>
                 </div>
               )}
               <div className="p-5">

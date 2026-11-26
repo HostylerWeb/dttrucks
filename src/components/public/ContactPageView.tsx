@@ -166,7 +166,7 @@ export function ContactPageView({
                 {address && <p className="font-medium text-on-surface">{address}</p>}
                 {what3words && what3wordsUrl && (
                   <p>
-                    What3Words:{" "}
+                    Precise location:{" "}
                     <a
                       href={what3wordsUrl}
                       target="_blank"

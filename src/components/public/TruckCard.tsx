@@ -21,13 +21,15 @@ export function TruckCard({
     >
       <div className="aspect-[4/3] bg-surface-container relative">
         {imageUrl ? (
-          <Image
-            src={imageUrl}
-            alt={name}
-            fill
-            className="object-cover"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          />
+          <div className="absolute inset-3">
+            <Image
+              src={imageUrl}
+              alt={name}
+              fill
+              className="object-contain object-center"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            />
+          </div>
         ) : (
           <div className="flex h-full items-center justify-center text-secondary text-sm">
             Truck image

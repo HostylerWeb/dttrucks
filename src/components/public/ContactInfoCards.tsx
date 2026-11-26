@@ -86,7 +86,17 @@ export function ContactInfoCards({
         <h3 className="mt-3 font-headline font-semibold">Address</h3>
         {address && <p className="mt-2 text-sm text-secondary">{address}</p>}
         {what3words && (
-          <p className="mt-2 text-xs text-secondary">{`///${what3words}`}</p>
+          <p className="mt-2 text-xs text-secondary">
+            Precise location:{" "}
+            <a
+              href={`https://what3words.com/${what3words.replace(/^\/\/\//, "").toLowerCase()}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-primary-container hover:underline"
+            >
+              {`///${what3words.replace(/^\/\/\//, "")}`}
+            </a>
+          </p>
         )}
       </div>
     </div>

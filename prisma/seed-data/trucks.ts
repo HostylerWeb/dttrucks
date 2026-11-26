@@ -18,18 +18,18 @@ type TruckModelSeed = {
 };
 
 const IMG = {
-  gvw35: "/media/sales/3.5-tonnes-GVW.jpg",
-  gvw55: "/media/sales/5.5-6.5-tonnes-GVW.jpg",
-  gvw75: "/media/sales/7.5-tonnes-GVW.webp",
-  gvw11: "/media/sales/11-13.5-tonnes-GVW.jpg",
-  gvw135: "/media/sales/11-13.5-tonnes-GVW.jpg",
-  tipper35: "/media/sales/Isuzu-3.5-Tonne-Tipper.jpg",
-  tipper75: "/media/sales/Isuzu-7.5-Tonne-Tipper.jpg",
-  dropside35: "/media/sales/Isuzu-3.5-Tonne-Dropside.jpg",
-  utilitruck: "/media/sales/Isuzu-3.5-Tonne-Utilitruck.jpg",
-  dropside75: "/media/sales/Isuzu-7.5-Tonne-Dropside.jpg",
-  box75: "/media/sales/Isuzu-7.5-Tonne-Box.jpg",
-  curtainsider: "/media/sales/Isuzu-7.5-Tonne-Curtainsider.jpg",
+  gvw35: "/media/sales/p700/grafter.webp",
+  gvw55: "/media/sales/p700/n55.webp",
+  gvw75: "/media/sales/p700/n75.webp",
+  gvw11: "/media/sales/p700/f110.webp",
+  gvw135: "/media/sales/p700/f135.webp",
+  tipper35: "/media/sales/p700/grafter.webp",
+  tipper75: "/media/sales/p700/n75.webp",
+  dropside35: "/media/sales/p700/grafter.webp",
+  utilitruck: "/media/sales/p700/grafter.webp",
+  dropside75: "/media/sales/p700/n75.webp",
+  box75: "/media/sales/p700/n75.webp",
+  curtainsider: "/media/sales/p700/n75.webp",
 };
 
 function specForCode(code?: string) {

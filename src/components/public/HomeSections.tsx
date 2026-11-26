@@ -186,7 +186,17 @@ export function HomeContactSection({
                   <p className="text-xs uppercase tracking-wide text-secondary font-semibold">Address</p>
                   <p className="text-sm leading-relaxed mt-1 whitespace-pre-line text-secondary">{companyAddress}</p>
                   {what3words && (
-                    <p className="text-xs text-secondary mt-2">What3Words: {`///${what3words}`}</p>
+                    <p className="text-xs text-secondary mt-2">
+                      Precise location:{" "}
+                      <a
+                        href={`https://what3words.com/${what3words.replace(/^\/\/\//, "").toLowerCase()}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-semibold text-primary-container hover:underline"
+                      >
+                        {`///${what3words.replace(/^\/\/\//, "")}`}
+                      </a>
+                    </p>
                   )}
                 </div>
               </div>
