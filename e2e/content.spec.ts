@@ -19,10 +19,32 @@ test.describe("Public content pages", () => {
     await expect(page.getByRole("button", { name: /continue/i })).toBeVisible();
   });
 
-  test("sales index shows separate 11t and 13.5t tabs", async ({ page }) => {
+  test("body quote accepts a preselected body type", async ({ page }) => {
+    await page.goto("/sales/body-quote?body=tipper");
+    await page.getByRole("button", { name: /continue/i }).click();
+    await expect(page.getByLabel(/body type/i)).toHaveValue("tipper");
+  });
+
+  test("sales index shows the five P700 GVW chassis tabs", async ({ page }) => {
     await page.goto("/sales");
-    await expect(page.getByRole("button", { name: /11 tonnes GVW/i })).toBeVisible();
-    await expect(page.getByRole("button", { name: /13\.5 tonnes GVW/i })).toBeVisible();
+    await expect(page.getByRole("button", { name: "3.5 tonnes GVW", exact: true })).toBeVisible();
+    await expect(page.getByRole("button", { name: "5.5 tonnes GVW", exact: true })).toBeVisible();
+    await expect(page.getByRole("button", { name: "7.5 tonnes GVW", exact: true })).toBeVisible();
+    await expect(page.getByRole("button", { name: "11 tonnes GVW", exact: true })).toBeVisible();
+    await expect(page.getByRole("button", { name: "13.5 tonnes GVW", exact: true })).toBeVisible();
+    await expect(page.getByText(/N65\.150/i)).toHaveCount(0);
+  });
+
+  test("legacy 5.5/6.5t range URLs show the corrected 5.5t chassis", async ({ page }) => {
+    await page.goto("/sales?range=5-5-6-5t-gvw");
+    await expect(page.getByRole("link", { name: /N55\.150 Chassis Cab - AMT/i })).toBeVisible();
+  });
+
+  test("7.5t tab includes the P700 transmission variants", async ({ page }) => {
+    await page.goto("/sales?range=7-5t-gvw");
+    await expect(page.getByRole("link", { name: /N75\.150 Chassis Cab - AMT/i })).toBeVisible();
+    await expect(page.getByRole("link", { name: /N75\.175 Chassis Cab - AMT/i })).toBeVisible();
+    await expect(page.getByRole("link", { name: /N75\.190 Chassis Cab - AMT/i })).toBeVisible();
   });
 
   test("can open a truck detail page from sales", async ({ page }) => {

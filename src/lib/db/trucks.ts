@@ -34,7 +34,7 @@ export async function getModels(categorySlug?: string) {
         ? { category: { slug: categorySlug } }
         : undefined),
     },
-    orderBy: { sort_order: "asc" },
+    orderBy: [{ category: { sort_order: "asc" } }, { sort_order: "asc" }],
     include: {
       category: true,
       images: { orderBy: { sort_order: "asc" } },

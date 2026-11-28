@@ -14,7 +14,7 @@ export type NavItem = NavItemLink & {
 
 export const salesNavChildren: NavItemLink[] = [
   { label: "3.5t Grafter", href: "/sales?range=3-5t-gvw" },
-  { label: "5.5 & 6.5t N-Series", href: "/sales?range=5-5-6-5t-gvw" },
+  { label: "5.5t N-Series", href: "/sales?range=5-5t-gvw" },
   { label: "7.5t N-Series", href: "/sales?range=7-5t-gvw" },
   { label: "11t F-Series", href: "/sales?range=11t-gvw" },
   { label: "13.5t F-Series", href: "/sales?range=13-5t-gvw" },

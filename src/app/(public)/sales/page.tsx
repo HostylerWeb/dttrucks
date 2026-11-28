@@ -1,12 +1,12 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
-import { getCategories, getDriveawayModels } from "@/lib/db/trucks";
+import Link from "next/link";
+import { getCategories } from "@/lib/db/trucks";
 import { getAllSettings } from "@/lib/db/settings";
 import { buildPageMetadata } from "@/lib/metadata";
 import { BreadcrumbsBar } from "@/components/layout/BreadcrumbsBar";
 import { SalesIntroSection } from "@/components/public/SalesIntroSection";
 import { SalesWhyChooseSection } from "@/components/public/SalesWhyChooseSection";
-import { TruckCard } from "@/components/public/TruckCard";
 import {
   SalesRangeHeader,
   type SalesCategoryTab,
@@ -31,11 +31,7 @@ function SalesContentSkeleton() {
 }
 
 async function SalesPageContent({ initialRange }: { initialRange?: string }) {
-  const [categories, driveaways, settings] = await Promise.all([
-    getCategories(),
-    getDriveawayModels(),
-    getAllSettings(),
-  ]);
+  const [categories, settings] = await Promise.all([getCategories(), getAllSettings()]);
 
   const catalogueCategories: SalesCategoryTab[] = categories
     .filter((c) => c.slug !== "driveaway")
@@ -58,33 +54,47 @@ async function SalesPageContent({ initialRange }: { initialRange?: string }) {
     <>
       <SalesRangeHeader categories={catalogueCategories} initialRange={initialRange} />
 
-      {driveaways.length > 0 && (
-        <section className="bg-surface border-t border-outline-variant page-section">
-          <div className="page-container">
-            <div className="mb-8 max-w-3xl">
-              <h3 className="font-headline text-2xl font-bold mb-3">Isuzu Driveaway Trucks</h3>
-              <p className="text-secondary leading-relaxed">
-                Ready-bodied trucks available with short lead times - tippers, dropsides,
-                utilitrucks, box vans and curtainsiders. Ideal when you need a complete vehicle
-                for work, not just a chassis.
-              </p>
-            </div>
-            <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {driveaways.map((model) => (
-                <li key={model.id}>
-                  <TruckCard
-                    name={model.name}
-                    description={model.description}
-                    href={`/sales/${model.slug}`}
-                    imageUrl={model.image_url}
-                    badge={model.driveaway_type?.replace("_", " ") ?? "Driveaway"}
-                  />
-                </li>
-              ))}
-            </ul>
+      <section className="bg-surface border-t border-outline-variant page-section">
+        <div className="page-container grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 items-start">
+          <div className="max-w-xl">
+            <h3 className="font-headline text-2xl font-bold mb-4">
+              Chassis first. Body built around your work.
+            </h3>
+            <p className="text-secondary leading-relaxed">
+              Isuzu Truck UK supplies the chassis. DT Trucks helps you choose the right GVW,
+              engine and gearbox, then arranges the body and equipment your operation needs —
+              from a box or tipper to a fridge, beavertail, crane or tail lift.
+            </p>
+            <Link
+              href="/sales/body-quote"
+              className="mt-6 inline-flex min-h-11 items-center justify-center rounded-lg bg-primary-container px-5 py-2.5 text-sm font-semibold text-white hover:bg-primary transition-colors"
+            >
+              Start a body specification
+            </Link>
           </div>
-        </section>
-      )}
+          <ul className="grid grid-cols-2 sm:grid-cols-4 gap-3" aria-label="Body types we can arrange">
+            {[
+              { label: "Box body", href: "/sales/body-quote?body=box" },
+              { label: "Curtainsider", href: "/sales/body-quote?body=curtainsider" },
+              { label: "Tipper", href: "/sales/body-quote?body=tipper" },
+              { label: "Fridge / freezer", href: "/sales/body-quote?body=fridge" },
+              { label: "Dropside", href: "/sales/body-quote?body=dropside" },
+              { label: "Beavertail", href: "/sales/body-quote?body=beavertail" },
+              { label: "Crane / Hiab", href: "/sales/body-quote" },
+              { label: "Tail lift", href: "/sales/body-quote" },
+            ].map((item) => (
+              <li key={item.label}>
+                <Link
+                  href={item.href}
+                  className="block h-full rounded-xl border border-outline-variant bg-white px-4 py-4 text-sm font-semibold text-on-background shadow-industrial hover:border-primary-container/40 hover:text-primary-container transition-colors"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
       <SalesIntroSection
         name={settings.sales_contact_name}

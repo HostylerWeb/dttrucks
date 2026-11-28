@@ -13,16 +13,20 @@ const STEPS = ["Chassis", "Body type", "Dimensions", "Options", "Contact"] as co
 type Props = {
   chassisModels: { slug: string; name: string; model_code: string | null }[];
   initialModelSlug?: string;
+  initialBodyType?: string;
 };
 
-export function BodyQuoteForm({ chassisModels, initialModelSlug }: Props) {
+export function BodyQuoteForm({ chassisModels, initialModelSlug, initialBodyType }: Props) {
   const [step, setStep] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
   const [pending, setPending] = useState(false);
 
   const [chassisSlug, setChassisSlug] = useState(initialModelSlug ?? "");
-  const [bodyType, setBodyType] = useState("");
+  const validInitialBodyType: string =
+    initialBodyType && bodyTypes.some((b) => b.value === initialBodyType) ? initialBodyType : "";
+
+  const [bodyType, setBodyType] = useState(validInitialBodyType);
   const [lengthM, setLengthM] = useState("");
   const [widthM, setWidthM] = useState("");
   const [heightM, setHeightM] = useState("");
@@ -159,7 +163,7 @@ export function BodyQuoteForm({ chassisModels, initialModelSlug }: Props) {
         {step === 0 && (
           <div className="space-y-4">
             <p className="text-secondary text-sm leading-relaxed">
-              Optional: link your request to a chassis model you viewed on our site.
+              Optional: choose the exact P700 chassis variant you are considering. If you are unsure, leave this blank and we will help you match GVW, engine, gearbox and wheelbase to the body.
             </p>
             <div>
               <Label htmlFor="chassis">Chassis model</Label>

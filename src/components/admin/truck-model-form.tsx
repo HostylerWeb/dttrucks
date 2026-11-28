@@ -63,7 +63,7 @@ export function TruckModelForm({
         <FormField
           label="Category"
           name="category_id"
-          hint="Weight-class categories (3.5t, 5.5/6.5t, etc.) appear under “Truck range by GVW”. Use “Isuzu Driveaway Trucks” for ready-bodied driveaway stock."
+          hint="Weight-class categories (3.5t, 5.5t, 7.5t, 11t and 13.5t) appear under the P700 truck range by GVW."
         >
           <select
             id="category_id"
@@ -157,8 +157,7 @@ export function TruckModelForm({
             <span>
               <span className="font-medium">Driveaway vehicle</span>
               <span className="block text-secondary mt-0.5">
-                Tick this to list it under “Driveaway vehicles” (ready-bodied tipper, dropside, box,
-                etc.). Leave unticked for chassis models shown only in the GVW weight-class tabs.
+                Tick only for genuine ready-bodied stock. Leave unticked for chassis variants shown in the GVW weight-class tabs.
               </span>
             </span>
           </label>

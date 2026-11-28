@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 export default async function BodyQuotePage({
   searchParams,
 }: {
-  searchParams: Promise<{ model?: string }>;
+  searchParams: Promise<{ model?: string; body?: string }>;
 }) {
-  const { model: modelParam } = await searchParams;
+  const { model: modelParam, body: bodyParam } = await searchParams;
   const models = await getModels();
   const chassisModels = models
     .filter((m) => !m.is_driveaway)
@@ -35,11 +35,17 @@ export default async function BodyQuotePage({
       <section className="page-section page-container max-w-2xl">
         <h1 className="font-headline text-2xl sm:text-3xl font-extrabold">Body specification quote</h1>
         <p className="mt-4 text-secondary leading-relaxed">
-          Tell us the body type, dimensions and options you need. George and the sales team will
-          reply with specification advice and pricing — this tool does not show prices online.
+          Choose the chassis if you know it, then tell us the body type, dimensions and equipment
+          you need. George and the sales team will reply with specification advice, bodybuilder
+          options and pricing — this tool does not show prices online.
         </p>
         <div className="mt-8">
-          <BodyQuoteForm chassisModels={chassisModels} initialModelSlug={modelParam} />
+          <BodyQuoteForm
+            key={`${modelParam ?? ""}-${bodyParam ?? ""}`}
+            chassisModels={chassisModels}
+            initialModelSlug={modelParam}
+            initialBodyType={bodyParam}
+          />
         </div>
       </section>
     </>

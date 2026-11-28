@@ -1,7 +1,8 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useMemo } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
 import { OfficialBannerHero } from "@/components/public/OfficialBannerHero";
 import { P700RangeBand } from "@/components/public/P700RangeBand";
 import { Tabs } from "@/components/ui/tabs";
@@ -10,6 +11,7 @@ import { TruckCard } from "@/components/public/TruckCard";
 import { cabColourNoteForCategory } from "@/lib/trucks/cab-colour-copy";
 import {
   bannerForCategorySlug,
+  normalizeSalesRangeSlug,
   salesRangeQueryKey,
 } from "@/lib/trucks/sales-range-banner";
 
@@ -41,26 +43,14 @@ export function SalesRangeHeader({
   const validIds = useMemo(() => new Set(categories.map((c) => c.id)), [categories]);
   const defaultTab = categories[0]?.id ?? "";
 
-  const rangeFromUrl = searchParams.get(salesRangeQueryKey);
-  const resolvedInitial =
-    initialRange && validIds.has(initialRange)
-      ? initialRange
-      : rangeFromUrl && validIds.has(rangeFromUrl)
-        ? rangeFromUrl
+  const rangeFromUrl = normalizeSalesRangeSlug(searchParams.get(salesRangeQueryKey));
+  const normalizedInitialRange = normalizeSalesRangeSlug(initialRange);
+  const activeTab =
+    rangeFromUrl && validIds.has(rangeFromUrl)
+      ? rangeFromUrl
+      : normalizedInitialRange && validIds.has(normalizedInitialRange)
+        ? normalizedInitialRange
         : defaultTab;
-
-  const [activeTab, setActiveTab] = useState(resolvedInitial);
-
-  useEffect(() => {
-    const fromUrl = searchParams.get(salesRangeQueryKey);
-    if (fromUrl && validIds.has(fromUrl)) {
-      setActiveTab(fromUrl);
-      return;
-    }
-    if (initialRange && validIds.has(initialRange)) {
-      setActiveTab(initialRange);
-    }
-  }, [searchParams, initialRange, validIds]);
 
   const syncUrl = useCallback(
     (tabId: string) => {
@@ -77,7 +67,6 @@ export function SalesRangeHeader({
   );
 
   const onTabChange = (tabId: string) => {
-    setActiveTab(tabId);
     syncUrl(tabId);
   };
 
@@ -125,17 +114,16 @@ export function SalesRangeHeader({
             </p>
             <h2 className="font-headline text-2xl lg:text-3xl font-bold mb-3">Isuzu Truck Range</h2>
             <p className="text-secondary leading-relaxed">
-              Browse Isuzu chassis by gross vehicle weight — from the 3.5t Grafter through separate{" "}
-              <strong className="font-semibold text-on-background">11 tonne</strong> and{" "}
-              <strong className="font-semibold text-on-background">13.5 tonne</strong> F-Series tabs.
-              Download{" "}
-              <a href="/sales/specification-sheets" className="font-semibold text-primary-container hover:underline">
-                specification sheets
-              </a>{" "}
-              or build a{" "}
-              <a href="/sales/body-quote" className="font-semibold text-primary-container hover:underline">
+              Browse current P700 chassis cabs by gross vehicle weight — from the 3.5t Grafter
+              through the 5.5t, 7.5t, 11t and 13.5t ranges. Each chassis can then be matched with
+              the body your work requires. Download{" "}
+              <Link href="/sales/specification-sheets" className="font-semibold text-primary-container hover:underline">
+                official specification sheets
+              </Link>{" "}
+              or start a{" "}
+              <Link href="/sales/body-quote" className="font-semibold text-primary-container hover:underline">
                 body quote request
-              </a>
+              </Link>
               .
             </p>
           </div>

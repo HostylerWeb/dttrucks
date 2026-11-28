@@ -15,7 +15,7 @@ test.describe("Admin", () => {
     await page.getByLabel("Email").fill("wrong@example.com");
     await page.getByLabel("Password").fill("wrongpassword");
     await page.getByRole("button", { name: "Sign in" }).click();
-    await expect(page.getByRole("alert")).toBeVisible();
+    await expect(page.getByText("Invalid email or password.")).toBeVisible();
   });
 
   test("admin can sign in and reach dashboard", async ({ page }) => {

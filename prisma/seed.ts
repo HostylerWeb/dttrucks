@@ -165,7 +165,7 @@ async function main() {
       slug: "3-5t-gvw",
       name: "3.5 tonnes GVW",
       description:
-        "The 3.5t Grafter is a light truck that’s more than capable of handling a busy workload - named Best Builders’ Truck seven years in a row by Trade Van Driver. Two models: 1.9L 123PS Grafter Green (N35.125) and 3.0L 150PS Grafter Blue (N35.150). Single or twin rear wheels, 3.5-tonne towing, and short Driveaway lead times.",
+        "P700 N35.120 Grafter chassis cabs. Choose single or twin rear wheels with manual or fully automatic transmission, then specify the body your operation needs.",
       image_url: "/media/sales/p700/grafter.webp",
       sort_order: 1,
       cab_colours: JSON.stringify([
@@ -177,10 +177,10 @@ async function main() {
       ]),
     },
     {
-      slug: "5-5-6-5t-gvw",
-      name: "5.5 / 6.5 tonnes GVW",
+      slug: "5-5t-gvw",
+      name: "5.5 tonnes GVW",
       description:
-        "More payload with the compact cab and body design of the Grafter range. Popular with arborists, breweries and local authorities. N55.150 (narrow cab option) and N65.150 (manual or Easyshift).",
+        "P700 N55.150 chassis cabs with twin rear wheels, a 3.0L 150PS engine and a choice of manual or ISIM automated transmission.",
       image_url: "/media/sales/p700/n55.webp",
       sort_order: 2,
       cab_colours: JSON.stringify([
@@ -195,7 +195,7 @@ async function main() {
       slug: "7-5t-gvw",
       name: "7.5 tonnes GVW",
       description:
-        "P700 N75 range: multiple wheelbases, the new 175 PS 3.0-litre option with ISIM nine-speed transmission, day and crew cabs, and advanced safety technology. Market leaders in recovery, distribution and plant hire.",
+        "P700 N75 chassis cabs with 3.0L 150PS or 175PS and 5.2L 190PS drivetrains, including manual, ISIM and Easy Shift automated options.",
       image_url: "/media/sales/p700/n75.webp",
       sort_order: 3,
       cab_colours: JSON.stringify([
@@ -210,7 +210,7 @@ async function main() {
       slug: "11t-gvw",
       name: "11 tonnes GVW",
       description:
-        "F-Series 11 tonne chassis on the P700 generation — compact cab, strong payload and manoeuvrability for tipper, beavertail and urban applications.",
+        "P700 F110.240 chassis cabs with a 5.2L 240PS engine and manual or Easy Shift automated transmission for higher-payload bodybuilder applications.",
       image_url: "/media/sales/p700/f110.webp",
       sort_order: 4,
       cab_colours: JSON.stringify([
@@ -226,7 +226,7 @@ async function main() {
       slug: "13-5t-gvw",
       name: "13.5 tonnes GVW",
       description:
-        "F135.240 and extended wheelbase options on P700 — ideal for scaffolders, box and curtainside operators stepping up from N-Series.",
+        "P700 F135.240 Easy Shift chassis cabs with a 5.2L 240PS engine, multiple wheelbases and high body/payload allowances.",
       image_url: "/media/sales/p700/f135.webp",
       sort_order: 5,
       cab_colours: JSON.stringify([
@@ -237,14 +237,6 @@ async function main() {
         { name: "Metallic blue", hex: "#2563eb" },
         { name: "Red (F-Series)", hex: "#c8102e" },
       ]),
-    },
-    {
-      slug: "driveaway",
-      name: "Isuzu Driveaway Trucks",
-      description:
-        "Ready-to-work tipper, dropside, utilitruck, box and curtainsider models available with short lead times from Barking.",
-      image_url: "/media/sales/p700/grafter.webp",
-      sort_order: 6,
     },
   ];
 

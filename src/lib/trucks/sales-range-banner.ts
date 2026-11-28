@@ -11,6 +11,7 @@ export function bannerForCategorySlug(slug: string | null | undefined): RangeBan
   switch (slug) {
     case "3-5t-gvw":
       return toBanner(p700LaunchMedia.grafter);
+    case "5-5t-gvw":
     case "5-5-6-5t-gvw":
     case "7-5t-gvw":
       return toBanner(p700LaunchMedia.nSeries);
@@ -20,6 +21,10 @@ export function bannerForCategorySlug(slug: string | null | undefined): RangeBan
     default:
       return toBanner(p700LaunchMedia.p700Range);
   }
+}
+
+export function normalizeSalesRangeSlug(slug: string | null | undefined) {
+  return slug === "5-5-6-5t-gvw" ? "5-5t-gvw" : slug;
 }
 
 export const salesRangeQueryKey = "range";

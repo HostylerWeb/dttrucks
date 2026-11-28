@@ -9,7 +9,14 @@ export type GalleryImage = {
   alt?: string;
 };
 
-export function ImageGallery({ images }: { images: GalleryImage[] }) {
+export function ImageGallery({
+  images,
+  single = "grid",
+}: {
+  images: GalleryImage[];
+  /** One photo on a product page should fill the column, not sit in a 3-up thumbnail. */
+  single?: "grid" | "feature";
+}) {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const active = lightboxIndex !== null ? images[lightboxIndex] : null;
 
@@ -17,24 +24,43 @@ export function ImageGallery({ images }: { images: GalleryImage[] }) {
 
   return (
     <>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {images.map((image, index) => (
-          <button
-            key={image.url}
-            type="button"
-            className="relative aspect-[4/3] overflow-hidden rounded-xl border border-outline-variant bg-surface-container group"
-            onClick={() => setLightboxIndex(index)}
-            aria-label={image.alt ? `View image: ${image.alt}` : `View image ${index + 1}`}
-          >
-            <Image
-              src={image.url}
-              alt={image.alt ?? ""}
-              fill
-              className="object-cover transition-transform group-hover:scale-105"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            />
-          </button>
-        ))}
+      <div
+        className={
+          images.length === 1 && single === "feature"
+            ? "grid"
+            : "grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        }
+      >
+        {images.map((image, index) => {
+          const featured = images.length === 1 && single === "feature";
+          return (
+            <button
+              key={image.url}
+              type="button"
+              className="relative aspect-[4/3] overflow-hidden rounded-xl border border-outline-variant bg-surface-container group"
+              onClick={() => setLightboxIndex(index)}
+              aria-label={image.alt ? `View image: ${image.alt}` : `View image ${index + 1}`}
+            >
+              <div className={featured ? "absolute inset-4" : "absolute inset-0"}>
+                <Image
+                  src={image.url}
+                  alt={image.alt ?? ""}
+                  fill
+                  className={
+                    featured
+                      ? "object-contain object-center"
+                      : "object-cover transition-transform group-hover:scale-105"
+                  }
+                  sizes={
+                    featured
+                      ? "(max-width: 1024px) 100vw, 50vw"
+                      : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  }
+                />
+              </div>
+            </button>
+          );
+        })}
       </div>
       <Dialog
         open={lightboxIndex !== null}

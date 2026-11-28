@@ -1,62 +1,86 @@
 /**
- * Official Isuzu UK spec sheet PDFs — sync from
- * https://www.isuzutruck.co.uk/specification-sheets/ when links break.
+ * Official Isuzu Truck UK specification PDFs for the current P700 chassis range.
+ * Files are mirrored locally from the manufacturer's current specification sheets so
+ * customers are not sent through a third-party flip-book viewer.
  */
-/** Closest current Isuzu sheet per DT model code (Isuzu may list N35.120 etc.). */
 export const defaultSpecSheetsByModelCode: Record<
   string,
   { label: string; url: string }
 > = {
-  "N35.125": {
-    label: "N35.120 Single Manual Grafter Chassis Spec Sheet",
-    url: "https://www.isuzutruck.co.uk/media/nsef2o33/ituk-n35120-single-manual-grafter-chassis-spec-sheet_010926.pdf",
+  "N35.120(S)": {
+    label: "N35.120 single manual chassis specification sheet",
+    url: "/media/specs/n35-120-s.pdf",
   },
-  "N35.150": {
-    label: "N35.120 Twin Manual Grafter Chassis Spec Sheet",
-    url: "https://www.isuzutruck.co.uk/media/l3ahzhzh/ituk-n35120-twin-manual-grafter-chassis-spec-sheet_010926.pdf",
+  "N35.120(T)": {
+    label: "N35.120 twin manual chassis specification sheet",
+    url: "/media/specs/n35-120-t.pdf",
+  },
+  "N35.120(SA)": {
+    label: "N35.120 single automatic chassis specification sheet",
+    url: "/media/specs/n35-120-sa.pdf",
+  },
+  "N35.120(TA)": {
+    label: "N35.120 twin automatic chassis specification sheet",
+    url: "/media/specs/n35-120-ta.pdf",
   },
   "N55.150": {
-    label: "N55.150N Manual Chassis Spec Sheet",
-    url: "https://www.isuzutruck.co.uk/media/taqdgrux/ituk-n55150n-manual-chassis-spec-sheet_010926.pdf",
+    label: "N55.150 manual chassis specification sheet",
+    url: "/media/specs/n55-150.pdf",
   },
-  "N65.150": {
-    label: "N65.150 Manual Chassis Spec Sheet",
-    url: "https://www.isuzutruck.co.uk/media/vjihlwlq/ituk-n65150-manual-chassis-spec-sheet_010926.pdf",
+  "N55.150 AMT": {
+    label: "N55.150 ISIM AMT chassis specification sheet",
+    url: "/media/specs/n55-150-amt.pdf",
   },
   "N75.150": {
-    label: "N75.150 Manual Chassis Spec Sheet",
-    url: "https://www.isuzutruck.co.uk/media/kc0pwjlj/ituk-n75150-manual-chassis-spec-sheet_010926.pdf",
+    label: "N75.150 manual chassis specification sheet",
+    url: "/media/specs/n75-150.pdf",
+  },
+  "N75.150 AMT": {
+    label: "N75.150 ISIM AMT chassis specification sheet",
+    url: "/media/specs/n75-150-amt.pdf",
+  },
+  "N75.175 AMT": {
+    label: "N75.175 ISIM AMT chassis specification sheet",
+    url: "/media/specs/n75-175-amt.pdf",
   },
   "N75.190": {
-    label: "N75.190 Manual Chassis Spec Sheet",
-    url: "https://www.isuzutruck.co.uk/media/4zia2x33/ituk-n75190-manual-chassis-spec-sheet_010926.pdf",
+    label: "N75.190 manual chassis specification sheet",
+    url: "/media/specs/n75-190.pdf",
+  },
+  "N75.190 AMT": {
+    label: "N75.190 Easy Shift AMT chassis specification sheet",
+    url: "/media/specs/n75-190-amt.pdf",
   },
   "F110.240": {
-    label: "F110.240 Manual Chassis Spec Sheet",
-    url: "https://www.isuzutruck.co.uk/media/x4okc0zj/ituk-f110240-manual-chassis-spec-sheet_010926.pdf",
+    label: "F110.240 manual chassis specification sheet",
+    url: "/media/specs/f110-240.pdf",
   },
-  "F135.240": {
-    label: "F135.240 Easy Shift AMT Chassis Spec Sheet",
-    url: "https://www.isuzutruck.co.uk/media/jhhjz5ce/ituk-f135240-easy-shift-amt-chassis-spec-sheet_010926.pdf",
+  "F110.240 AMT": {
+    label: "F110.240 Easy Shift AMT chassis specification sheet",
+    url: "/media/specs/f110-240-amt.pdf",
+  },
+  "F135.240 AMT": {
+    label: "F135.240 Easy Shift AMT chassis specification sheet",
+    url: "/media/specs/f135-240-amt.pdf",
   },
 };
 
-/** Extra sheets on Isuzu UK hub (shown on our spec page footer section). */
+/** Additional factory chassis options that are available but outside the core day-cab list. */
 export const isuzuAdditionalSpecSheets = [
   {
-    label: "N75.175 ISIM AMT Chassis Spec Sheet",
-    url: "https://www.isuzutruck.co.uk/media/q5sj44zo/ituk-n75175-isim-amt-chassis-spec-sheet_010926.pdf",
+    label: "N75.190 Crew Cab manual chassis specification sheet",
+    url: "/media/specs/n75-190-crew.pdf",
     gvw: "7.5t",
   },
   {
-    label: "N75.190 Easy Shift AMT Chassis Spec Sheet",
-    url: "https://www.isuzutruck.co.uk/media/gsufwc51/ituk-n75190-easy-shift-amt-chassis-spec-sheet_010926.pdf",
+    label: "N75.190 Crew Cab Easy Shift AMT chassis specification sheet",
+    url: "/media/specs/n75-190-crew-amt.pdf",
     gvw: "7.5t",
   },
   {
-    label: "F110.240 Easy Shift AMT Chassis Spec Sheet",
-    url: "https://www.isuzutruck.co.uk/media/5nrb1gt3/ituk-f110240-easy-shift-amt-chassis-spec-sheet_010926.pdf",
-    gvw: "11t",
+    label: "F135.240 Easy Shift AMT air suspension chassis specification sheet",
+    url: "/media/specs/f135-240-amt-air.pdf",
+    gvw: "13.5t",
   },
 ] as const;
 

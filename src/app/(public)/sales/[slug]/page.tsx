@@ -77,7 +77,7 @@ export default async function TruckDetailPage({
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           <div>
             {galleryImages.length > 0 ? (
-              <ImageGallery images={galleryImages} />
+              <ImageGallery images={galleryImages} single="feature" />
             ) : (
               <div className="aspect-[4/3] rounded-xl bg-surface-container border border-outline-variant" />
             )}
